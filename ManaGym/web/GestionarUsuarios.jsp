@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,25 +19,24 @@
             <label>Cliente</label>        
             <input type="checkbox" id="chkInstructor" />
             <label>Instructor</label>
-            <input type="submit" id="btnBuscar" name="Buscar"/>
+            <input type="submit" id="btnBuscar" name="accion" value="Buscar"/>
             
             <br>
             <label>Elija el usuario...</label>
-            <% if(request.getParameter("Buscar") != null){
+            <% if( request.getParameter("accion") != null){
             %>            
             <br>
             <div id="usuarios" style="width:300px; height:200px; overflow: scroll;">                
                 <select name="usuarios" multiple>
-                    <!--<option value=${clientes.get(0).getIdentificacion()}>
-                        ${clientes.get(0).toString()}
-                    </option>-->
-                    <c:forEach items="${clientes}" var="cliente">
-                        <option value="${cliente.getIdentificacion()}"> ${cliente.getNombreCliente()}</option>
-                    </c:forEach>
+                    <c:forEach var="cliente" items="${clientes}">
+                        <option value=${cliente.getIdentificacion()}>
+                            ${cliente.toString()}
+                        </option>
+                     </c:forEach>
                 </select>
                 <!--<img src="imgiconos/users.png" title="${clientes.get(0).toString()}" />-->
             </div>
-            <%}%>
+            <%}%>   
             <br>
             <label>Marque la opción:</label>
             <select name="lstAccion">
@@ -44,7 +44,7 @@
                 <option value="2" >Deshabilitar</option>
             </select>
             <br>
-            <input type="submit" id="btnGestionarUsuario" name="Gestionar"/>
+            <input type="submit" id="btnGestionarUsuario" name="accion" value="Gestionar"/>
         </form>
     </body>
 </html>
