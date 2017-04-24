@@ -6,8 +6,9 @@ import java.util.ArrayList;
 
 public class Cliente {
     private int     identificacion;
+    private int id;
     private String  NombreCliente;
-private ArrayList<FichaMedica> fichas;
+    private ArrayList<FichaMedica> fichas;
     private ArrayList<Rutina> rutinas;
     private ArrayList<Reporte> reportes;
      
@@ -16,10 +17,18 @@ private ArrayList<FichaMedica> fichas;
         this.NombreCliente = NombreCliente;
     }
  
-     public Cliente (){
-    fichas = new ArrayList();
-    rutinas = new ArrayList();
-    reportes = new ArrayList();
+    public Cliente (){
+        fichas = new ArrayList();
+        rutinas = new ArrayList();
+        reportes = new ArrayList();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
      
     public ArrayList<FichaMedica> getFichas() {

@@ -1,20 +1,18 @@
 <%-- 
-    Document   : GestionarEjercicios
-    Created on : 18/04/2017, 10:54:24 PM
+    Document   : MostrarEjercicios
+    Created on : 23/04/2017, 08:05:10 PM
     Author     : lenovo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-     <head>
+    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-       <script type="text/jscript" > 
-        </script>
-        <style type="text/css">
-            body {
-                 background-image: url(imgfondos/fitness29.jpg);     
+        <style>
+              body {
+                 background-image: url(imgfondos/fit2.jpg); 
                 }
                 h1 {
                     color: black;
@@ -22,12 +20,12 @@
                     text-align: center;
                 }
                 td{
-                color: black;
+                color: floralwhite;
                 font-family: fantasy;
             }
                 legend {
-                    color: black;
-                    font-family: monospace;
+                    color: navy;
+                    font-family: fantasy;
                     font-size: 30px;
                   }
                     *{
@@ -67,53 +65,40 @@
         </style>
     </head>
     <body>
-        
-            <ul class="nav">
-                <li><a href="GestionarEjercicios.jsp">GESTION DE EJERCICIOS</a></li> 
-                <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
-                <li><a href="GestionarRutinas.jsp">GESTION DE RUTINAS</a></li>
-                <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
-                    
-            </ul>
-         <br>
-          <br>
-           <br>
-            <br>
-             <br>
-        <h1>MANAGYM</h1>
+       <h1>MANAGYM</h1>
         <br>
-         <br>
-          <br>
-        
         <br>
-        <form name="form2" action="Ejerciciocontrolador">
+        <form name="form1" action="Ejerciciocontrolador">
             <fieldset>
-                <legend>FORMULARIO INGRESO DE EJERCICIOS</legend>
             <table>
-                 <br>
-                <tr>
-                    <td>Id Ejercicio:</td> 
-                    <td><input type="text" name="IdEjercicio"></td>
-                </tr>
-                <tr>
+                <legend>EJERCICIOS</legend>
+                
+                    <tr>
+                        <td>Id Ejercicio</td>
+                        <td><input type="text" name="IdEjercicio" value=${ejercicio.IdEjercicio}></td>
+                    </tr>
+                    <tr>
                     <td>Nombre Ejercicio:</td> 
-                    <td><input type="text" name="NombreEjercicio"></td>
+                    <td><input type="text" name="NombreEjercicio" value=${Ejercicio.NombreEjercicio} size="40"></td>
                 </tr>
                 <tr>
                     <td>Descripcion Ejercicio:</td> 
-                    <td><input type="text" name="DescripcionEjercicio"></td>
+                    <td><input type="text" name="DescripcionEjercicio" value=${Ejercicio.DescripcionEjercicio} size="40"></td>
                 </tr>
                 <tr>
                     <td>Video Ejercicio:</td> 
-                    <td><input type="text" name="VideoEjercicio"></td>
+                    <td><input type="text" name="VideoEjercicio" value=${Ejercicio.VideoEjercicio} size="40"></td>
                 </tr>
                 <tr>
-                    <td><input type="image"  src="imgiconos/deshacer.png" value="Limpiar" name="accion">
-                    <td><input type="image" src="imgiconos/guardar.png" value="Guardar" name="accion" ></td> 
-                    <td><input type="image" src="imgiconos/buscar.png" value="Consultar" name="accion"></td>
+                    <tr>
+                ${mensaje}
                 </tr>
+                    <tr>
+                        <td><input type="image" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
+                    </tr>
             </table>
-            </fieldset>
+                
+                </fieldset>
         </form>
     </body>
 </html>
