@@ -63,8 +63,8 @@ public class GestionarUsuariosControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
        HttpSession sesion = request.getSession();
-       String accion = request.getParameter("Buscar");
-       if(accion.equals("Enviar consulta")){
+       String accion = request.getParameter("accion");
+       if(accion.equals("Buscar")){
            ClienteBD cliente = new ClienteBD();
             ArrayList <Cliente> clientes = cliente.getClientes();//new ArrayList <Cliente>();//
             clientes.add(new Cliente(1018456341,"Michael Montes"));
@@ -73,8 +73,8 @@ public class GestionarUsuariosControlador extends HttpServlet {
        }
        else if(accion.equals("Gestionar")){
            ArrayList <Cliente> clientes = (ArrayList <Cliente>) sesion.getAttribute("clientes");
-           int estado = (int) sesion.getAttribute("lstAccion");
-           gestionarClientes(clientes, estado);
+           String estado = sesion.getAttribute("lstAccion").toString();
+           gestionarClientes(clientes, Integer.parseInt(estado));
        }
     }
 
