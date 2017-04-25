@@ -3,7 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/src/java/Managym/Cliente.java</file>
+            <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/src/java/Managym/Usuario.java</file>
+            <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/src/java/BD/UsuarioDAO.java</file>
+            <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/web/GestionarUsuarios.jsp</file>
+            <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/src/java/BD/ClienteBD.java</file>
+            <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/web/index.html</file>
+            <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/src/java/Servlets/GestionarUsuariosControlador.java</file>
+            <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/web/IniciarSesion.jsp</file>
             <file>file:/D:/MICHAEL/Documents/GitHub/MANAGYM/ManaGym/src/java/Servicios/DBManager.java</file>
         </group>
     </open-files>

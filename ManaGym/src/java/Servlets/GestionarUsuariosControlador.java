@@ -6,7 +6,9 @@
 package Servlets;
 
 import BD.ClienteBD;
+import BD.UsuarioDAO;
 import Managym.Cliente;
+import Managym.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -65,16 +67,15 @@ public class GestionarUsuariosControlador extends HttpServlet {
        HttpSession sesion = request.getSession();
        String accion = request.getParameter("accion");
        if(accion.equals("Buscar")){
-           ClienteBD cliente = new ClienteBD();
-            ArrayList <Cliente> clientes = cliente.getClientes();//new ArrayList <Cliente>();//
-            clientes.add(new Cliente(1018456341,"Michael Montes"));
-            sesion.setAttribute("clientes", clientes);
+           UsuarioDAO usuario = new UsuarioDAO();
+            ArrayList <Usuario> usuarios = new ArrayList <Usuario>();//
+            sesion.setAttribute("clientes", usuarios);
             request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
        }
        else if(accion.equals("Gestionar")){
-           ArrayList <Cliente> clientes = (ArrayList <Cliente>) sesion.getAttribute("clientes");
+           ArrayList <Usuario> usuarios = (ArrayList <Usuario>) sesion.getAttribute("usuarios");
            String estado = sesion.getAttribute("lstAccion").toString();
-           gestionarClientes(clientes, Integer.parseInt(estado));
+           gestionarUsuarios(usuarios, Integer.parseInt(estado));
        }
     }
 
@@ -102,12 +103,12 @@ public class GestionarUsuariosControlador extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private void gestionarClientes(ArrayList<Cliente> clientes, int estado) {
-        ClienteBD clienteBD = new ClienteBD();
-        for(int i = 0; i<clientes.size();i++){
-            Cliente cliente = clientes.get(i);
-            //cliente.estado = estado;
-            clienteBD.update(cliente);
+    private void gestionarUsuarios(ArrayList<Usuario> usuarios, int estado) {
+        UsuarioDAO usuarioBD = new UsuarioDAO();
+        for(int i = 0; i<usuarios.size();i++){
+            Usuario usuario = usuarios.get(i);
+            usuario.setEstado(estado);
+            usuarioBD.update(usuario);
         }
             
     }

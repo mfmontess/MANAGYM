@@ -28,9 +28,9 @@
             <br>
             <div id="usuarios" style="width:300px; height:200px; overflow: scroll;">                
                 <select name="usuarios" multiple>
-                    <c:forEach var="cliente" items="${clientes}">
-                        <option value=${cliente.getIdentificacion()}>
-                            ${cliente.toString()}
+                    <c:forEach var="usuarios" items="${usuarios}">
+                        <option value=${usuario.getId()}>
+                            ${usuario.getUsuario()}
                         </option>
                      </c:forEach>
                 </select>

@@ -1,7 +1,7 @@
 <%-- 
-    Document   : GestionarUsuarios
-    Created on : 18/04/2017, 10:53:45 PM
-    Author     : lenovo
+    Document   : TransaccionMal
+    Created on : 24/04/2017, 05:07:37 PM
+    Author     : daniel
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>error</h1>
     </body>
 </html>
