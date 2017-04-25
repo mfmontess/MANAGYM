@@ -5,6 +5,8 @@
  */
 package Managym;
 
+import java.sql.ResultSet;
+
 /**
  *
  * @author daniel
@@ -21,12 +23,22 @@ public class Usuario {
     }
 
     public Usuario(int id,  String usuario, String contraseña, int perfil, int estado) {
-        this.id = id;
-      
+        this.id = id;      
         this.usuario = usuario;
         this.contraseña = contraseña;
         this.perfil = perfil;
         this.estado = estado;
+    }
+    
+    public Usuario(ResultSet rs){        
+        try {
+            id = rs.getInt("IdUsuario");
+            usuario = rs.getString("NombreUsuario");
+            contraseña = rs.getString("ContrasenaUsuario");            
+            perfil = rs.getInt("IdPerfil");
+            estado = rs.getInt("IdEstado");
+        } catch (Exception e) {
+        }
     }
 
     public int getId() {

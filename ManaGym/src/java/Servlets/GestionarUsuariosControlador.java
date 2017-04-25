@@ -6,12 +6,16 @@
 package Servlets;
 
 import BD.ClienteBD;
+import BD.UsuarioBD;
 import BD.UsuarioDAO;
 import Managym.Cliente;
 import Managym.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -64,19 +68,20 @@ public class GestionarUsuariosControlador extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       HttpSession sesion = request.getSession();
-       String accion = request.getParameter("accion");
-       if(accion.equals("Buscar")){
-           UsuarioDAO usuario = new UsuarioDAO();
-            ArrayList <Usuario> usuarios = new ArrayList <Usuario>();//
-            sesion.setAttribute("clientes", usuarios);
+        HttpSession sesion = request.getSession();
+        String accion = request.getParameter("accion");
+        String perfil = request.getParameter("perfil");
+        
+        if(accion.equals("Buscar")){
+            ArrayList <Usuario> usuarios = UsuarioBD.mgr.getUsuarios(perfil);//
+            sesion.setAttribute("usuarios", usuarios);
             request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
-       }
-       else if(accion.equals("Gestionar")){
-           ArrayList <Usuario> usuarios = (ArrayList <Usuario>) sesion.getAttribute("usuarios");
-           String estado = sesion.getAttribute("lstAccion").toString();
-           gestionarUsuarios(usuarios, Integer.parseInt(estado));
-       }
+        }
+        else if(accion.equals("Gestionar")){
+            String estado = request.getParameter("lstAccion");
+            String[] usuarios = obtenerUsuarios(request);
+            gestionarUsuarios(usuarios, Integer.parseInt(estado));
+        }
     }
 
     /**
@@ -103,14 +108,16 @@ public class GestionarUsuariosControlador extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private void gestionarUsuarios(ArrayList<Usuario> usuarios, int estado) {
-        UsuarioDAO usuarioBD = new UsuarioDAO();
-        for(int i = 0; i<usuarios.size();i++){
-            Usuario usuario = usuarios.get(i);
-            usuario.setEstado(estado);
-            usuarioBD.update(usuario);
+    private void gestionarUsuarios(String[] usuarios, int estado) {
+        for(int i = 0; i<usuarios.length;i++){
+            UsuarioBD.mgr.updateEstado(usuarios[i],estado);
         }
             
+    }
+
+    private String[] obtenerUsuarios(HttpServletRequest request) {
+         String[] usuarios = request.getParameterMap().get("lstUsuarios");
+         return usuarios;
     }
 
 }

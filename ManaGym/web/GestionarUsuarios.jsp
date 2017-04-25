@@ -15,9 +15,9 @@
     <body>
         <form name="form2" action="GestionarUsuariosControlador">
             <h3>Elija el perfil del usuario:</h3>
-            <input type="checkbox" id="chkCliente" />
-            <label>Cliente</label>        
-            <input type="checkbox" id="chkInstructor" />
+            <input type="checkbox" id="chkCliente" name="perfil" value="1" checked="true"/>
+            <label>Cliente</label>
+            <input type="checkbox" id="chkInstructor" name="perfil" value="2"/>
             <label>Instructor</label>
             <input type="submit" id="btnBuscar" name="accion" value="Buscar"/>
             
@@ -27,8 +27,8 @@
             %>            
             <br>
             <div id="usuarios" style="width:300px; height:200px; overflow: scroll;">                
-                <select name="usuarios" multiple>
-                    <c:forEach var="usuarios" items="${usuarios}">
+                <select name="lstUsuarios" multiple>
+                    <c:forEach var="usuario" items="${usuarios}">
                         <option value=${usuario.getId()}>
                             ${usuario.getUsuario()}
                         </option>
