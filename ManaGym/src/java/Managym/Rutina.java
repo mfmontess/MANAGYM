@@ -8,6 +8,7 @@ public class Rutina {
     private int IdRutina;
     private String NombreRutina;
     private ArrayList<Ejercicios> ejercicios;
+    private int series;
     
     public Rutina(int IdRutina, String NombreRutina, ArrayList<Ejercicios> ejercicios) {
         this.IdRutina = IdRutina;
@@ -44,6 +45,14 @@ public class Rutina {
     @Override
     public String toString() {
         return "n"+IdRutina+"n"+NombreRutina;
+    }
+
+    public int getSeries() {
+        return series;
+    }
+    
+    public void setSeries(int series) {
+        this.series = series;
     }
     
 }

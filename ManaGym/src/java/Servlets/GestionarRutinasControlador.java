@@ -5,19 +5,12 @@
  */
 package Servlets;
 
-import BD.ClienteBD;
-import BD.UsuarioBD;
-import BD.UsuarioDAO;
-import Managym.Cliente;
-import Managym.Usuario;
+import BD.*;
+import Managym.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,10 +18,11 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author ASUS
+ * @author Administrator
  */
-@WebServlet(name = "GestionarUsuariosControlador", urlPatterns = {"/GestionarUsuariosControlador"})
-public class GestionarUsuariosControlador extends HttpServlet {
+public class GestionarRutinasControlador extends HttpServlet {
+    
+    ArrayList <String> ejerciciosRutina = new ArrayList<String>();
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -47,10 +41,10 @@ public class GestionarUsuariosControlador extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet GestionarUsuariosControlador</title>");            
+            out.println("<title>Servlet GestionarRutinasControlador</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet GestionarUsuariosControlador at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet GestionarRutinasControlador at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -70,19 +64,19 @@ public class GestionarUsuariosControlador extends HttpServlet {
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
         String accion = request.getParameter("accion");
-        String perfil = request.getParameter("perfil");
-        
-        if(accion.equals("Buscar")){
-            ArrayList <Usuario> usuarios = UsuarioBD.mgr.getUsuarios(perfil);//
-            sesion.setAttribute("usuarios", usuarios);
-            request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
+        if(accion.equals("Adicionar Ejercicio")){
+            ArrayList <Ejercicios> ejercicios = EjercicioBD.mgr.getEjercicios();//
+            ejercicios.add(new Ejercicios("1", "Mountain Climbers", "Fleccion de pecho con brazo cruzado", null));
+            sesion.setAttribute("ejercicios", ejercicios);
+            request.getRequestDispatcher("GestionarRutinas.jsp").forward(request, response);
+        }
+        else if(accion.equals("Adicionar")){            
+            String ejercicio = request.getParameter("lstEjercicios");
+            ejerciciosRutina.add(ejercicio);//asociar ejercicio con numero de repeticiones realizado
         }
         else if(accion.equals("Gestionar")){
-            String estado = request.getParameter("lstAccion");
-            String[] usuarios = obtenerUsuarios(request);
-            gestionarUsuarios(usuarios, Integer.parseInt(estado));
-            request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
-        }   
+            RutinaBD.mgr.guardar(new Rutina());//crea objeto rutina con todos los ejercicios seleccionados
+        }
     }
 
     /**
@@ -91,7 +85,7 @@ public class GestionarUsuariosControlador extends HttpServlet {
      * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+        * @throws IOException if an I/O error occurs
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -108,17 +102,4 @@ public class GestionarUsuariosControlador extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-    private void gestionarUsuarios(String[] usuarios, int estado) {
-        for(int i = 0; i<usuarios.length;i++){
-            UsuarioBD.mgr.updateEstado(usuarios[i],estado);
-        }
-            
-    }
-
-    private String[] obtenerUsuarios(HttpServletRequest request) {
-         String[] usuarios = request.getParameterValues("lstUsuarios");
-         return usuarios;
-    }
-
 }

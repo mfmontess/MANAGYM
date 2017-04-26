@@ -81,7 +81,7 @@ public class Ejerciciocontrolador extends HttpServlet {
             if(accion.equals("Consultar")){
                 IdEjercicio = request.getParameter("IdEjercicio");
                 ejercicio= EjercicioBD.mgr.getEjercicio(IdEjercicio);
-                ArrayList <Ejercicios> ejercicios = EjercicioBD.mgr.getEjercicios1();
+                ArrayList <Ejercicios> ejercicios = EjercicioBD.mgr.getEjercicios();
                 sesion.setAttribute("ejercicios", ejercicios);
                 sesion.setAttribute("ejercicio", ejercicio);
                 sesion.setAttribute("mensaje", "El registro es:");

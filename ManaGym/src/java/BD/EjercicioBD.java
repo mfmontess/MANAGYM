@@ -43,7 +43,7 @@ public class EjercicioBD extends DBManager{
     public void eliminarEjercicio(Ejercicios ejercicio){
         mgr.execute("delete from ejercicios where IdEjercicios = "+ejercicio.getIdEjercicio()+"");
     }
-    public ArrayList<Ejercicios> getEjercicios1(){
+    public ArrayList<Ejercicios> getEjercicios(){
     ArrayList<Ejercicios> x = ejecutarQuery("select * from ejercicios");
     return x;
     }
