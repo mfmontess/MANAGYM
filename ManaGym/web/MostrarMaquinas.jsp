@@ -89,7 +89,7 @@
                 ${mensaje}
                 </tr>
                     <tr>
-                        <td><input type="image" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
+                        <td><input type="submit" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
                     </tr>
             </table>
                 
