@@ -74,10 +74,18 @@
                     </tr>
                      <tr>
                         <td>Nombre Maquina</td>
-                        <td><input type="text" name="iddelegacion" value=${Maquina.NombreMaquina} size="40"></td>
+                        <td><input type="text" name="NombreMaquina" value=${maquina.NombreMaquina}></td>
                     </tr>
-                     
-                    <tr>
+                     <tr>
+                          <tr>
+                    <td>Estado Maquina:</td> 
+                    <td><input type="text" name="EstadoMaquina" value=${maquina.EstadoMaquina}></td>
+                </tr>
+                <tr>
+                    <td>Caracteristicas Maquina:</td> 
+                    <td><input type="text" name="Caracteristicas" value=${maquina.Caracteristicas}></td>
+                </tr>
+                <tr>
                 ${mensaje}
                 </tr>
                     <tr>

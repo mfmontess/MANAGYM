@@ -100,8 +100,15 @@
                     <td><input type="text" name="NombreMaquina"></td>
                 </tr>
                 <tr>
-                    <td><input type="image"  src="imgiconos/deshacer.png" value="Limpiar" name="accion">
-                    <td><input type="image" src="imgiconos/guardar.png" value="Guardar" name="accion" ></td> 
+                    <td>Estado Maquina:</td> 
+                    <td><input type="text" name="EstadoMaquina"></td>
+                </tr>
+                <tr>
+                    <td>Caracteristicas Maquina:</td> 
+                    <td><input type="text" name="Caracteristicas"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" src="imgiconos/guardar.png" value="Guardar" name="accion"></td> 
                     <td><input type="image" src="imgiconos/buscar.png" value="Consultar" name="accion"></td>
                 </tr>
             </table>

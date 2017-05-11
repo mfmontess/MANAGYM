@@ -6,11 +6,11 @@ import java.util.ArrayList;
 
 
 public class DBManager {
-    private final String db = "managym";
-    private final String url = "jdbc:mysql://sitewebs.cloudapp.net:3306/"+db;
-    private final String driver = "com.mysql.jdbc.Driver";
-    private final String usuario = "administrador";
-    private final String password = "managym2017";
+    private final String db = "Managym";
+    private final String url = "jdbc:postgresql://localhost:5432/"+db;
+    private final String driver = "org.postgresql.Driver";
+    private final String usuario = "postgres";
+    private final String password = "andres06";
     
     public DBManager(){
     }

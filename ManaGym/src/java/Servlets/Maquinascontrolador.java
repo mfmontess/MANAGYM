@@ -64,11 +64,14 @@ public class Maquinascontrolador extends HttpServlet {
         String id = request.getParameter("id");
         String IdMaquina = request.getParameter("IdMaquina");
         String NombreMaquina= request.getParameter("NombreMaquina");
-        String maquina1= request.getParameter("maquina");
+        String Caracteristicas= request.getParameter("Caracteristicas");
+        String EstadoMaquina= request.getParameter("EstadoMaquina");
+        //String maquina1= request.getParameter("maquina");
         String accion = request.getParameter("accion");
         Maquina maquina = new Maquina();
+        System.out.println("este es el error"+accion);
         if(accion.equals("Guardar")){
-            maquina = new Maquina (IdMaquina,NombreMaquina);
+            maquina = new Maquina (IdMaquina,NombreMaquina,Caracteristicas,EstadoMaquina);
             MaquinaBD.mgr.guardar(maquina, true);
             sesion.setAttribute("maquina", maquina);
             sesion.setAttribute("mensaje", "Registro guardado con exito");
