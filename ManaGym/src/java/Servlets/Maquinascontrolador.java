@@ -66,7 +66,7 @@ public class Maquinascontrolador extends HttpServlet {
         String NombreMaquina= request.getParameter("NombreMaquina");
         String Caracteristicas= request.getParameter("Caracteristicas");
         String EstadoMaquina= request.getParameter("EstadoMaquina");
-        //String maquina1= request.getParameter("maquina");
+        String maquina1= request.getParameter("maquina");
         String accion = request.getParameter("accion");
         Maquina maquina = new Maquina();
         System.out.println("este es el error"+accion);

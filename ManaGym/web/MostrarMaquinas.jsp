@@ -60,6 +60,8 @@
         </style>
     </head>
     <body>
+    <jsp:useBean id="Maquina" class="Managym.Maquina" scope="session" />
+            <jsp:setProperty name="Maquina" property="*" />
        <h1>MANAGYM</h1>
         <br>
         <br>
@@ -70,20 +72,20 @@
                 
                     <tr>
                         <td>Id Maquina</td>
-                        <td><input type="text" name="IdMaquina" value=${maquina.IdMaquina}></td>
+                        <td><input type="text" name="IdMaquina" value=${maquina.idMaquina}></td>
                     </tr>
                      <tr>
                         <td>Nombre Maquina</td>
-                        <td><input type="text" name="NombreMaquina" value=${maquina.NombreMaquina}></td>
+                        <td><input type="text" name="NombreMaquina" value=${maquina.nombreMaquina}></td>
                     </tr>
                      <tr>
                           <tr>
                     <td>Estado Maquina:</td> 
-                    <td><input type="text" name="EstadoMaquina" value=${maquina.EstadoMaquina}></td>
+                    <td><input type="text" name="EstadoMaquina" value=${maquina.estadoMaquina}></td>
                 </tr>
                 <tr>
                     <td>Caracteristicas Maquina:</td> 
-                    <td><input type="text" name="Caracteristicas" value=${maquina.Caracteristicas}></td>
+                    <td><input type="text" name="Caracteristicas" value=${maquina.caracteristicas}></td>
                 </tr>
                 <tr>
                 ${mensaje}
