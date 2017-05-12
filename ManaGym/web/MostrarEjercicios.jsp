@@ -75,26 +75,26 @@
                 
                     <tr>
                         <td>Id Ejercicio</td>
-                        <td><input type="text" name="IdEjercicio" value=${ejercicio.IdEjercicio}></td>
+                        <td><input type="text" name="IdEjercicio" value=${ejercicio.idEjercicio}></td>
                     </tr>
                     <tr>
                     <td>Nombre Ejercicio:</td> 
-                    <td><input type="text" name="NombreEjercicio" value=${Ejercicio.NombreEjercicio} size="40"></td>
+                    <td><input type="text" name="NombreEjercicio" value=${Ejercicio.nombreEjercicio}></td>
                 </tr>
                 <tr>
                     <td>Descripcion Ejercicio:</td> 
-                    <td><input type="text" name="DescripcionEjercicio" value=${Ejercicio.DescripcionEjercicio} size="40"></td>
+                    <td><input type="text" name="DescripcionEjercicio" value=${Ejercicio.descripcionEjercicio}></td>
                 </tr>
                 <tr>
                     <td>Video Ejercicio:</td> 
-                    <td><input type="text" name="VideoEjercicio" value=${Ejercicio.VideoEjercicio} size="40"></td>
+                    <td><input type="text" name="VideoEjercicio" value=${Ejercicio.videoEjercicio}></td>
                 </tr>
                 <tr>
                     <tr>
                 ${mensaje}
                 </tr>
                     <tr>
-                        <td><input type="image" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
+                        <td><input type="submit" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
                     </tr>
             </table>
                 

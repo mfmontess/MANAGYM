@@ -75,27 +75,27 @@
             <table>
                 <tr>
                     <td>Id Ejercicios:</td>
-                    <td> <input type="text" name="IdEjercicio" value=${Ejercicios.IdEjercicio}></td>
+                    <td> <input type="text" name="IdEjercicio" value=${Ejercicios.idEjercicio}></td>
                 </tr>
                 <tr>
                     <td>Nombre Ejercicios:</td>
-                    <td> <input type="text" name="NombreEjercicio" value=${Ejercicios.NombreEjercicio} size="40"></td>
+                    <td> <input type="text" name="NombreEjercicio" value=${Ejercicios.nombreEjercicio}></td>
                 </tr>
                 <tr>
                     <td>Descripcion Ejercicios:</td>
-                    <td> <input type="text" name="DescripcionEjercicio" value=${Ejercicios.DescripcionEjercicio} size="40"></td>
+                    <td> <input type="text" name="DescripcionEjercicio" value=${Ejercicios.descripcionEjercicio}></td>
                 </tr>
                 <tr>
                     <td>Video Ejercicios:</td>
-                    <td> <input type="text" name="VideoEjercicio" value=${Ejercicios.VideoEjercicio} size="40"></td>
+                    <td> <input type="text" name="VideoEjercicio" value=${Ejercicios.videoEjercicio}></td>
                 </tr>
                 <tr>
                 ${mensaje}
                 </tr>
                 <tr>
-                    <td><input type="image" src="imgiconos/modificar.png" value="Modificar" name="accion"></td>
-                    <td><input type="image" src="imgiconos/eliminar.png" value="Eliminar" name="accion"></td>
-                    <td><input type="image" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
+                    <td><input type="submit" src="imgiconos/modificar.png" value="Modificar" name="accion"></td>
+                    <td><input type="submit" src="imgiconos/eliminar.png" value="Eliminar" name="accion"></td>
+                    <td><input type="submit" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
                 </tr>
             </table>
                 </fieldset>
