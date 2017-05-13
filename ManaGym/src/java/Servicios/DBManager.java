@@ -5,32 +5,13 @@ import java.sql.*;
 import java.util.ArrayList;
 
 
+
 public class DBManager {
-     protected String dominio = "http://181.48.135.254:3306";
-    protected String base = "managym";
-    protected String usuario = "managym";
-    protected String contrasena = "managym";
-    protected Connection conn;
-
-    public void conectar() throws SQLException, Exception {
-
-        Class.forName("com.mysql.jdbc.Driver");
-        conn = DriverManager.getConnection("jdbc:mysql://" + dominio + "/" + base, usuario, contrasena);
-    }
-
-    public void cerrarConexion() throws SQLException, Exception {
-        if (null != conn) {
-            conn.close();
-        }
-    }
-    
-    /*--SQL SERVER-------------
-    private final String db = "Managym";
-    private final String url = "jdbc:sqlserver://managym.mssql.somee.com;" +
-            "user=managym; password=managym2017; databaseName="+db+";";
-    private final String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    private final String db = "managym";
+    private final String url = "jdbc:mysql://181.48.135.254:3306/"+db;
+    private final String driver = "com.mysql.jdbc.Driver";
     private final String usuario = "managym";
-    private final String password = "managym2017";
+    private final String password = "managym";
     
     public DBManager(){
     }
@@ -42,7 +23,7 @@ public class DBManager {
         try {
             Class.forName(driver);
             System.out.println("\nConectando a la Base de Managym....\n");
-            Connection con= DriverManager.getConnection(url);
+            Connection con= DriverManager.getConnection(url, usuario,password);
             if(con==null){
             System.out.println("\nNo esta conectado  la base\n");
             return x;
@@ -88,6 +69,7 @@ public class DBManager {
        // JOptionPane.showMessageDialog(null, sz+"\n"+"VIOLA LA LLAVE DE UNICIDAD DEL CAMPO A AGREGAR, INTENTE NUEVAMENTE....");
         System.out.println("Exception :"+e);
         }
-        }*/
+        }
    
     }
+
