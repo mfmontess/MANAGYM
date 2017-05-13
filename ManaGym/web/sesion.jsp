@@ -2,7 +2,11 @@
 <!DOCTYPE HTML>
 <html>
     <head>
+<<<<<<< HEAD
         <title>GYM</title>
+=======
+        <title>ManaGym</title>
+>>>>>>> origin/DEV
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -27,7 +31,7 @@
         <div class="error_page">
             <!--/login-top-->
             <div class="error-top">
-                <h2 class="inner-tittle page">GYM</h2>
+                <h2 class="inner-tittle page">ManaGYM</h2>
                 <div class="login">
                     <h3 class="inner-tittle t-inner">Login</h3>
                     <form method="post" action="ingresar1">
