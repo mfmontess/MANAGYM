@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Bogota travel</title>
+        <title>GYM</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -24,39 +24,30 @@
     </head> 
     <body>
         <!--/login-->
-
         <div class="error_page">
             <!--/login-top-->
-
             <div class="error-top">
                 <h2 class="inner-tittle page">GYM</h2>
                 <div class="login">
                     <h3 class="inner-tittle t-inner">Login</h3>
-
                     <form method="post" action="ingresar1">
                         <input type="text" name="usuario" class="text" placeholder="Usuario"  required>
                         <input type="password" name="pass" placeholder="Password" required>
                         <div class="submit"><input type="submit"  value="Login" ></div>
                         <div class="clearfix"></div>
-
                         <div class="new">                            
                             <p class="checkbox11">No esta registrado ? <a href="registrar.html">Registrese</a></p>
                             <div class="clearfix"></div>
                         </div>
                     </form>
                 </div>
-
-
             </div>
-
-
             <!--//login-top-->
         </div>
 
         <!--//login-->
         <!--footer section start-->
         <div class="footer">
-
             <p>&copy 2017  . All Rights Reserved | Design by </p>
         </div>
         <!--footer section end-->
