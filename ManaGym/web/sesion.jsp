@@ -2,11 +2,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-<<<<<<< HEAD
-        <title>GYM</title>
-=======
         <title>ManaGym</title>
->>>>>>> origin/DEV
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
