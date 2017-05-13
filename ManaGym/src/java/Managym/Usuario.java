@@ -11,18 +11,19 @@ import java.sql.ResultSet;
  *
  * @author daniel
  */
-public class Usuario {
-   private int id;   
+    public class Usuario {
+    private int id;   
     private String usuario;
     private String contraseña;
-    private int perfil;
+    private Perfil perfil;
     private int estado;
+    
     
 
     public Usuario() {
     }
 
-    public Usuario(int id,  String usuario, String contraseña, int perfil, int estado) {
+    public Usuario(int id,  String usuario, String contraseña, Perfil perfil, int estado) {
         this.id = id;      
         this.usuario = usuario;
         this.contraseña = contraseña;
@@ -35,11 +36,19 @@ public class Usuario {
             id = rs.getInt("IdUsuario");
             usuario = rs.getString("NombreUsuario");
             contraseña = rs.getString("ContrasenaUsuario");            
-            perfil = rs.getInt("IdPerfil");
+            perfil = new Perfil(rs.getInt("IdPerfil"),rs.getString("NombrePerfil"));
             estado = rs.getInt("IdEstado");
         } catch (Exception e) {
         }
     }
+
+    public Usuario(String usuario, String password, Perfil perfil) {
+        this.usuario = usuario;
+        this.contraseña = password;
+        this.perfil = perfil;
+    }
+    
+    
 
     public int getId() {
         return id;
@@ -71,11 +80,11 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    public int getPerfil() {
+    public Perfil getPerfil() {
         return perfil;
     }
 
-    public void setPerfil(int perfil) {
+    public void setPerfil(Perfil perfil) {
         this.perfil = perfil;
     }
 

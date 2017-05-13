@@ -4,30 +4,18 @@ package Managym;
 import java.util.ArrayList;
 
 
-public class Instructor {
+public class Instructor extends Persona {
     
-private int IdInstructor;
+    private int IdInstructor;
     private String NombreInstructor;
-    private ArrayList<Ejercicios> ejercicios;
     
-    public Instructor(int IdInstructor, String NombreInstructor, ArrayList<Ejercicios> ejercicios) {
+    public Instructor(int IdInstructor, String NombreInstructor) {
         this.IdInstructor = IdInstructor;
         this.NombreInstructor = NombreInstructor;
-        this.ejercicios = ejercicios;
     }
     
     public Instructor (){
-    ejercicios = new ArrayList();
-    }
-
-    public ArrayList<Ejercicios> getEjercicios() {
-        return ejercicios;
-    }
-
-    public void setEjercicios(ArrayList<Ejercicios> ejercicios) {
-        this.ejercicios = ejercicios;
-    }
-    
+    }    
     
     public int getIdInstructor() {
         return IdInstructor;
@@ -46,6 +34,6 @@ private int IdInstructor;
     }
    @Override
     public String toString() {
-       return "\n"+IdInstructor+"\n"+NombreInstructor;
+       return "\n"+IdInstructor+"\n"+super.getIdentificacion()+"\n"+NombreInstructor;
     }
 }

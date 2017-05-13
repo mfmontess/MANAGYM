@@ -4,17 +4,18 @@ package Managym;
 import java.util.ArrayList;
 
 
-public class Cliente {
-    private int     identificacion;
-    private int id;
-    private String  NombreCliente;
+public class Cliente extends Persona {
+    private int idCliente;
+    private String  nombreCliente;
     private ArrayList<FichaMedica> fichas;
     private ArrayList<Rutina> rutinas;
     private ArrayList<Reporte> reportes;
      
-    public Cliente(int identificacion, String NombreCliente) {
-        this.identificacion = identificacion;
-        this.NombreCliente = NombreCliente;
+    public Cliente(String NombreCliente) {
+        this.nombreCliente = NombreCliente;
+        fichas = new ArrayList();
+        rutinas = new ArrayList();
+        reportes = new ArrayList();
     }
  
     public Cliente (){
@@ -23,12 +24,12 @@ public class Cliente {
         reportes = new ArrayList();
     }
 
-    public int getId() {
-        return id;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdCliente(int id) {
+        this.idCliente = id;
     }
      
     public ArrayList<FichaMedica> getFichas() {
@@ -54,26 +55,16 @@ public class Cliente {
     public void setReportes(ArrayList<Reporte> reportes) {
         this.reportes = reportes;
     }
-    
-  
-    
-    public int getIdentificacion() {
-        return identificacion;
-    }
-
-    public void setIdentificacion(int identificacion) {
-        this.identificacion = identificacion;
-    }
 
     public String getNombreCliente() {
-        return NombreCliente;
+        return nombreCliente;
     }
 
     public void setNombreCliente(String NombreCliente) {
-        this.NombreCliente = NombreCliente;
+        this.nombreCliente = NombreCliente;
     }
     @Override
     public String toString() {
-       return "\n"+identificacion+"\n"+NombreCliente;
+       return "\n"+idCliente+"\n"+super.getIdentificacion()+"\n"+nombreCliente;
     }
 }
