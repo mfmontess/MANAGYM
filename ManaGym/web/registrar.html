@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>MANAGYM</title>
+        <title>GYM</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -27,64 +27,27 @@
 
         <div class="error_page">
             <!--/login-top-->
-            <script>
-            $(document).ready(function() {
-                $("input[name$='usuario']").click(function() {
-        var test = $(this).val();
 
-        $("div.desc").hide();
-        $("#usuario" + test).show();
-    });
-});
-    </script>
             <div class="error-top">
-                <h2 class="inner-tittle page">MANAGYM</h2>
+                <h2 class="inner-tittle page">GYM</h2>
                 <div class="login">
                     <h3 class="inner-tittle t-inner">registrarse</h3>
-                    <div id="myRadioGroup">
-                        Instructor<input type="radio" name="usuario" checked="checked" value="0"  />
-                        Cliente<input type="radio" name="usuario" value="1" />
+                    <form action="registrar">
+                        <input type="text" name="id" class="text" placeholder="Documento"  required>
+                        <input type="text" name="usuario" class="text" placeholder="Usuario"  required>                        
+                        <input type="password" name="pass"  placeholder="Password"  required>
+                        <div class="sign-up">
 
-                        <div id="usuario0" class="desc">
-                            <!--INSTRUCTOR-->
-                           <form action="registrar">
-                                <input type="text" name="id" class="text" placeholder="Documento"  required>
-                                <input type="text" name="usuario" class="text" placeholder="Nombre Instructor"  required>                        
-                                <input type="password" name="pass"  placeholder="Password"  required>
-                                <div class="sign-up">
+                            <input type="submit"  value="Enviar">
 
-                                    <input type="submit"  value="Enviar">
-
-                                </div>
-                                <div class="clearfix"></div>
-
-                                <div class="new">                            
-                                    <p class="sign">iniciar sesion ? <a href="sesion.jsp">Login</a></p>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </form>
                         </div>
-                        <div id="usuario1" class="desc" style="display: none;">
-                            <!--CLIENTE-->
-                           <form action="registrar">
-                                <input type="text" name="id" class="text" placeholder="Documento"  required>
-                                <input type="text" name="usuario" class="text" placeholder="Nombre Cliente"  required>                        
-                                <input type="password" name="pass"  placeholder="Password"  required>
-                                <div class="sign-up">
+                        <div class="clearfix"></div>
 
-                                    <input type="submit"  value="Enviar">
-
-                                </div>
-                                <div class="clearfix"></div>
-
-                                <div class="new">                            
-                                    <p class="sign">iniciar sesion ? <a href="sesion.jsp">Login</a></p>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </form>
+                        <div class="new">                            
+                            <p class="sign">iniciar sesion ? <a href="sesion.jsp">Login</a></p>
+                            <div class="clearfix"></div>
                         </div>
-                    </div>
-                    
+                    </form>
                 </div>
 
             </div>
