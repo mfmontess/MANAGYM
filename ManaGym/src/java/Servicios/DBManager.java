@@ -6,6 +6,25 @@ import java.util.ArrayList;
 
 
 public class DBManager {
+     protected String dominio = "http://181.48.135.254:3306";
+    protected String base = "managym";
+    protected String usuario = "managym";
+    protected String contrasena = "managym";
+    protected Connection conn;
+
+    public void conectar() throws SQLException, Exception {
+
+        Class.forName("com.mysql.jdbc.Driver");
+        conn = DriverManager.getConnection("jdbc:mysql://" + dominio + "/" + base, usuario, contrasena);
+    }
+
+    public void cerrarConexion() throws SQLException, Exception {
+        if (null != conn) {
+            conn.close();
+        }
+    }
+    
+    /*--SQL SERVER-------------
     private final String db = "Managym";
     private final String url = "jdbc:sqlserver://managym.mssql.somee.com;" +
             "user=managym; password=managym2017; databaseName="+db+";";
@@ -69,6 +88,6 @@ public class DBManager {
        // JOptionPane.showMessageDialog(null, sz+"\n"+"VIOLA LA LLAVE DE UNICIDAD DEL CAMPO A AGREGAR, INTENTE NUEVAMENTE....");
         System.out.println("Exception :"+e);
         }
-        }
+        }*/
    
     }
