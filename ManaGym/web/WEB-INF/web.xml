@@ -16,6 +16,10 @@
         <servlet-name>GestionarRutinasControlador</servlet-name>
         <servlet-class>Servlets.GestionarRutinasControlador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Registrar</servlet-name>
+        <servlet-class>Servlets.Registrar</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Maquinascontrolador</servlet-name>
         <url-pattern>/Maquinascontrolador</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>GestionarRutinasControlador</servlet-name>
         <url-pattern>/GestionarRutinasControlador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Registrar</servlet-name>
+        <url-pattern>/Registrar</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
