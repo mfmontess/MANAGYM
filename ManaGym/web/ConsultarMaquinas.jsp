@@ -71,11 +71,11 @@
             <table>
                 <tr>
                     <td>Id Maquina:</td>
-                    <td> <input type="text" name="IdMaquina" value=${maquina.IdMaquina}></td>
+                    <td> <input type="text" name="IdMaquina" value=${maquina.idMaquina}></td>
                 </tr>
                 <tr>
                     <td>Nombre Maquina:</td>
-                    <td> <input type="text" name="NombreMaquina" value=${Maquina.NombreMaquina} size="40"></td>
+                    <td> <input type="text" name="NombreMaquina" value=${Maquina.nombreMaquina} ></td>
                 </tr>
                 <tr>
                 ${mensaje}

@@ -11,9 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <style>
-              body {
-                 background-image: url(imgfondos/fit2.jpg); 
-                }
+              
                 h1 {
                     color: black;
                     font-family: fantasy;
@@ -68,33 +66,32 @@
        <h1>MANAGYM</h1>
         <br>
         <br>
-        <form name="form1" action="Ejerciciocontrolador">
+        <form name="form1" action="Ejercicioscontrolador">
             <fieldset>
             <table>
                 <legend>EJERCICIOS</legend>
-                
                     <tr>
-                        <td>Id Ejercicio</td>
-                        <td><input type="text" name="IdEjercicio" value=${ejercicio.idEjercicio}></td>
+                        <td>Id Ejercicio: </td>
+                        <td><input type="text" name="idejercicio" value=${ejercicio.idejercicio}></td>
                     </tr>
                     <tr>
                     <td>Nombre Ejercicio:</td> 
-                    <td><input type="text" name="NombreEjercicio" value=${Ejercicio.nombreEjercicio}></td>
+                    <td><input type="text" name="nombreejercicio" value=${ejercicio.nombreejercicio}></td>
                 </tr>
                 <tr>
                     <td>Descripcion Ejercicio:</td> 
-                    <td><input type="text" name="DescripcionEjercicio" value=${Ejercicio.descripcionEjercicio}></td>
+                    <td><input type="text" name="descripcionejercicio" value=${ejercicio.descripcionejercicio}></td>
                 </tr>
                 <tr>
                     <td>Video Ejercicio:</td> 
-                    <td><input type="text" name="VideoEjercicio" value=${Ejercicio.videoEjercicio}></td>
+                    <td><input type="text" name="videoejercicio" value=${ejercicio.videoejercicio}></td>
                 </tr>
                 <tr>
                     <tr>
                 ${mensaje}
                 </tr>
                     <tr>
-                        <td><input type="submit" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
+                        <td><input type="submit"  value="Regresar" name="accion"></td>
                     </tr>
             </table>
                 

@@ -8,9 +8,9 @@ public class Instructor {
     
 private int IdInstructor;
     private String NombreInstructor;
-    private ArrayList<Ejercicios> ejercicios;
+    private ArrayList<Ejercicio> ejercicios;
     
-    public Instructor(int IdInstructor, String NombreInstructor, ArrayList<Ejercicios> ejercicios) {
+    public Instructor(int IdInstructor, String NombreInstructor, ArrayList<Ejercicio> ejercicios) {
         this.IdInstructor = IdInstructor;
         this.NombreInstructor = NombreInstructor;
         this.ejercicios = ejercicios;
@@ -20,11 +20,11 @@ private int IdInstructor;
     ejercicios = new ArrayList();
     }
 
-    public ArrayList<Ejercicios> getEjercicios() {
+    public ArrayList<Ejercicio> getEjercicios() {
         return ejercicios;
     }
 
-    public void setEjercicios(ArrayList<Ejercicios> ejercicios) {
+    public void setEjercicios(ArrayList<Ejercicio> ejercicios) {
         this.ejercicios = ejercicios;
     }
     
