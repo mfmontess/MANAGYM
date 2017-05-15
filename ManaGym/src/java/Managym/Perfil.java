@@ -13,9 +13,13 @@ public class Perfil {
     private int id;
     private String nombre;
 
-    Perfil(int id, String nombre) {
+    public Perfil(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
+    }
+    
+    public Perfil(int id){
+        this.id = id;
     }
 
     public int getId() {

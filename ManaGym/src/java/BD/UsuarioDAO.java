@@ -5,6 +5,7 @@
  */
 package BD;
 
+import Managym.Perfil;
 import Managym.Usuario;
 import conexion.Conexion;
 import java.sql.PreparedStatement;
@@ -49,10 +50,9 @@ public class UsuarioDAO extends Conexion {
                     rs.getInt("IdUsuario"),
                     rs.getString("NombreUsuario"),
                     rs.getString("ContrasenaUsuario"),                    
-                    rs.getInt("IdPerfil"),                    
+                    new Perfil(rs.getInt("IdPerfil"),rs.getString("NombrePerfil")),                    
                     rs.getInt("IdEstado")
             );
-
         }
         cerrarConexion();
         return u;

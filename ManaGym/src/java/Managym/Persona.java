@@ -15,6 +15,15 @@ public class Persona {
     private String nombre;
     private String celular;
     private String direccion;
+    private Usuario usuario;
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
     public int getEdad() {
         return edad;

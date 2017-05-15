@@ -5,7 +5,7 @@
  */
 package Servlets;
 
-import BD.UsuarioBD;
+import BD.*;
 import Managym.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -66,13 +66,17 @@ public class RegistroUsuarioControlador extends HttpServlet {
             String usuario = request.getParameter("usuario");
             String password = request.getParameter("pass");
             int perfil = Integer.parseInt(request.getParameter("perfil"));
-            UsuarioBD.mgr.insert(new Usuario(usuario,password,new Perfil(perfil)));
-            Persona obj = FactoryPersona.CrearPersona(perfil,usuario,password,documento);
+            Usuario user = new Usuario(usuario,password,new Perfil(perfil));
+            UsuarioBD.mgr.insert(user);
+            Persona obj = FactoryPersona.CrearPersona(user);
+            PersonaBD.mgr.insert(obj);
+            String msj = "Su registro se ha realizado satisfactoriamente, en breve espere su activación.";
+            sesion.setAttribute("persona", obj);
         } catch(Exception e){
             String msj = "No se pudo registrar el usuario debido al siguiente error: " + e.getMessage();
             sesion.setAttribute("error", msj);
         }
-        request.getRequestDispatcher("registrar.html").forward(request, response);
+        request.getRequestDispatcher("RegistrarUsuario.jsp").forward(request, response);
     }
 
     /**
