@@ -36,19 +36,21 @@
                         <div class="submit"><input type="submit"  value="Login" ></div>
                         <div class="clearfix"></div>
                         <div class="new">                            
-                            <p class="checkbox11">No esta registrado ? <a href="registrar.html">Registrese</a></p>
+                            <p class="checkbox11">No esta registrado ? <a href="RegistrarUsuario.jsp">Registrese</a></p>
                             <div class="clearfix"></div>
                         </div>
                     </form>
                 </div>
             </div>
-            <!--//login-top-->
         </div>
-
+        <!--//login-top-->
         <!--//login-->
         <!--footer section start-->
         <div class="footer">
-            <p>&copy 2017  . All Rights Reserved | Design by </p>
+            <div class="error-btn">
+                <a class="read fourth" href="index.html">Home</a>
+            </div>
+            <p>&copy 2016 Augment . All Rights Reserved | Design by </p>
         </div>
         <!--footer section end-->
         <!--/404-->

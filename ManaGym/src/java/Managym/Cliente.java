@@ -6,17 +6,9 @@ import java.util.ArrayList;
 
 public class Cliente extends Persona {
     private int idCliente;
-    private String  nombreCliente;
     private ArrayList<FichaMedica> fichas;
     private ArrayList<Rutina> rutinas;
     private ArrayList<Reporte> reportes;
-     
-    public Cliente(String NombreCliente) {
-        this.nombreCliente = NombreCliente;
-        fichas = new ArrayList();
-        rutinas = new ArrayList();
-        reportes = new ArrayList();
-    }
  
     public Cliente (){
         fichas = new ArrayList();
@@ -55,16 +47,9 @@ public class Cliente extends Persona {
     public void setReportes(ArrayList<Reporte> reportes) {
         this.reportes = reportes;
     }
-
-    public String getNombreCliente() {
-        return nombreCliente;
-    }
-
-    public void setNombreCliente(String NombreCliente) {
-        this.nombreCliente = NombreCliente;
-    }
+    
     @Override
     public String toString() {
-       return "\n"+idCliente+"\n"+super.getIdentificacion()+"\n"+nombreCliente;
+       return "\n"+idCliente+"\n"+super.getIdentificacion()+"\n"+super.getNombre();
     }
 }

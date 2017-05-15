@@ -11,11 +11,11 @@ package Managym;
  */
 public class FactoryPersona {
 
-    public static Persona CrearPersona(int perfil, String usuario, String password, String documento) throws Exception {
-        switch (perfil) {
-            case 1:
-                return new Cliente();
+    public static Persona CrearPersona(Usuario usuario) throws Exception {
+        switch (usuario.getPerfil().getId()) {
             case 2:
+                return new Cliente();
+            case 3:
                 return new Instructor();
             default:
                 throw new Exception("Tipo de perfil no definido en el sistema");
