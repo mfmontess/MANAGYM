@@ -62,8 +62,11 @@ public class RegistroUsuarioControlador extends HttpServlet {
         HttpSession sesion = request.getSession();
         
         try{
-            String documento = request.getParameter("id");
+            String documento = request.getParameter("documento");
             String usuario = request.getParameter("usuario");
+            String nombre = request.getParameter("nombre");
+            String direccion = request.getParameter("direccion");
+            String celular = request.getParameter("celular");
             String password = request.getParameter("pass");
             int perfil = Integer.parseInt(request.getParameter("perfil"));
             Usuario user = new Usuario(usuario,password,new Perfil(perfil),2);

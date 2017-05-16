@@ -49,20 +49,20 @@
                         <div id="myRadioGroup">
                             Instructor<input type="radio" name="perfil" checked="checked" value="2"/>
                             Cliente<input type="radio" name="perfil" value="3"/>
+                            <input type="text" name="documento" class="text" placeholder="Documento"  required>
                             <div id="usuario2" class="desc">
                                 <!--INSTRUCTOR-->
-                                    <input type="text" name="id" class="text" placeholder="Documento"  required>
-                                    <input type="text" name="usuario" class="text" placeholder="Nombre Instructor"  required>
-                                    <input type="password" name="pass"  placeholder="Password"  required>
+                                    <input type="text" name="nombre" class="text" placeholder="Nombre Instructor"  required>
                             </div>
                             <div id="usuario3" class="desc" style="display: none;">
                                 <!--CLIENTE-->
-                                <input type="text" name="documento" class="text" placeholder="Documento"  required>
                                 <input type="text" name="nombre" class="text" placeholder="Nombre Cliente"  required>
-                                <input type="text" name="usuario" class="text" placeholder="Codigo Usuario"  required>
-                                <input type="password" name="pass"  placeholder="Password"  required>
                             </div>
                         </div>
+                        <input type="text" name="direccion" class="text" placeholder="Dirección"  required>
+                        <input type="text" name="celular" class="text" placeholder="Celular"  required>
+                        <input type="text" name="usuario" class="text" placeholder="Codigo Usuario"  required>
+                        <input type="password" name="pass"  placeholder="Password"  required>
                         <div class="sign-up">
                             <input type="submit"  value="Enviar">
                         </div>
