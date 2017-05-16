@@ -34,6 +34,8 @@ public class UsuarioBD extends DBManager{
     }
 
     public void insert(Usuario usuario) {
-        execute("insert into usuarios (NombreUsuario,ContrasenaUsuario,IdPerfil,IdEstado) values ('" + usuario.getUsuario() +"','" + usuario.getContraseña() + "'," + usuario.getPerfil().getId() + ",2)");
+        execute("insert into usuarios (NombreUsuario,ContrasenaUsuario,IdPerfil,IdEstado) values ('"
+                + usuario.getNombreUsuario() + "','" + usuario.getContraseña() + "',"         
+                + usuario.getPerfil().getId() + "," + usuario.getEstado());
     }    
 }

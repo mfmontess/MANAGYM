@@ -11,7 +11,6 @@ import conexion.Conexion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 
 /**
@@ -46,13 +45,7 @@ public class UsuarioDAO extends Conexion {
         ResultSet rs = ps.executeQuery();
 
         while (rs.next()) {
-            u = new Usuario(
-                    rs.getInt("IdUsuario"),
-                    rs.getString("NombreUsuario"),
-                    rs.getString("ContrasenaUsuario"),                    
-                    new Perfil(rs.getInt("IdPerfil"),rs.getString("NombrePerfil")),                    
-                    rs.getInt("IdEstado")
-            );
+            u = new Usuario(rs);
         }
         cerrarConexion();
         return u;
@@ -70,7 +63,7 @@ public class UsuarioDAO extends Conexion {
                 + "VALUES (?, ?, ?, 2 , 1 );";
         PreparedStatement ps = conn.prepareStatement(sql);
         ps.setInt(1, U.getId());
-        ps.setString(2, U.getUsuario());
+        ps.setString(2, U.getNombreUsuario());
         ps.setString(3, U.getContraseña());
        
 

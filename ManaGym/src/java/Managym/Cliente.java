@@ -4,18 +4,11 @@ package Managym;
 import java.util.ArrayList;
 
 
-public class Cliente {
-    private int     identificacion;
+public class Cliente extends Persona{
     private int id;
-    private String  NombreCliente;
     private ArrayList<FichaMedica> fichas;
     private ArrayList<Rutina> rutinas;
     private ArrayList<Reporte> reportes;
-     
-    public Cliente(int identificacion, String NombreCliente) {
-        this.identificacion = identificacion;
-        this.NombreCliente = NombreCliente;
-    }
  
     public Cliente (){
         fichas = new ArrayList();
@@ -55,25 +48,8 @@ public class Cliente {
         this.reportes = reportes;
     }
     
-  
-    
-    public int getIdentificacion() {
-        return identificacion;
-    }
-
-    public void setIdentificacion(int identificacion) {
-        this.identificacion = identificacion;
-    }
-
-    public String getNombreCliente() {
-        return NombreCliente;
-    }
-
-    public void setNombreCliente(String NombreCliente) {
-        this.NombreCliente = NombreCliente;
-    }
     @Override
     public String toString() {
-       return "\n"+identificacion+"\n"+NombreCliente;
+       return id + "\n" + super.getIdentificacion() + "\n" + super.getNombre();
     }
 }

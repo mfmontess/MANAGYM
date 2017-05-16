@@ -25,7 +25,7 @@ public class ClienteBD extends DBManager {
     public void update(Cliente cliente) {
         execute( "update clientes"
                 + "set nombreCliente = " + cliente.getNombre()
-                + "where  idCliente = " + cliente.getIdCliente()
+                + "where  idCliente = " + cliente.getId()
         );
     }
 

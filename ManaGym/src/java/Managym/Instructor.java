@@ -4,7 +4,7 @@ package Managym;
 import java.util.ArrayList;
 
 
-public class Instructor {
+public class Instructor extends Persona {
     
 private int IdInstructor;
     private String NombreInstructor;

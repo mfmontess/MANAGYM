@@ -66,7 +66,7 @@ public class RegistroUsuarioControlador extends HttpServlet {
             String usuario = request.getParameter("usuario");
             String password = request.getParameter("pass");
             int perfil = Integer.parseInt(request.getParameter("perfil"));
-            Usuario user = new Usuario(usuario,password,new Perfil(perfil));
+            Usuario user = new Usuario(usuario,password,new Perfil(perfil),2);
             UsuarioBD.mgr.insert(user);
             Persona obj = FactoryPersona.CrearPersona(user);
             PersonaBD.mgr.insert(obj);
