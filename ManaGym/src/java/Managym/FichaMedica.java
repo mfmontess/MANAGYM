@@ -1,6 +1,8 @@
 
 package Managym;
 
+import java.sql.ResultSet;
+
 
 public class FichaMedica {
             private String id;
@@ -15,6 +17,8 @@ public class FichaMedica {
     private String Peso;
     private String Altura; 
     
+    public FichaMedica (){
+    }
     public FichaMedica(String id, String AnchoEspalda, String ContornoBrazo, String ContornoCintura, String ContornoMuslo, String ContornoPantorrilla, String ContornoPecho, String FechaActualizacion, String IdFicha, String Peso, String Altura) {
         this.id = id;
         this.AnchoEspalda = AnchoEspalda;
@@ -40,7 +44,22 @@ public class FichaMedica {
         this.Peso = Peso;
         this.Altura = Altura;
     }
-    
+    public FichaMedica (ResultSet rs){
+        try{
+            id= rs.getString("id");
+            IdFicha = rs.getString("idficha");
+            Peso  = rs.getString("peso");
+            Altura = rs.getString("altura");
+            FechaActualizacion = rs.getString("fechaactualizacion");
+            ContornoPecho = rs.getString("contornopecho");
+            ContornoPantorrilla = rs.getString("contornopantorrilla");
+            ContornoMuslo = rs.getString("ContornoMuslo");
+            ContornoBrazo = rs.getString("contornobrazo");
+            AnchoEspalda = rs.getString("anchoespalda");
+            ContornoCintura = rs.getString("contornocintura");
+        } catch (Exception e){
+        }
+        }
     public String getId() {
         return id;
     }
@@ -129,7 +148,10 @@ public class FichaMedica {
         this.Altura = Altura;
     }
 
-    
-    
+    @Override
+    public String toString(){
+        return "\n"+id+"\n"+IdFicha+"\n"+Peso+"\n"+Altura+"\n"+ContornoPecho+"\n"+ContornoPantorrilla+"\n"+ContornoMuslo+"\n"+ContornoBrazo+"\n"+AnchoEspalda
+                +"\n"+FechaActualizacion+"\n"+ContornoCintura+"\n";
+    }
     
 }

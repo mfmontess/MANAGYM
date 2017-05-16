@@ -66,7 +66,7 @@
        <h1>MANAGYM</h1>
         <br>
         <br>
-        <form name="form1" action="Ejercicioscontrolador">
+        <form name="form2" action="Ejercicioscontrolador">
             <fieldset>
             <table>
                 <legend>EJERCICIOS</legend>
