@@ -16,6 +16,10 @@
         <servlet-name>Rutinacontrolador</servlet-name>
         <servlet-class>Servlets.Rutinacontrolador</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FichaMedicaControlador</servlet-name>
+        <servlet-class>Servlets.FichaMedicaControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Maquinascontrolador</servlet-name>
         <url-pattern>/Maquinascontrolador</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>Rutinacontrolador</servlet-name>
         <url-pattern>/Rutinacontrolador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FichaMedicaControlador</servlet-name>
+        <url-pattern>/FichaMedicaControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
