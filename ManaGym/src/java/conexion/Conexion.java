@@ -8,9 +8,9 @@ import java.sql.SQLException;
 
 public class Conexion {
 //sitewebs.cloudapp.net:3306
-    protected String dominio = "sitewebs.cloudapp.net:3306";
+    protected String dominio = "181.48.135.254:3306";
     protected String base = "managym";
-    protected String usuario = "administrador";
+    protected String usuario = "managym";
     protected String contrasena = "managym2017";
     protected Connection conn;
 

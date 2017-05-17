@@ -30,7 +30,7 @@
                 <h2 class="inner-tittle page">ManaGYM</h2>
                 <div class="login">
                     <h3 class="inner-tittle t-inner">Login</h3>
-                    <form method="post" action="ingresar1">
+                    <form method="post" action="Ingresar">
                         <input type="text" name="usuario" class="text" placeholder="Usuario"  required>
                         <input type="password" name="pass" placeholder="Password" required>
                         <div class="submit"><input type="submit"  value="Login" ></div>
