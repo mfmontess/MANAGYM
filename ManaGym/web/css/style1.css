@@ -1,32 +1,32 @@
 
 body a{
- transition:0.5s all;
- -webkit-transition:0.5s all;
- -moz-transition:0.5s all;
- -o-transition:0.5s all;
- -ms-transition:0.5s all;
+    transition:0.5s all;
+    -webkit-transition:0.5s all;
+    -moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    -ms-transition:0.5s all;
 }
 h1,h2,h3,h4,h5,h6{
-	padding:0px 0px;
-	margin:0px 0px;
+    padding:0px 0px;
+    margin:0px 0px;
 }
 p{
-	padding:0px 0px;
-	margin:0px 0px;
+    padding:0px 0px;
+    margin:0px 0px;
 }
 ul{
-	padding:0px 0px;
-	margin:0px 0px;
+    padding:0px 0px;
+    margin:0px 0px;
 }
 body{
-	padding:0px 0px;
-	margin:0px 0px;
-	font-family: 'Open Sans', sans-serif;
+    padding:0px 0px;
+    margin:0px 0px;
+    font-family: 'Open Sans', sans-serif;
 }
 a.navbar-brand {
     font-size: 1.2em;
     font-family: 'Ubuntu Condensed', sans-serif;
-	margin-top: 0.4em;
+    margin-top: 0.4em;
 }
 .navbar-default {
     background-color: #00bbd3;
@@ -49,11 +49,11 @@ a.navbar-brand {
 .navbar-default .navbar-nav > li > a {
     color: #fff;
     font-size: 1.2em;
-	line-height: 60px;
-	font-family: 'Ubuntu Condensed', sans-serif;
+    line-height: 60px;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-       color: #fff;
+    color: #fff;
     background-color: #00bbd3;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
@@ -62,196 +62,196 @@ a.navbar-brand {
 }
 
 .nav-in::after {
-	content: '';
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	right: 0;
-	z-index: -1;
-	background: #00bbd3;
-	-webkit-transform: translate3d(101%,0,0);
-	transform: translate3d(101%,0,0);
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
-	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: #00bbd3;
+    -webkit-transform: translate3d(101%,0,0);
+    transform: translate3d(101%,0,0);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
 
 .nav-in:hover::after {
-	-webkit-transform: translate3d(0,0,0);
-	transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 .nav-in span {
-	display: block;
-	position: relative;
+    display: block;
+    position: relative;
 }
 
 .nav-in span::before {
-	content: attr(data-letters);
-	position: absolute;
-	color: #1E1E1E;
-	left: 0;
-	overflow: hidden;
-	white-space: nowrap;
-	width: 0%;
-	-webkit-transition: width 0.5s;
-	transition: width 0.5s;
-	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    content: attr(data-letters);
+    position: absolute;
+    color: #1E1E1E;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0%;
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 }
 div#bs-example-navbar-collapse-1 {
     padding: 0;
-	margin-top: 0.5em;
+    margin-top: 0.5em;
 }
 .nav-in:hover span::before {
-	width: 100%;
+    width: 100%;
 }
 /* Rectangle Out */
 .hvr-rectangle-out {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  background: #e1e1e1;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    background: #e1e1e1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
 }
 .hvr-rectangle-out:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #1E1E1E;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1E1E1E;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 }
 .hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
-  color: white;
+    color: white;
 }
 .hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
-  -webkit-transform: scale(1);
-  transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
 }
 
 .banner-section{
-	background:url(../images/2.jpg) no-repeat 0px 0px;
-	background-size:cover;
-	min-height:807px;
+    background:url(../images/2.jpg) no-repeat 0px 0px;
+    background-size:cover;
+    min-height:807px;
 }
 .slider {
-	position: relative;
-	text-align: center;
-	width: 100%;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 .rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 .caption{
-	margin-top:26em;
+    margin-top:26em;
 }
 .caption h3{
     color: #fff;
     font-size: 3em;
     text-transform: capitalize;
-	font-family: 'Ubuntu Condensed', sans-serif;
-	line-height: 1.4em;
-	letter-spacing: 2px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    line-height: 1.4em;
+    letter-spacing: 2px;
 }
 .rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
-.rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
 }
 .rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
+    position: relative;
+    display: block;
+    float: left;
+}
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
 }
 .callbacks_tabs a:after {
-	content: "\f111";
-	font-size: 0;
-	font-family: FontAwesome;
-	visibility: visible;
-	display: block;
-	height: 8px;
-	width: 8px;
-	display: inline-block;
-	border: 2px solid #fff;
-	border-radius:50%;
-	background:#fff;
+    content: "\f111";
+    font-size: 0;
+    font-family: FontAwesome;
+    visibility: visible;
+    display: block;
+    height: 8px;
+    width: 8px;
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius:50%;
+    background:#fff;
 }
 .callbacks_here a:after{
-	border: 2px solid #FFF;
-	background:transparent;
+    border: 2px solid #FFF;
+    background:transparent;
 }
 .callbacks_tabs a{
-	visibility:hidden;
+    visibility:hidden;
 }
 .callbacks_tabs li{
-	display:inline-block;
+    display:inline-block;
 }
 ul.callbacks_tabs.callbacks1_tabs {
-	position: absolute;
-	bottom: 29px;
-	z-index: 999;
-	left: 46%;
-	display: none;
+    position: absolute;
+    bottom: 29px;
+    z-index: 999;
+    left: 46%;
+    display: none;
 }
 .callbacks_nav {
-  position: absolute;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  top: 73%;
-	left: 15%;
-  opacity: 0.7;
-  z-index: 3;
-  text-indent: -9999px;
-  overflow: hidden;
-  text-decoration: none;
-  height: 61px;
-  width: 38px;
-  margin-top: -45px;
-  }
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    top: 73%;
+    left: 15%;
+    opacity: 0.7;
+    z-index: 3;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 61px;
+    width: 38px;
+    margin-top: -45px;
+}
 .callbacks_nav.next {
-  left: auto;
-  background-position: right top;
-  right: 15%;
+    left: auto;
+    background-position: right top;
+    right: 15%;
 }
 .caption p {
     font-size: 1.1em;
     color: #fff;
     line-height: 2em;
-	 background: rgba(238, 238, 238, 0.33);
+    background: rgba(238, 238, 238, 0.33);
     padding: 2em;
 }
 a.button {
@@ -262,13 +262,13 @@ a.button {
     padding: 1em;
     width: 29%;
     margin: 2em auto;
-	text-decoration:none;
-	color:#fff;
+    text-decoration:none;
+    color:#fff;
 }
 .train {
     text-align: center;
     padding: 5em 0;
-	    background: #ECECEC;
+    background: #ECECEC;
 }
 .train-grids {
     margin-top: 3em;
@@ -283,9 +283,9 @@ a.button {
 .train-top {
     background: #fff;
     padding: 2em;
-	box-shadow: 0 0 5px #c3c3c3;
-	border: 1px solid#DACFCF;
-   text-align: center;
+    box-shadow: 0 0 5px #c3c3c3;
+    border: 1px solid#DACFCF;
+    text-align: center;
 }
 .train-img {
     width: 68px;
@@ -308,99 +308,99 @@ a.button {
     margin-top: 0.5em;
 }
 .train-grid:hover div.train-img {
-	    background: #00BBD3;
+    background: #00BBD3;
 }
 .train-grid:hover.train-grid h4 {
     color: #fff;
 }
 /* Bounce To Right */
 .hvr-bounce-to-right {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }
 .hvr-bounce-to-right:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #1E1E1E;;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-  transform-origin: 0 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1E1E1E;;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 }
 .hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
-  color: white;
+    color: white;
 }
 .hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 /* Bounce To Bottom */
 .hvr-bounce-to-bottom {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
 }
 .hvr-bounce-to-bottom:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #00bbd3;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00bbd3;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 }
 .hvr-bounce-to-bottom:hover, .hvr-bounce-to-bottom:focus, .hvr-bounce-to-bottom:active {
-  color: white;
+    color: white;
 }
 .hvr-bounce-to-bottom:hover:before, .hvr-bounce-to-bottom:focus:before, .hvr-bounce-to-bottom:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }
 .fit-left {
     padding: 4em 3em 8.1em;
@@ -410,13 +410,13 @@ a.button {
     color: #fff;
     font-size: 2.5em;
     text-transform: capitalize;
-   font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 .fit-left p {
     font-size: 1em;
     color: #eee;
     line-height: 1.8em;
-	padding: 0.5em 0;
+    padding: 0.5em 0;
 }
 .fit-left ul li {
     list-style: none;
@@ -426,7 +426,7 @@ a.button {
 }
 .fit-grid {
     padding: 0;
-	overflow:hidden;
+    overflow:hidden;
 }
 .fit-grid:hover img,.fit-grid2:hover img,.about-right:hover img,.product-grid:hover img   {
     webkit-transform: scale(1.1);
@@ -435,29 +435,29 @@ a.button {
     transform: scale(1.1);
 }
 .fit-grid img,.fit-grid2 img,.about-right img,.product-grid img {
-	-webkit-transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out;
     -moz-transition: all 2s ease-in-out;
     -o-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
 }
 .fit-grid2 {
     padding: 0;
-	overflow:hidden;
+    overflow:hidden;
 }
 .product-grid  {
-	overflow:hidden;
+    overflow:hidden;
 }
 .fit-grids {
     background: #fff;
 }
 .fit-right{
-	 padding: 3em 3em 8.1em;
+    padding: 3em 3em 8.1em;
 }
 .fit-right:hover.fit-right h3 {
     color: #fff;
 }
 .fit-right  h3{
-	color: #1E1E1E;
+    color: #1E1E1E;
     font-size: 2.5em;
     text-transform: capitalize;
     font-family: 'Ubuntu Condensed', sans-serif;
@@ -466,23 +466,23 @@ a.button {
     font-size: 1em;
     color: #777;
     line-height: 1.8em;
-	padding: 0.5em 0;
+    padding: 0.5em 0;
 }
 .fit-grid1 {
     background: #1E1E1E;
-	    padding: 0;
+    padding: 0;
 }
 .fit-grid1  h3{
-	color: #fff;
+    color: #fff;
     font-size: 2.5em;
     text-transform: capitalize;
-   font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 .fit-grid1 p {
     font-size: 1em;
     color: #eee;
     line-height: 1.8em;
-	padding: 0.5em 0;
+    padding: 0.5em 0;
 }
 a.button1 {
     font-size: 1em;
@@ -493,11 +493,11 @@ a.button1 {
     color: #fff;
     width: 21%;
     margin-top: 1em;
-	text-decoration: none;
+    text-decoration: none;
 }
 .benefits {
-	padding:5em 0;
-	background:#eee;
+    padding:5em 0;
+    background:#eee;
 }
 .benefit-right {
     float: left;
@@ -509,7 +509,7 @@ a.button1 {
     text-align: center;
     background: #00bbd3;
     padding: 0.8em;
-	    margin-right: 2%;
+    margin-right: 2%;
 }
 .benefits-grid h4 {
     font-size: 2em;
@@ -529,19 +529,19 @@ a.button1 {
     font-size: 3em;
     text-transform: capitalize;
     font-family: 'Ubuntu Condensed', sans-serif;
-	margin-bottom: 1em;
+    margin-bottom: 1em;
 
 }
 .benefits-grid1 input[type="text"],.benefits-grid1 textarea {
-	padding: 0.8em;
+    padding: 0.8em;
     width: 100%;
     font-size: 1em;
     outline: none;
     border: none;
 }
 .benefits-grid1 textarea {
-	height:200px;
-	resize:none;
+    height:200px;
+    resize:none;
 }
 .benefits-grid1 input[type="submit"] {
     color: #fff;
@@ -551,16 +551,16 @@ a.button1 {
     width: 100%;
     padding: 8px;
     text-align: center;
-	outline: none;
-	font-family: 'Ubuntu Condensed', sans-serif;
-	transition: .5s all;
+    outline: none;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    transition: .5s all;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
     -o-transition: .5s all;
     -ms-transition: .5s all;
 }
 .benefits-grid1 input[type="button"]:hover{
-	 background: #00bbd3;
+    background: #00bbd3;
 }
 .email {
     margin-top: 0.8em;
@@ -572,7 +572,7 @@ a.button1 {
     padding: 5em 0;
 }
 .testimonials-section h3{
-	 color: #000;
+    color: #000;
     font-size: 3em;
     text-transform: capitalize;
     font-family: 'Ubuntu Condensed', sans-serif;
@@ -583,11 +583,11 @@ a.button1 {
     color: #555;
 }
 .testimonials-section h5{
-	font-size: 1.8em;
+    font-size: 1.8em;
     color: #1C3142;
     text-transform: capitalize;
-   font-family: 'Ubuntu Condensed', sans-serif;
-	margin: .5em 0 0 2em;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    margin: .5em 0 0 2em;
 }
 .testimonials-grids {
     margin-top: 3em;
@@ -612,15 +612,15 @@ a.button1 {
 .footer-grid h4 {
     font-size: 2em;
     color: #fff;
-	margin-bottom: .5em;
-	    font-family: 'Ubuntu Condensed', sans-serif;
+    margin-bottom: .5em;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 .footer-grid ul li  {
     font-size: 0.95em;
     color: #eee;
     text-decoration: none;
     line-height: 2em;
-	padding-left: 2em;
+    padding-left: 2em;
     background: url(../images/arrow1.png) no-repeat 0px 2px;
 }
 .footer-grid ul li {
@@ -634,7 +634,7 @@ a.button1 {
 .copy-section {
     padding: 2em 0;
     text-align: center;
-        background: #1E1E1E;
+    background: #1E1E1E;
 }
 .footer-grid a {
     color: #eee;
@@ -651,16 +651,16 @@ a.button1 {
     opacity: 0.5;
 }
 .social-icons i.icon{
-background-position:0px 2px;
+    background-position:0px 2px;
 }
 .social-icons i.icon1{
-background-position:-35px 2px;
+    background-position:-35px 2px;
 }
 .social-icons i.icon2{
-background-position:-70px 2px;
+    background-position:-70px 2px;
 }
 .social-icons i.icon3{
-background-position:-105px 2px;
+    background-position:-105px 2px;
 }
 .social-icons {
     margin-bottom: 1em;
@@ -683,8 +683,8 @@ background-position:-105px 2px;
 .banner {
     background: url(../images/banner1.jpg) no-repeat 0px 0px;
     background-size: cover;
-	min-height:300px;
-	padding-top: 13em;
+    min-height:300px;
+    padding-top: 13em;
     text-align: center;
 }
 .banner h2 {
@@ -705,7 +705,7 @@ background-position:-105px 2px;
     font-size: 1em;
     color: #777;
     line-height: 2em;
-	margin: 1em 0;
+    margin: 1em 0;
 }
 .about-left {
     float: left;
@@ -716,10 +716,10 @@ background-position:-105px 2px;
     float: left;
     width: 40%;
     margin-top: 1.2em;
-	border: 1px solid#DACFCF;
+    border: 1px solid#DACFCF;
     padding: .5em;
     box-shadow: 0 0 5px #c3c3c3;
-	    overflow: hidden;
+    overflow: hidden;
 }
 .few-grid h5 {
     font-size: 1.8em;
@@ -729,7 +729,7 @@ background-position:-105px 2px;
     margin: 0.5em 0;
 }
 .few-grid span{
-	font-size: 1em;
+    font-size: 1em;
     color: #777;
     line-height: 2em;
 }
@@ -754,7 +754,7 @@ background-position:-105px 2px;
     color: #1E1E1E;
     font-size: 1.8em;
     text-transform: capitalize;
-   font-family: 'Ubuntu Condensed', sans-serif;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 .latest-class {
     margin-top: 1.5em;
@@ -768,7 +768,7 @@ background-position:-105px 2px;
 .latest-right p {
     font-size: 1em;
     color: #777;
-	line-height: 2em;
+    line-height: 2em;
 }
 .latest-top {
     border: 1px solid#DACFCF;
@@ -783,11 +783,11 @@ background-position:-105px 2px;
 }
 .time-left {
     float: left;
-	    width: 50%;
+    width: 50%;
 }
 .time-right {
     float: left;
-	    width: 50%;
+    width: 50%;
 }
 .time-bottom {
     margin: 1em 0;
@@ -810,7 +810,7 @@ background-position:-105px 2px;
     font-size: 1em;
     color: #777;
     line-height: 2em;
-	margin:0.5em 0;
+    margin:0.5em 0;
 }
 ul.details li {
     list-style: none;
@@ -844,9 +844,9 @@ ul.details li i {
     text-transform: capitalize;
 }
 .product-grid p {
-     font-size: 1em;
+    font-size: 1em;
     color: #777;
-	line-height: 2em;
+    line-height: 2em;
 }
 /**about**/
 
@@ -865,16 +865,16 @@ ul.details li i {
     color: #fff;
     font-family: 'Ubuntu Condensed', sans-serif;
     text-transform: capitalize;
-	    margin-top: 0.5em;
+    margin-top: 0.5em;
 }
 .class-grid {
     padding: 0;
 }
 .class-top p {
-     font-size: 0.96em;
+    font-size: 0.96em;
     color: #eee;
-	line-height: 2em;
-	padding: 0.3em 0 0;
+    line-height: 2em;
+    padding: 0.3em 0 0;
 }
 .class-text {
     background: #1E1E1E;
@@ -890,15 +890,15 @@ ul.details li i {
 .recent-right {
     float: left;
     width: 70%;
-	background:#eee;
-	    padding: 1.5em;
+    background:#eee;
+    padding: 1.5em;
 }
 .class-grid1 h4 {
     color: #1E1E1E;
     font-size: 1.8em;
     text-transform: capitalize;
     font-family: 'Ubuntu Condensed', sans-serif;
-	margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
 }
 .recent-left img {
     width: 100%;
@@ -932,7 +932,7 @@ ul.details li i {
     color: #fff;
     font-size: 1.2em;
     padding: 9px 0px;
-	display: block;
+    display: block;
     margin-top: 1em;
     text-transform: uppercase;
     transition: .5s all;
@@ -942,13 +942,13 @@ ul.details li i {
     -ms-transition: .5s all;
 }
 .register input[type="submit"]:hover{
-	 background: #00bbd3;
+    background: #00bbd3;
 }
 .register {
     margin-top: 3em;
 }
 .email1{
-	 margin: 1em 0;
+    margin: 1em 0;
 }
 .more-class {
     margin-top: 2em;
@@ -959,7 +959,7 @@ ul.details li i {
     padding: 5em 0;
 }
 .lb-album li img{
-	width:100%;
+    width:100%;
 }
 .lb-overlay:target img {
     width: 24%;
@@ -990,145 +990,145 @@ ul.details li i {
 }
 .lb-overlay div h3{
     float: none;
-	width:inherit;
-	height:inherit;
-	text-align:center;
-	border:none;
-	color:#fff;
+    width:inherit;
+    height:inherit;
+    text-align:center;
+    border:none;
+    color:#fff;
 }
 .lb-overlay div p {
     float: none;
-	width:inherit;
-	height:inherit;
-	text-align:center;
-	border:none;
-	color:#fff;
-	line-height:2em;
-	font-size:1em;
-	font-style:normal;
-	font-family: 'Open Sans', sans-serif;
+    width:inherit;
+    height:inherit;
+    text-align:center;
+    border:none;
+    color:#fff;
+    line-height:2em;
+    font-size:1em;
+    font-style:normal;
+    font-family: 'Open Sans', sans-serif;
 }
 .lb-overlay div h3{
-	margin:15px 0;
+    margin:15px 0;
 }
 /* Common style */
 .grid figure {
-	position: relative;
+    position: relative;
 
-	overflow: hidden;
+    overflow: hidden;
 
-	background: #3085a3;
-	text-align: center;
-	cursor: pointer;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
 }
 
 .grid figure img {
-	position: relative;
-	display: block;
-	min-height: 100%;
-	max-width: 100%;
-	opacity: 0.8;
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
 }
 
 .grid figure figcaption {
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 1.25em;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 .grid figure figcaption::before,
 .grid figure figcaption::after {
-	pointer-events: none;
+    pointer-events: none;
 }
 
 .grid figure figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 figure.effect-apollo {
-	background: #3498db;
+    background: #3498db;
 }
 
 figure.effect-apollo img {
-	opacity: 0.95;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-webkit-transform: scale3d(1.05,1.05,1);
-	transform: scale3d(1.05,1.05,1);
+    opacity: 0.95;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.05,1.05,1);
+    transform: scale3d(1.05,1.05,1);
 }
 
 figure.effect-apollo figcaption::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(255,255,255,0.5);
-	content: '';
-	-webkit-transition: -webkit-transform 0.6s;
-	transition: transform 0.6s;
-	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-106%,0);
-	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-106%,0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.5);
+    content: '';
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-106%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-106%,0);
 }
 
 figure.effect-apollo p {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	margin: 3em;
-	padding: 0 1em;
-	max-width: 150px;
-	border-right: 4px solid #fff;
-	text-align: right;
-	opacity: 0;
-	-webkit-transition: opacity 0.35s;
-	transition: opacity 0.35s;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 3em;
+    padding: 0 1em;
+    max-width: 150px;
+    border-right: 4px solid #fff;
+    text-align: right;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
 }
 
 figure.effect-apollo h2 {
-	text-align: left;
+    text-align: left;
 }
 
 figure.effect-apollo:hover img {
-	opacity: 0.6;
-	-webkit-transform: scale3d(1,1,1);
-	transform: scale3d(1,1,1);
+    opacity: 0.6;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
 }
 
 figure.effect-apollo:hover figcaption::before {
-	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,106%,0);
-	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,106%,0);
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,106%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,106%,0);
 }
 
 figure.effect-apollo:hover p {
-	opacity: 1;
-	-webkit-transition-delay: 0.1s;
-	transition-delay: 0.1s;
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
 }
 
 /*-- //gallery --*/
 /*-- //gallery --*/
 /**codes**/
 .headdings, .Buttons, .progress-bars, .alerts, .bread-crumbs, .pagenatin, .appearance, .distracted {
-	padding: 2em 0;
+    padding: 2em 0;
 }
 h3.ghj {
     font-size: 2em;
-	margin: 0 0 1em 0;
-	color: #1C3142;
-        font-family: 'Ubuntu Condensed', sans-serif;
+    margin: 0 0 1em 0;
+    color: #1C3142;
+    font-family: 'Ubuntu Condensed', sans-serif;
 }
 .pages-top{
-	text-align:center;
+    text-align:center;
 }
 .typo-bottom{
-	margin-top:4%;
+    margin-top:4%;
 }
 .table tr th {
     width: 50%;
@@ -1139,17 +1139,17 @@ h3.ghj {
     font-size: 65%;
     font-weight: bold;
     line-height: 3;
-	}
+}
 /*--typo-end--*/
 /**contact**/
 .map{
-	padding:22em 0 0;
+    padding:22em 0 0;
 }
 .map iframe{
-	width:100%;
-	outline:none;
-	border:none;
-	min-height:600px;
+    width:100%;
+    outline:none;
+    border:none;
+    min-height:600px;
 }
 .map-grids {
     background: #FFFFFF;
@@ -1158,7 +1158,7 @@ h3.ghj {
     top: 7em;
     left: 21em;
     box-shadow: 0px 1px 4px #AFAEAE;
-	width: 62%;
+    width: 62%;
     margin: 0 auto;
 }
 .contact {
@@ -1208,7 +1208,7 @@ h3.ghj {
     color: #999;
     font-size: 14px;
     padding: 12px 10px;
-	margin-bottom:30px;
+    margin-bottom:30px;
 }
 .map-middle input[type="text"]:hover, .map-middle textarea:hover {
     border: 3px double #00bbd3;	
@@ -1221,7 +1221,7 @@ h3.ghj {
     outline: none;
     border: none;
     width: 100%;
-	background:#1E1E1E;
+    background:#1E1E1E;
     color: #fff;	
     font-size: 1.2em;
     padding: 12px 0px;
@@ -1241,767 +1241,768 @@ h3.ghj {
 
 /**responsive**/
 @media(max-width:1440px){
-.banner-section {
-  min-height: 772px;
-}
-.map-grids {
-    left: 19em;
-}
+    .banner-section {
+        min-height: 772px;
+    }
+    .map-grids {
+        left: 19em;
+    }
 }
 @media(max-width:1366px){
-	.banner-section {
-    min-height: 738px;
-}
-.map-grids {
-    left: 18em;
-}
+    .banner-section {
+        min-height: 738px;
+    }
+    .map-grids {
+        left: 18em;
+    }
 }
 @media(max-width:1280px){
-.caption {
-    margin-top: 23em;
-}
-.banner-section {
-    min-height: 685px;
-}
-.map-grids {
-    left: 17em;
-}
+    .caption {
+        margin-top: 23em;
+    }
+    .banner-section {
+        min-height: 685px;
+    }
+    .map-grids {
+        left: 17em;
+    }
 }
 @media(max-width:1080px){
-.banner-section {
-    min-height: 551px;
-}
-.caption {
-    margin-top: 18em;
-}
-.caption h3 {
-    font-size: 2.8em;
-}
-.caption p {
-    font-size: 1em;
-}
-.train h2,.banner h2 {
-    font-size: 2.8em;
-}
-.train-grid h4,.about-grid h4,.about-grid1 h4 ,.product-grid h4,.class-top h4,.class-grid1 h4{
-    font-size: 1.6em;
-}
-.lb-overlay:target img {
-    width: 34%;
-}
-.fit-left {
-    padding: 2.5em 3em 3em;
-}
-.fit-right {
-   padding: 2.5em 3em 3em;
-}
-.benefits h3,.testimonials-section h3,.gym-product h3 {
-    font-size: 2.8em;
-}
-.testimonials-section h5 {
-    font-size: 1.5em;
-}
-.footer-grid h4 {
-    font-size: 1.8em;
-}
-.banner {
-    min-height: 244px;
-    padding-top: 11em;
-}
-.latest-left {
-    float: left;
-    width: 32%;
-    margin-right: 5%;
-}
-.latest-right {
-    float: left;
-    width: 63%;
-}
-.few-grid h5 {
-    font-size: 1.4em;
-}
-.recent-right {
-    padding: 1em;
-}
-.map-grids {
-    left: 14em;
-    width: 63%;
-}
-.map-left h4 {
-    font-size: 1.8em;
-}
+    .banner-section {
+        min-height: 551px;
+    }
+    .caption {
+        margin-top: 18em;
+    }
+    .caption h3 {
+        font-size: 2.8em;
+    }
+    .caption p {
+        font-size: 1em;
+    }
+    .train h2,.banner h2 {
+        font-size: 2.8em;
+    }
+    .train-grid h4,.about-grid h4,.about-grid1 h4 ,.product-grid h4,.class-top h4,.class-grid1 h4{
+        font-size: 1.6em;
+    }
+    .lb-overlay:target img {
+        width: 34%;
+    }
+    .fit-left {
+        padding: 2.5em 3em 3em;
+    }
+    .fit-right {
+        padding: 2.5em 3em 3em;
+    }
+    .benefits h3,.testimonials-section h3,.gym-product h3 {
+        font-size: 2.8em;
+    }
+    .testimonials-section h5 {
+        font-size: 1.5em;
+    }
+    .footer-grid h4 {
+        font-size: 1.8em;
+    }
+    .banner {
+        min-height: 244px;
+        padding-top: 11em;
+    }
+    .latest-left {
+        float: left;
+        width: 32%;
+        margin-right: 5%;
+    }
+    .latest-right {
+        float: left;
+        width: 63%;
+    }
+    .few-grid h5 {
+        font-size: 1.4em;
+    }
+    .recent-right {
+        padding: 1em;
+    }
+    .map-grids {
+        left: 14em;
+        width: 63%;
+    }
+    .map-left h4 {
+        font-size: 1.8em;
+    }
 }
 @media(max-width:991px){
-a.navbar-brand {
-    font-size: 1.1em;
-    margin-top: 0.3em;
-}	
-.cap-left {
-    float: left;
-    width: 50%;
-}
-a.button {
-    width: 35%;
-}
-.navbar-default .navbar-nav > li > a {
-    font-size: 1.15em;
-}
-.caption p {
-    font-size: 0.96em;
-	    padding: 1em;
-}
-.banner-section {
-    min-height: 527px;
-}
-.caption {
-    margin-top: 18em;
-}
-.caption h3 {
-    font-size: 2.5em;
-}
-.train-grid {
-    float: left;
-    width: 50%;
-}
-.train-grid:nth-child(3),.train-grid:nth-child(4) {
-    margin-top: 2em;
-}
-.fit-grid {
-    float: left;
-    width: 33.3%;
-}
-.fit-left h3,.fit-right h3 {
-    font-size: 1.8em;
-}
-.fit-left {
-    padding: 0.85em 1em 1em;
-}
-.fit-right {
-    padding: 0.5em 1em 0.35em;
-}
-.fit-left ul li {
-    font-size: 0.95em;
-}
-.fit-grid2 {
-    float: left;
-    width: 60%;
-}
-.fit-grid1 {
-    float: left;
-    width: 40%;
-}
-.train ,.benefits,.testimonials-section,.footer-section,.about-section,.trainers-section{
-    padding: 4em 0;
-}
-.benefits h3{
-	margin-bottom: 0.5em;
-	font-size: 2.5em;
-}
-.testimonials-section h3 {
-    font-size: 2.5em;
-}
-.benefits-grid {
-    float: left;
-    width: 50%;
-}
-.benefits-grid1 {
-    float: left;
-    width: 50%;
-}
-.benefits-grid h4 {
-    font-size: 1.5em;
-}
-.benefit-left {
-    float: left;
-    width: 13%;
-}
-.benefit-right {
-    float: left;
-    width: 83%;
-}
-.testimonials-grid1 {
-    float: left;
-    width: 20%;
-}
-.testimonials-grid {
-    float: left;
-    width: 80%;
-	margin-top: 0;
+    a.navbar-brand {
+        font-size: 1.1em;
+        margin-top: 0.3em;
+    }	
+    .cap-left {
+        float: left;
+        width: 50%;
+    }
+    a.button {
+        width: 35%;
+    }
+    .navbar-default .navbar-nav > li > a {
+        font-size: 1.15em;
+    }
+    .caption p {
+        font-size: 0.96em;
+        padding: 1em;
+    }
+    .banner-section {
+        min-height: 527px;
+    }
+    .caption {
+        margin-top: 18em;
+    }
+    .caption h3 {
+        font-size: 2.5em;
+    }
+    .train-grid {
+        float: left;
+        width: 50%;
+    }
+    .train-grid:nth-child(3),.train-grid:nth-child(4) {
+        margin-top: 2em;
+    }
+    .fit-grid {
+        float: left;
+        width: 33.3%;
+    }
+    .fit-left h3,.fit-right h3 {
+        font-size: 1.8em;
+    }
+    .fit-left {
+        padding: 0.85em 1em 1em;
+    }
+    .fit-right {
+        padding: 0.5em 1em 0.35em;
+    }
+    .fit-left ul li {
+        font-size: 0.95em;
+    }
+    .fit-grid2 {
+        float: left;
+        width: 60%;
+    }
+    .fit-grid1 {
+        float: left;
+        width: 40%;
+    }
+    .train ,.benefits,.testimonials-section,.footer-section,.about-section,.trainers-section{
+        padding: 4em 0;
+    }
+    .benefits h3{
+        margin-bottom: 0.5em;
+        font-size: 2.5em;
+    }
+    .testimonials-section h3 {
+        font-size: 2.5em;
+    }
+    .benefits-grid {
+        float: left;
+        width: 50%;
+    }
+    .benefits-grid1 {
+        float: left;
+        width: 50%;
+    }
+    .benefits-grid h4 {
+        font-size: 1.5em;
+    }
+    .benefit-left {
+        float: left;
+        width: 13%;
+    }
+    .benefit-right {
+        float: left;
+        width: 83%;
+    }
+    .testimonials-grid1 {
+        float: left;
+        width: 20%;
+    }
+    .testimonials-grid {
+        float: left;
+        width: 80%;
+        margin-top: 0;
 
-}
-.footer-grid h4 {
-    font-size: 1.5em;
-}
-.footer-grid {
-    float: left;
-    width: 50%;
-}
-.footer-grid:nth-child(3),.footer-grid:nth-child(4) {
-    margin-top: 2em;
-}
-.about-grid1 {
-    float: left;
-    width: 40%;
-}
-.about-grid {
-    float: left;
-    width: 60%;
-}
-.about-grid p,.latest-right p,.help-line p,.product-grid p ,.fit-right p,.fit-left p,.fit-grid1 p,.class-top p,.train-grid p,.benefits-grid p,.testimonials-section p {
-    font-size: 0.96em;
-}
-.few-grid span {
-    font-size: 0.96em;
-}
-.latest-right h5,.time h5 {
-    font-size: 1.1em;
-}
-.few-grid {
-    float: left;
-    width: 33.3%;
-}
-.few-grid h5 {
-    font-size: 1.5em;
-}
-.few-words {
-    margin-top: 2em;
-}
-.gym-product h3 {
-    font-size: 2.5em;
-}
-.product-grid {
-    float: left;
-    width: 33.3%;
-}
-.class-grid {
-    float: left;
-    width: 60%;
-}
-.class-grid1 {
-    float: left;
-    width: 40%;
-}
-.class-left {
-    float: left;
-    width: 50%;
-}
-.class-right {
-    float: left;
-    width: 50%;
-}
-.class-text {
-    padding: 1em;
-}
-.recent-right {
-    padding: 0.8em;
-}
-.recent-right h5 {
-    font-size: 1.1em;
-}
-.class-top h5 {
-    font-size: 1.3em;
-}
-.map-middle {
-    float: left;
-    width: 60%;
-}
-.map-left {
-    float: left;
-    width: 40%;
-}
-.map-grids {
-    left: 14em;
-    width: 60%;
-	top: 5em;
-}
-.map-left h4 {
-    font-size: 1.5em;
-}
+    }
+    .footer-grid h4 {
+        font-size: 1.5em;
+    }
+    .footer-grid {
+        float: left;
+        width: 50%;
+    }
+    .footer-grid:nth-child(3),.footer-grid:nth-child(4) {
+        margin-top: 2em;
+    }
+    .about-grid1 {
+        float: left;
+        width: 40%;
+    }
+    .about-grid {
+        float: left;
+        width: 60%;
+    }
+    .about-grid p,.latest-right p,.help-line p,.product-grid p ,.fit-right p,.fit-left p,.fit-grid1 p,.class-top p,.train-grid p,.benefits-grid p,.testimonials-section p {
+        font-size: 0.96em;
+    }
+    .few-grid span {
+        font-size: 0.96em;
+    }
+    .latest-right h5,.time h5 {
+        font-size: 1.1em;
+    }
+    .few-grid {
+        float: left;
+        width: 33.3%;
+    }
+    .few-grid h5 {
+        font-size: 1.5em;
+    }
+    .few-words {
+        margin-top: 2em;
+    }
+    .gym-product h3 {
+        font-size: 2.5em;
+    }
+    .product-grid {
+        float: left;
+        width: 33.3%;
+    }
+    .class-grid {
+        float: left;
+        width: 60%;
+    }
+    .class-grid1 {
+        float: left;
+        width: 40%;
+    }
+    .class-left {
+        float: left;
+        width: 50%;
+    }
+    .class-right {
+        float: left;
+        width: 50%;
+    }
+    .class-text {
+        padding: 1em;
+    }
+    .recent-right {
+        padding: 0.8em;
+    }
+    .recent-right h5 {
+        font-size: 1.1em;
+    }
+    .class-top h5 {
+        font-size: 1.3em;
+    }
+    .map-middle {
+        float: left;
+        width: 60%;
+    }
+    .map-left {
+        float: left;
+        width: 40%;
+    }
+    .map-grids {
+        left: 14em;
+        width: 60%;
+        top: 5em;
+    }
+    .map-left h4 {
+        font-size: 1.5em;
+    }
 }
 @media (max-width: 768px){
-.banner-section {
-    min-height: 475px;
-}
+    .banner-section {
+        min-height: 475px;
+    }
 }
 @media (max-width:736px){
-.navbar-nav {
-    text-align: center;
-}
-a.navbar-brand {
-    font-size: 1em;
-    margin-top: 0;
-	margin-bottom: 0.2em;
-}
-.navbar-brand {
-    padding: 8px 15px;
-}
-.navbar-default .navbar-nav > li > a {
-    line-height: 30px;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: #1E1E1E;
-}
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
-}
-.navbar-collapse {
-    max-height: 530px;
-}
-.navbar-default .navbar-toggle {
-    border-color: #1E1E1E;
-}
-.navbar-toggle {
-    background-color: #1E1E1E;
-}
-.nav-in::after {
-    background: #00bbd3;
-    -webkit-transform: translate3d(101%,0,0);
-    transform: translate3d(-49%,0,0);
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    text-align: center;
-}
-.caption h3 {
-    font-size: 2.3em;
-}
-a.button {
-    width: 40%;
-}
-.caption {
-    margin-top: 13em;
-}
-.banner-section {
-    min-height: 404px;
-}
-.train, .benefits, .testimonials-section, .footer-section, .about-section, .trainers-section,.class {
-    padding: 3em 0;
-}
-.train h2, .banner h2 {
-    font-size: 2.5em;
-}
-.fit-left,.fit-right {
-    padding: 2em;
-}
-.fit-grid {
-    width: 100%;
-}
-.fit-grid2 {
-    width: 100%;
-}
-.fit-grid1 {
-    width: 100%;
-}
-.benefits h3,.testimonials-section h3,.gym-product h3 {
-    font-size: 2.3em;
-}
-.benefits-grid {
-    width: 100%;
-}
-.benefits-grid1 {
-    width: 100%;
-    margin-top: 2em;
-}
-.benefits-grid1 input[type="button"] {
-    font-size: 1.2em;
-}
-.train-grid h4, .about-grid h4, .about-grid1 h4, .product-grid h4, .class-top h4, .class-grid1 h4 {
-    font-size: 1.5em;
-    line-height: 1.3em;
-}
-.about-grid p, .latest-right p, .help-line p, .product-grid p, .fit-right p, .fit-left p, .fit-grid1 p, .class-top p {
-    font-size: 0.92em;
-}
-.latest-right h5, .time h5 {
-    font-size: 1.1em;
-}
-.about-left {
-    width: 100%;
-}
-.about-right {
-    width: 100%;
-}
-.few-grid {
-    width: 100%;
-}
-ul.details li {
-    font-size: 0.9em;
-}
-.banner {
-    min-height: 130px;
-    padding-top: 5.5em;
-}
-.class-left {
-    width: 100%;
-}
-.class-right {
-    float: left;
-    width: 100%;
-	margin-top: 2em;
-}
-.lb-overlay div p {
-    font-size: 0.95em;
-}
-.register input[type="submit"] {
-    font-size: 1em;
-}
-.recent-right h5 {
-    font-size: 1em;
-}
-.recent-right p {
-    margin-top: 0.5em;
-    font-size: 0.9em;
-}
-.recent-right {
-    padding: 0.43em;
-    width: 72%;
-}
-.lb-overlay:target img {
-    width: 48%;
-}
-.lb-album li {
-    width: 47%;
-}
-.map-grids {
-    left: 2em;
-    width: 90%;
-    top: 5em;
-}
-.map-middle input[type="submit"] {
-    font-size: 1em;
-}
-.map iframe {
-    min-height: 460px;
-}
+    .navbar-nav {
+        text-align: center;
+    }
+    a.navbar-brand {
+        font-size: 1em;
+        margin-top: 0;
+        margin-bottom: 0.2em;
+    }
+    .navbar-brand {
+        padding: 8px 15px;
+    }
+    .navbar-default .navbar-nav > li > a {
+        line-height: 30px;
+    }
+    .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+        background-color: #1E1E1E;
+    }
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .navbar-collapse {
+        max-height: 530px;
+    }
+    .navbar-default .navbar-toggle {
+        border-color: #1E1E1E;
+    }
+    .navbar-toggle {
+        background-color: #1E1E1E;
+    }
+    .nav-in::after {
+        background: #00bbd3;
+        -webkit-transform: translate3d(101%,0,0);
+        transform: translate3d(-49%,0,0);
+        -webkit-transition: -webkit-transform 0.5s;
+        transition: transform 0.5s;
+        -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+        text-align: center;
+    }
+    .caption h3 {
+        font-size: 2.3em;
+    }
+    a.button {
+        width: 40%;
+    }
+    .caption {
+        margin-top: 13em;
+    }
+    .banner-section {
+        min-height: 404px;
+    }
+    .train, .benefits, .testimonials-section, .footer-section, .about-section, .trainers-section,.class {
+        padding: 3em 0;
+    }
+    .train h2, .banner h2 {
+        font-size: 2.5em;
+    }
+    .fit-left,.fit-right {
+        padding: 2em;
+    }
+    .fit-grid {
+        width: 100%;
+    }
+    .fit-grid2 {
+        width: 100%;
+    }
+    .fit-grid1 {
+        width: 100%;
+    }
+    .benefits h3,.testimonials-section h3,.gym-product h3 {
+        font-size: 2.3em;
+    }
+    .benefits-grid {
+        width: 100%;
+    }
+    .benefits-grid1 {
+        width: 100%;
+        margin-top: 2em;
+    }
+    .benefits-grid1 input[type="button"] {
+        font-size: 1.2em;
+    }
+    .train-grid h4, .about-grid h4, .about-grid1 h4, .product-grid h4, .class-top h4, .class-grid1 h4 {
+        font-size: 1.5em;
+        line-height: 1.3em;
+    }
+    .about-grid p, .latest-right p, .help-line p, .product-grid p, .fit-right p, .fit-left p, .fit-grid1 p, .class-top p {
+        font-size: 0.92em;
+    }
+    .latest-right h5, .time h5 {
+        font-size: 1.1em;
+    }
+    .about-left {
+        width: 100%;
+    }
+    .about-right {
+        width: 100%;
+    }
+    .few-grid {
+        width: 100%;
+    }
+    ul.details li {
+        font-size: 0.9em;
+    }
+    .banner {
+        min-height: 130px;
+        padding-top: 5.5em;
+    }
+    .class-left {
+        width: 100%;
+    }
+    .class-right {
+        float: left;
+        width: 100%;
+        margin-top: 2em;
+    }
+    .lb-overlay div p {
+        font-size: 0.95em;
+    }
+    .register input[type="submit"] {
+        font-size: 1em;
+    }
+    .recent-right h5 {
+        font-size: 1em;
+    }
+    .recent-right p {
+        margin-top: 0.5em;
+        font-size: 0.9em;
+    }
+    .recent-right {
+        padding: 0.43em;
+        width: 72%;
+    }
+    .lb-overlay:target img {
+        width: 48%;
+    }
+    .lb-album li {
+        width: 47%;
+    }
+    .map-grids {
+        left: 2em;
+        width: 90%;
+        top: 5em;
+    }
+    .map-middle input[type="submit"] {
+        font-size: 1em;
+    }
+    .map iframe {
+        min-height: 460px;
+    }
 }
 @media (max-width: 667px){
-.caption {
-    margin-top: 11em;
-}
+    .caption {
+        margin-top: 11em;
+    }
 }
 @media(max-width:640px){
-.item, .item-hover, .item-hover .mask, .item-img, .item-type-move .item-info {
-    width: 198px;
-    height: 245px;
-}
-.item-type-move .item-hover:hover .item-info .date-month {
-    bottom: 25%;
-}
+    .item, .item-hover, .item-hover .mask, .item-img, .item-type-move .item-info {
+        width: 198px;
+        height: 245px;
+    }
+    .item-type-move .item-hover:hover .item-info .date-month {
+        bottom: 25%;
+    }
 }
 @media(max-width:600px){
-	a.button {
-    width: 43%;
-}
+    a.button {
+        width: 43%;
+    }
 }
 @media (max-width: 568px){
-a.button {
-    width: 47%;
-}
+    a.button {
+        width: 47%;
+    }
 }
 @media(max-width:480px){
-.cap-left {
-    width: 100%;
-}
-.caption {
-    margin-top: 9em;
-}
-.caption h3 {
-    font-size: 2em;
-}
-.banner-section {
-    min-height: 375px;
-    background: url(../images/2.jpg) no-repeat -108px 0px;
-    background-size: cover;
-}
-.navbar-default .navbar-nav > li > a {
-    line-height: 20px;
-}
-.caption p {
-    margin-bottom: 0.5em;
-}
-.train h2, .banner h2 {
-    font-size: 2.3em;
-}
-.train, .benefits, .testimonials-section, .footer-section, .about-section, .trainers-section,.class {
-    padding: 2em 0;
-}
-.train-grids,.testimonials-grids,.product-grids ,.top2,.register,.time,.help-line{
-    margin-top: 2em;
-}
-.train-grid h4, .about-grid h4, .about-grid1 h4, .product-grid h4, .class-top h4, .class-grid1 h4 {
-    font-size: 1.4em;
-	line-height: 1.3em;
-}
-.train-grid {
-    width: 100%;
-}
-.testimonials-grid1 {
-    width: 100%;
-}
-.testimonials-grid {
-    width: 100%;
-}
-.testimonials-grid1 img {
-    margin: 0 auto;
-}
-.test {
-    margin-top: 1em;
-}
-.testimonials-section h5 {
-    font-size: 1.4em;
-    margin: .5em 0 0 0em;
-}
-.benefits-grid1 textarea {
-    height: 130px;
-}
-.footer-grid {
-    width: 100%;
-}
-.footer-grid:nth-child(2),.footer-grid:nth-child(3), .footer-grid:nth-child(4) {
-    margin-top: 2em;
-}
-.about-grid1 {
-    width: 100%;
-}
-.about-grid {
-    width: 100%;
-	margin-top: 1em;
-}
-.about-right img {
-    width: 100%;
-}
-.product-grid {
-    width: 100%;
-}
-.product-grid:nth-child(2) {
-    margin: 2em 0;
-}
-.gym-product {
-    padding: 0 0 2em;
-}
-.class-grid {
-    width: 100%;
-}
-.class-grid1 {
-    width: 100%;
-    margin-top: 2em;
-}
-.lb-overlay > div {
-    width: 403px;
-}
-.lb-overlay:target img {
-    width: 70%;
-}
-.lb-overlay a.lb-close {
-    left: 40.5%;
-}
-.lb-overlay div h3 {
-    font-size: 1.8em;
-}
-.recent-right {
-    padding: 2.2em;
-}
-.headdings, .Buttons, .progress-bars, .alerts, .bread-crumbs, .pagenatin, .appearance, .distracted {
-    padding: 1em 0;
-}
-.map-grids {
-    padding: 2em 1em;
-}
-.map-middle {
-    width: 100%;
-}
-.map-middle input[type="text"], .map-middle textarea {
-    margin-bottom: 10px;
-}
-.map-left {
-    width: 100%;
-    margin-top: 2em;
-}
-.map-left h4 {
-    margin-bottom: 11px;
-}
-.test1 {
-    margin-bottom: 1em;
-}
-@media (max-width: 414px){
-.caption {
-    margin-top: 9em;
-}
-.caption p {
-    font-size: 0.92em;
-	padding: 0.5em;
-}
-.table h1 {
-    font-size: 1.6em;
-}
-.table h2 {
-    font-size: 1.5em;
-}
-.table h3 {
-    font-size: 1.5em;
-}
-h3.ghj {
-    font-size: 1.8em;
-    margin: 0 0 0.2em 0;
-}
-.label {
-    display: inline;
-    padding: 0.2em .6em .3em;
-    font-size: 40%;
-    font-weight: bold;
-    line-height: 3;
-}
-.navbar-toggle {
-    position: relative;
-    float: right;
-    padding: 9px 10px;
-    margin-top: 13px;
-    margin-right: 15px;
-	margin-bottom: 0;
-}
-}
-@media (max-width: 384px){
-a.button {
-    width: 35%;
-    margin: 1.2em auto 0.3em;
-}
-}
-@media(max-width:375px){
-a.button {
-  width: 39%;
-}
-.navbar-header img {
-    width: 14%;
-}
-a.navbar-brand {
-    font-size: 0.9em;
-    margin-top: 0.2em;
-	margin-bottom: 0em;
-}
-.caption h3 {
-    font-size: 1.8em;
-}
-.train h2, .banner h2 {
-    font-size: 2.1em;
-}
-.benefits h3, .testimonials-section h3, .gym-product h3 {
-    font-size: 2em;
-}
-.lb-overlay > div {
-    width: 355px;
-}
-}
-@media(max-width:320px){
-.caption {
-    margin-top: 8em;
-}
-a.navbar-brand {
-    margin-top: 0.3em;
-}
-a.button {
-    width: 43%;
-}
-.cap-left {
-    padding: 0;
-}
-.cap-right {
-    padding: 0;
-}
-.caption h3 {
-    font-size: 1.8em;
-}
-.banner-section {
-    min-height: 345px;
-}
-.train-top {
-    padding: 1em;
-}
-.train-grid {
-    padding: 0;
-}
-.train, .benefits, .testimonials-section, .footer-section, .about-section, .trainers-section, .class {
-    padding: 1em 0;
-}
-.train-grids, .testimonials-grids, .product-grids, .top2, .register {
-    margin-top: 1em;
-}
-.benefit-left {
-    float: left;
-    width: 17%;
-}
-.benefit-right {
-    float: left;
-    width: 79%;
-}
-.benefits-grid {
-    padding: 0;
-}
-.benefits-grid1 {
-    padding: 0;
-}
-.testimonials-grid {
-    padding: 0;
-}
-.footer-grid {
-    padding: 0;
-}
-.footer-grid:nth-child(2), .footer-grid:nth-child(3), .footer-grid:nth-child(4) {
-    margin-top: 1em;
-}
-.copy-section {
-    padding: 1em 0;
-}
-.about-grid1 {
-    padding: 0;
-}
-.about-grid {
-    padding: 0;
-}
-.about-grid h4{
-	line-height:1.5em;
-}
-.benefits h3, .testimonials-section h3, .gym-product h3 {
-    font-size: 1.8em;
-}
-.product-grid {
-    padding: 0;
-}
-.class-left {
-    padding: 0;
-}
-.class-right {
-    padding: 0;
-}
-.class-grid1 {
-    margin-top: 1em;
-    padding: 0;
-}
-.lb-album li {
-    width: 100%;
-}
-.lb-overlay div h3 {
-    font-size: 1.5em;
-    margin: 0px 0;
-}
-.lb-overlay > div {
-    width: 313px;
-}
-.lb-overlay:target {
-    padding: 98px 0 0;
-}
-.lb-overlay a.lb-close {
-    left: 37.5%;
-}
-.recent-right {
-    padding: 1em;
-}
-.map-grids {
-    padding: 1em 0em;
-}
-.map-grids {
-    left: 1em;
-    width: 90%;
-    top: 2em;
-}
-}
+    .cap-left {
+        width: 100%;
+    }
+    .caption {
+        margin-top: 9em;
+    }
+    .caption h3 {
+        font-size: 2em;
+    }
+    .banner-section {
+        min-height: 375px;
+        background: url(../images/2.jpg) no-repeat -108px 0px;
+        background-size: cover;
+    }
+    .navbar-default .navbar-nav > li > a {
+        line-height: 20px;
+    }
+    .caption p {
+        margin-bottom: 0.5em;
+    }
+    .train h2, .banner h2 {
+        font-size: 2.3em;
+    }
+    .train, .benefits, .testimonials-section, .footer-section, .about-section, .trainers-section,.class {
+        padding: 2em 0;
+    }
+    .train-grids,.testimonials-grids,.product-grids ,.top2,.register,.time,.help-line{
+        margin-top: 2em;
+    }
+    .train-grid h4, .about-grid h4, .about-grid1 h4, .product-grid h4, .class-top h4, .class-grid1 h4 {
+        font-size: 1.4em;
+        line-height: 1.3em;
+    }
+    .train-grid {
+        width: 100%;
+    }
+    .testimonials-grid1 {
+        width: 100%;
+    }
+    .testimonials-grid {
+        width: 100%;
+    }
+    .testimonials-grid1 img {
+        margin: 0 auto;
+    }
+    .test {
+        margin-top: 1em;
+    }
+    .testimonials-section h5 {
+        font-size: 1.4em;
+        margin: .5em 0 0 0em;
+    }
+    .benefits-grid1 textarea {
+        height: 130px;
+    }
+    .footer-grid {
+        width: 100%;
+    }
+    .footer-grid:nth-child(2),.footer-grid:nth-child(3), .footer-grid:nth-child(4) {
+        margin-top: 2em;
+    }
+    .about-grid1 {
+        width: 100%;
+    }
+    .about-grid {
+        width: 100%;
+        margin-top: 1em;
+    }
+    .about-right img {
+        width: 100%;
+    }
+    .product-grid {
+        width: 100%;
+    }
+    .product-grid:nth-child(2) {
+        margin: 2em 0;
+    }
+    .gym-product {
+        padding: 0 0 2em;
+    }
+    .class-grid {
+        width: 100%;
+    }
+    .class-grid1 {
+        width: 100%;
+        margin-top: 2em;
+    }
+    .lb-overlay > div {
+        width: 403px;
+    }
+    .lb-overlay:target img {
+        width: 70%;
+    }
+    .lb-overlay a.lb-close {
+        left: 40.5%;
+    }
+    .lb-overlay div h3 {
+        font-size: 1.8em;
+    }
+    .recent-right {
+        padding: 2.2em;
+    }
+    .headdings, .Buttons, .progress-bars, .alerts, .bread-crumbs, .pagenatin, .appearance, .distracted {
+        padding: 1em 0;
+    }
+    .map-grids {
+        padding: 2em 1em;
+    }
+    .map-middle {
+        width: 100%;
+    }
+    .map-middle input[type="text"], .map-middle textarea {
+        margin-bottom: 10px;
+    }
+    .map-left {
+        width: 100%;
+        margin-top: 2em;
+    }
+    .map-left h4 {
+        margin-bottom: 11px;
+    }
+    .test1 {
+        margin-bottom: 1em;
+    }
+    @media (max-width: 414px){
+        .caption {
+            margin-top: 9em;
+        }
+        .caption p {
+            font-size: 0.92em;
+            padding: 0.5em;
+        }
+        .table h1 {
+            font-size: 1.6em;
+        }
+        .table h2 {
+            font-size: 1.5em;
+        }
+        .table h3 {
+            font-size: 1.5em;
+        }
+        h3.ghj {
+            font-size: 1.8em;
+            margin: 0 0 0.2em 0;
+        }
+        .label {
+            display: inline;
+            padding: 0.2em .6em .3em;
+            font-size: 40%;
+            font-weight: bold;
+            line-height: 3;
+        }
+        .navbar-toggle {
+            position: relative;
+            float: right;
+            padding: 9px 10px;
+            margin-top: 13px;
+            margin-right: 15px;
+            margin-bottom: 0;
+        }
+    }
+    @media (max-width: 384px){
+        a.button {
+            width: 35%;
+            margin: 1.2em auto 0.3em;
+        }
+    }
+    @media(max-width:375px){
+        a.button {
+            width: 39%;
+        }
+        .navbar-header img {
+            width: 14%;
+        }
+        a.navbar-brand {
+            font-size: 0.9em;
+            margin-top: 0.2em;
+            margin-bottom: 0em;
+        }
+        .caption h3 {
+            font-size: 1.8em;
+        }
+        .train h2, .banner h2 {
+            font-size: 2.1em;
+        }
+        .benefits h3, .testimonials-section h3, .gym-product h3 {
+            font-size: 2em;
+        }
+        .lb-overlay > div {
+            width: 355px;
+        }
+    }
+    @media(max-width:320px){
+        .caption {
+            margin-top: 8em;
+        }
+        a.navbar-brand {
+            margin-top: 0.3em;
+        }
+        a.button {
+            width: 43%;
+        }
+        .cap-left {
+            padding: 0;
+        }
+        .cap-right {
+            padding: 0;
+        }
+        .caption h3 {
+            font-size: 1.8em;
+        }
+        .banner-section {
+            min-height: 345px;
+        }
+        .train-top {
+            padding: 1em;
+        }
+        .train-grid {
+            padding: 0;
+        }
+        .train, .benefits, .testimonials-section, .footer-section, .about-section, .trainers-section, .class {
+            padding: 1em 0;
+        }
+        .train-grids, .testimonials-grids, .product-grids, .top2, .register {
+            margin-top: 1em;
+        }
+        .benefit-left {
+            float: left;
+            width: 17%;
+        }
+        .benefit-right {
+            float: left;
+            width: 79%;
+        }
+        .benefits-grid {
+            padding: 0;
+        }
+        .benefits-grid1 {
+            padding: 0;
+        }
+        .testimonials-grid {
+            padding: 0;
+        }
+        .footer-grid {
+            padding: 0;
+        }
+        .footer-grid:nth-child(2), .footer-grid:nth-child(3), .footer-grid:nth-child(4) {
+            margin-top: 1em;
+        }
+        .copy-section {
+            padding: 1em 0;
+        }
+        .about-grid1 {
+            padding: 0;
+        }
+        .about-grid {
+            padding: 0;
+        }
+        .about-grid h4{
+            line-height:1.5em;
+        }
+        .benefits h3, .testimonials-section h3, .gym-product h3 {
+            font-size: 1.8em;
+        }
+        .product-grid {
+            padding: 0;
+        }
+        .class-left {
+            padding: 0;
+        }
+        .class-right {
+            padding: 0;
+        }
+        .class-grid1 {
+            margin-top: 1em;
+            padding: 0;
+        }
+        .lb-album li {
+            width: 100%;
+        }
+        .lb-overlay div h3 {
+            font-size: 1.5em;
+            margin: 0px 0;
+        }
+        .lb-overlay > div {
+            width: 313px;
+        }
+        .lb-overlay:target {
+            padding: 98px 0 0;
+        }
+        .lb-overlay a.lb-close {
+            left: 37.5%;
+        }
+        .recent-right {
+            padding: 1em;
+        }
+        .map-grids {
+            padding: 1em 0em;
+        }
+        .map-grids {
+            left: 1em;
+            width: 90%;
+            top: 2em;
+        }
+
+    }

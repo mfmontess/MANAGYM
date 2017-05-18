@@ -40,9 +40,7 @@ public class Ingresar extends HttpServlet {
 
             try {
                 String usuario = request.getParameter("usuario");
-                out.println(usuario);
                 String pass = request.getParameter("pass");
-                out.println(pass);
                 if (UsuarioServicio.getInstance().IngresarSistema(usuario, pass) != null) {
                     U = UsuarioServicio.getInstance().IngresarSistema(usuario, pass);
                     HttpSession session = request.getSession(true);
