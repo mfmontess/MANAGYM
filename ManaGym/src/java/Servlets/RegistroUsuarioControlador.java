@@ -5,11 +5,10 @@
  */
 package Servlets;
 
-import BD.UsuarioBD;
-import Managym.Usuario;
+import BD.*;
+import Managym.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -61,10 +60,26 @@ public class RegistroUsuarioControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
-        String accion = request.getParameter("id");
-        String usuario = request.getParameter("usuario");
-        String password = request.getParameter("pass");
-        //request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
+        
+        try{
+            String documento = request.getParameter("documento");
+            String usuario = request.getParameter("usuario");
+            String nombre = request.getParameter("nombre");
+            String direccion = request.getParameter("direccion");
+            String celular = request.getParameter("celular");
+            String password = request.getParameter("pass");
+            int perfil = Integer.parseInt(request.getParameter("perfil"));
+            Usuario user = new Usuario(usuario,password,new Perfil(perfil),2);
+            UsuarioBD.mgr.insert(user);
+            Persona obj = FactoryPersona.CrearPersona(user);
+            PersonaBD.mgr.insert(obj);
+            String msj = "Su registro se ha realizado satisfactoriamente, en breve espere su activación.";
+            sesion.setAttribute("persona", obj);
+        } catch(Exception e){
+            String msj = "No se pudo registrar el usuario debido al siguiente error: " + e.getMessage();
+            sesion.setAttribute("error", msj);
+        }
+        request.getRequestDispatcher("RegistrarUsuario.jsp").forward(request, response);
     }
 
     /**

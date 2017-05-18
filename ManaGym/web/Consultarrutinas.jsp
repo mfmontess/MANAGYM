@@ -1,6 +1,6 @@
 <%-- 
-    Document   : MostrarEjercicios
-    Created on : 23/04/2017, 08:05:10 PM
+    Document   : Consultarrutinas
+    Created on : 14/05/2017, 06:47:05 PM
     Author     : lenovo
 --%>
 
@@ -9,23 +9,23 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>MANAGYM RUTINAS</title>
         <style>
-              
-                h1 {
+            h1 {
                     color: black;
                     font-family: fantasy;
                     text-align: center;
                 }
-                td{
-                color: floralwhite;
-                font-family: fantasy;
-            }
+               
                 legend {
-                    color: navy;
-                    font-family: fantasy;
+                    color: black;
+                    font-family: monospace;
                     font-size: 30px;
                   }
+                   td{
+                color: black;
+                font-family: fantasy;
+            }
                     *{
                padding: 0px;
                margin: 0px;
@@ -63,39 +63,39 @@
         </style>
     </head>
     <body>
-       <h1>MANAGYM</h1>
+        <h1>MANAGYM</h1>
         <br>
         <br>
-        <form name="form2" action="Ejercicioscontrolador">
+        <form name="form3" action="Rutinacontrolador">
             <fieldset>
-            <table>
-                <legend>EJERCICIOS</legend>
+                <legend>RUTINAS</legend>
+                <table>
                     <tr>
-                        <td>Id Ejercicio: </td>
-                        <td><input type="text" name="idejercicio" value=${ejercicio.idejercicio}></td>
-                    </tr>
-                    <tr>
-                    <td>Nombre Ejercicio:</td> 
-                    <td><input type="text" name="nombreejercicio" value=${ejercicio.nombreejercicio}></td>
-                </tr>
-                <tr>
-                    <td>Descripcion Ejercicio:</td> 
-                    <td><input type="text" name="descripcionejercicio" value=${ejercicio.descripcionejercicio}></td>
-                </tr>
-                <tr>
-                    <td>Video Ejercicio:</td> 
-                    <td><input type="text" name="videoejercicio" value=${ejercicio.videoejercicio}></td>
-                </tr>
-                <tr>
-                    <tr>
-                ${mensaje}
+                    <td>Id Rutina:</td>
+                    <td> <input type="text" name="idrutina" value=${rutina.idrutina}></td>
                 </tr>
                     <tr>
-                        <td><input type="submit"  value="Regresar" name="accion"></td>
-                    </tr>
-            </table>
-                
-                </fieldset>
+                    <td>Nombre Rutina:</td>
+                    <td> <input type="text" name="nombrerutina" value=${rutina.nombrerutina}></td>
+                </tr>
+                    <tr>
+                    <td>Descripcion:</td>
+                    <td> <input type="text" name="descripcion" value=${rutina.descripcion}></td>
+                </tr>
+                  <tr>
+                    <td>Tiempo de Duracion:</td>
+                    <td> <input type="text" name="tiempodeduracion" value=${rutina.tiempodeduracion}></td>
+                </tr>
+                 <tr>
+                  ${mensaje3}
+                </tr>
+                 <tr>
+                     <td><input type="submit" value="Modificar" name="accion"</td>
+                     <td><input type="submit" value="Eliminar" name="accion"</td>
+                     <td><input type="submit" value="Regresar" name="accion"</td>
+                </tr>
+                </table>
+            </fieldset>
         </form>
     </body>
 </html>

@@ -52,8 +52,8 @@ public class MaquinaBD extends DBManager{
     return x;
     }
     
-    public ArrayList consultarMaquinas (String campo, String valor){
-    ArrayList x = ejecutarQuery("select * from maquinas where "+campo+" ="+valor+" ");
+    public ArrayList consultarMaquinas (String valor){
+    ArrayList x = ejecutarQuery("select * from maquinas where idmaquina ="+valor+" ");
     return x;
     }
 }

@@ -13,18 +13,17 @@ import java.sql.ResultSet;
  */
 public class Usuario {
    private int id;   
-    private String usuario;
+    private String nombreUsuario;
     private String contraseña;
-    private int perfil;
+    private Perfil perfil;
     private int estado;
     
 
     public Usuario() {
     }
 
-    public Usuario(int id,  String usuario, String contraseña, int perfil, int estado) {
-        this.id = id;      
-        this.usuario = usuario;
+    public Usuario(String usuario, String contraseña, Perfil perfil, int estado) {
+        this.nombreUsuario = usuario;
         this.contraseña = contraseña;
         this.perfil = perfil;
         this.estado = estado;
@@ -33,9 +32,9 @@ public class Usuario {
     public Usuario(ResultSet rs){        
         try {
             id = rs.getInt("IdUsuario");
-            usuario = rs.getString("NombreUsuario");
+            nombreUsuario = rs.getString("NombreUsuario");
             contraseña = rs.getString("ContrasenaUsuario");            
-            perfil = rs.getInt("IdPerfil");
+            perfil = new Perfil(rs.getInt("IdPerfil"), rs.getString("NombrePerfil"));
             estado = rs.getInt("IdEstado");
         } catch (Exception e) {
         }
@@ -48,19 +47,13 @@ public class Usuario {
     public void setId(int id) {
         this.id = id;
     }
-
-   
-
     
-
-  
-
-    public String getUsuario() {
-        return usuario;
+    public String getNombreUsuario() {
+        return nombreUsuario;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setNombreUsuario(String usuario) {
+        this.nombreUsuario = usuario;
     }
 
     public String getContraseña() {
@@ -71,11 +64,11 @@ public class Usuario {
         this.contraseña = contraseña;
     }
 
-    public int getPerfil() {
+    public Perfil getPerfil() {
         return perfil;
     }
 
-    public void setPerfil(int perfil) {
+    public void setPerfil(Perfil perfil) {
         this.perfil = perfil;
     }
 

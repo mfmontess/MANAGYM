@@ -15,7 +15,8 @@ import java.util.ArrayList;
  */
 public class ClienteBD extends DBManager {
     
-    public ClienteBD(){}
+    private ClienteBD(){}
+    public static ClienteBD mgr = new ClienteBD();
     public ArrayList getClientes(){
         ArrayList x = ejecutarQuery("select * from clientes");
         return x;
@@ -23,8 +24,12 @@ public class ClienteBD extends DBManager {
 
     public void update(Cliente cliente) {
         execute( "update clientes"
-                + "set nombreCliente = " + cliente.getNombreCliente()
+                + "set nombreCliente = " + cliente.getNombre()
                 + "where  idCliente = " + cliente.getId()
         );
+    }
+
+    void insert(Cliente cliente) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

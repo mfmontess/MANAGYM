@@ -11,9 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <style>
-              body {
-                 background-image: url(imgfondos/fit.jpg); 
-                }
+              
                 h1 {
                     color: black;
                     font-family: fantasy;
@@ -69,33 +67,33 @@
       <h1>MANAGYM</h1>
         <br>
         <br>
-        <form name="form1" action="Ejerciciocontrolador">
+        <form name="form2" action="Ejercicioscontrolador">
             <fieldset>
                 <legend>EJERCICIOS</legend>
             <table>
                 <tr>
-                    <td>Id Ejercicios:</td>
-                    <td> <input type="text" name="IdEjercicio" value=${Ejercicios.idEjercicio}></td>
+                    <td>Id Ejercicio:</td>
+                    <td> <input type="text" name="idejercicio" value=${ejercicio.idejercicio}></td>
                 </tr>
                 <tr>
-                    <td>Nombre Ejercicios:</td>
-                    <td> <input type="text" name="NombreEjercicio" value=${Ejercicios.nombreEjercicio}></td>
+                    <td>Nombre Ejercicio:</td>
+                    <td> <input type="text" name="nombreejercicio" value=${ejercicio.nombreejercicio}></td>
                 </tr>
                 <tr>
-                    <td>Descripcion Ejercicios:</td>
-                    <td> <input type="text" name="DescripcionEjercicio" value=${Ejercicios.descripcionEjercicio}></td>
+                    <td>Descripcion Ejercicio:</td>
+                    <td> <input type="text" name="descripcionejercicio" value=${ejercicio.descripcionejercicio}></td>
                 </tr>
                 <tr>
-                    <td>Video Ejercicios:</td>
-                    <td> <input type="text" name="VideoEjercicio" value=${Ejercicios.videoEjercicio}></td>
+                    <td>Video Ejercicio:</td>
+                    <td> <input type="text" name="videoejercicio" value=${ejercicio.videoejercicio}></td>
                 </tr>
                 <tr>
                 ${mensaje}
                 </tr>
                 <tr>
-                    <td><input type="submit" src="imgiconos/modificar.png" value="Modificar" name="accion"></td>
-                    <td><input type="submit" src="imgiconos/eliminar.png" value="Eliminar" name="accion"></td>
-                    <td><input type="submit" src="imgiconos/deshacer.png" value="Regresar" name="accion"></td>
+                    <td><input type="submit"  value="Modificar" name="accion"></td>
+                    <td><input type="submit"  value="Eliminar" name="accion"></td>
+                    <td><input type="submit"  value="Regresar" name="accion"></td>
                 </tr>
             </table>
                 </fieldset>

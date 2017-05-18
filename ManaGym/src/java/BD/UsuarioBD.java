@@ -32,5 +32,10 @@ public class UsuarioBD extends DBManager{
     public void updateEstado(String usuario, int estado) {
         execute("update usuarios set IdEstado = " + estado + " where IdUsuario = " + usuario);
     }
-    
+
+    public void insert(Usuario usuario) {
+        execute("insert into usuarios (NombreUsuario,ContrasenaUsuario,IdPerfil,IdEstado) values ('"
+                + usuario.getNombreUsuario() + "','" + usuario.getContraseña() + "',"         
+                + usuario.getPerfil().getId() + "," + usuario.getEstado());
+    }    
 }

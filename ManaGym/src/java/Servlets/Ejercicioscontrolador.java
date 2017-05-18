@@ -7,7 +7,7 @@ package Servlets;
 
 import BD.EjercicioBD;
 import BD.MaquinaBD;
-import Managym.Ejercicios;
+import Managym.Ejercicio;
 import Managym.Maquina;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author lenovo
  */
-public class Ejerciciocontrolador extends HttpServlet {
+public class Ejercicioscontrolador extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +41,10 @@ public class Ejerciciocontrolador extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Ejerciciocontrolador</title>");            
+            out.println("<title>Servlet Ejercicioscontrolador</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Ejerciciocontrolador at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Ejercicioscontrolador at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -62,56 +62,62 @@ public class Ejerciciocontrolador extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        processRequest(request, response);
         HttpSession sesion = request.getSession();
-        String id = request.getParameter("id");
-        String IdEjercicio = request.getParameter("IdEjercicio");
-        String NombreEjercicio= request.getParameter("NombreEjercicio");
-        String DescripcionEjercicio = request.getParameter("DescripcionEjercicio");
-        String VideoEjercicio= request.getParameter("VideoEjercicio");
-        String ejercicio1= request.getParameter("ejercicio");
+        String id= request.getParameter("id");
+        String idejercicio = request.getParameter("idejercicio");
+        String nombreejercicio = request.getParameter("nombreejercicio");
+        String descripcionejercicio = request.getParameter("descripcionejercicio");
+        String videoejercicio = request.getParameter("videoejercicio");
+        String ejercicio1 = request.getParameter("ejercicio");
         String accion = request.getParameter("accion");
-        Ejercicios ejercicio = new Ejercicios();
+        Ejercicio ejercicio = new Ejercicio();
         if(accion.equals("Guardar")){
-             ejercicio = new Ejercicios (IdEjercicio,NombreEjercicio,DescripcionEjercicio,VideoEjercicio);
-            EjercicioBD.mgr.guardar(ejercicio,IdEjercicio, true);
+            ejercicio = new Ejercicio(idejercicio, videoejercicio, descripcionejercicio, videoejercicio);
+            EjercicioBD.mgr.guardar(ejercicio, true);
             sesion.setAttribute("ejercicio", ejercicio);
             sesion.setAttribute("mensaje", "Registro guardado con exito");
-           request.getRequestDispatcher("MostrarEjercicios.jsp").forward(request, response);
+            request.getRequestDispatcher("MostrarEjercicios.jsp").forward(request, response);
         }else{
             if(accion.equals("Consultar")){
-                IdEjercicio = request.getParameter("IdEjercicio");
-                ejercicio= EjercicioBD.mgr.getEjercicio(IdEjercicio);
-                ArrayList <Ejercicios> ejercicios = EjercicioBD.mgr.getEjercicios();
+                idejercicio = request.getParameter("idejercicio");
+                ejercicio = EjercicioBD.mgr.getEjercicio(idejercicio);
+                ArrayList <Ejercicio> ejercicios = EjercicioBD.mgr.getEjercicios1();
+                ArrayList <Maquina> maquinas = MaquinaBD.mgr.consultarMaquinas("idmaquina");
                 sesion.setAttribute("ejercicios", ejercicios);
+                sesion.setAttribute("maquinas", maquinas);
                 sesion.setAttribute("ejercicio", ejercicio);
                 sesion.setAttribute("mensaje", "El registro es:");
                 request.getRequestDispatcher("ConsultarEjercicios.jsp").forward(request, response);
             }else{
                 if(accion.equals("Eliminar")){
-                    ejercicio = (Ejercicios) sesion.getAttribute("ejercicio");
-                    EjercicioBD.mgr.eliminarEjercicio(ejercicio);
-                    sesion.setAttribute("ejercicio", ejercicio);
-                    sesion.setAttribute("mensaje", "Registro eliminado con exito");
-                   request.getRequestDispatcher("MostrarEjercicios.jsp").forward(request, response);
+                ejercicio = (Ejercicio) sesion.getAttribute("ejercicio");
+                EjercicioBD.mgr.eliminarEjercicio(ejercicio);
+                sesion.setAttribute("ejercicio", ejercicio);
+                sesion.setAttribute("mensaje", "Registro eliminado con exito");
+                request.getRequestDispatcher("MostrarEjercicios.jsp").forward(request, response);
                 }else{
-                    if(accion.equals("Modificar")){
-                        ejercicio = (Ejercicios) sesion.getAttribute("ejercicios");
-                        NombreEjercicio = request.getParameter("NombreEjercicio");
-                        IdEjercicio = request.getParameter("IdEjercicio");
-                        DescripcionEjercicio = request.getParameter("DescripcionEjercicio");
-                        VideoEjercicio = request.getParameter("VideoEjercicio");
-                        EjercicioBD.mgr.guardar(ejercicio,IdEjercicio, false);
-                        sesion.setAttribute("ejercicio", ejercicio);
-                        sesion.setAttribute("mensaje", "Registro modificado con exito");
-                        request.getRequestDispatcher("MostrarEjercicios.jsp").forward(request, response);
-                    }else{
-                        request.getRequestDispatcher("GestionarEjercicios.jsp").forward(request, response);
-                        
-                    }
+                if(accion.equals("Modificar")){
+                    ejercicio = (Ejercicio) sesion.getAttribute("ejercicio");
+                    nombreejercicio = request.getParameter("nombreejercicio");
+                    idejercicio = request.getParameter("idejercicio");
+                    descripcionejercicio = request.getParameter("descripcionejercicio");
+                    videoejercicio= request.getParameter("videoejercicio");
+                    ejercicio.setIdejercicio(idejercicio);
+                    ejercicio.setNombreejercicio(nombreejercicio);
+                    ejercicio.setNombreejercicio(descripcionejercicio);
+                    ejercicio.setVideoejercicio(videoejercicio);
+                    EjercicioBD.mgr.guardar(ejercicio, false);
+                    sesion.setAttribute("ejercicio", ejercicio);
+                    sesion.setAttribute("mensaje", "Registro modificado con exito");
+                    request.getRequestDispatcher("MostrarEjercicios.jsp").forward(request, response);
+                }else{
+                    request.getRequestDispatcher("GestionarEjercicios.jsp").forward(request, response);
                 }
-                
+                }
             }
         }
+        
     }
 
     /**

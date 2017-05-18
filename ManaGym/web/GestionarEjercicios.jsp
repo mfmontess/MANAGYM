@@ -10,12 +10,10 @@
      <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-       <script type="text/jscript" > 
+        <script type="text/jscript" src="Validacion.js"> 
         </script>
         <style type="text/css">
-            body {
-                 background-image: url(imgfondos/fitness29.jpg);     
-                }
+           
                 h1 {
                     color: black;
                     font-family: fantasy;
@@ -73,7 +71,7 @@
                 <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
                 <li><a href="GestionarRutinas.jsp">GESTION DE RUTINAS</a></li>
                 <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
-                    
+                <li><a href="AdministrarFiicha.jsp">ADMINISTRAR FICHA MEDICA</a></li>                  
             </ul>
          <br>
           <br>
@@ -86,31 +84,31 @@
           <br>
         
         <br>
-        <form name="form2" action="Ejerciciocontrolador">
+        <form name="form2" action="Ejercicioscontrolador" onsubmit ="return Validacion(this);">
             <fieldset>
-                <legend>FORMULARIO INGRESO DE EJERCICIOS</legend>
+                <legend>FORMULARIO GESTION DE EJERCICIOS</legend>
             <table>
                  <br>
                 <tr>
                     <td>Id Ejercicio:</td> 
-                    <td><input type="text" name="IdEjercicio"></td>
+                    <td><input type="text" name="idejercicio"></td>
                 </tr>
                 <tr>
                     <td>Nombre Ejercicio:</td> 
-                    <td><input type="text" name="NombreEjercicio"></td>
+                    <td><input type="text" name="nombreejercicio" value="Ejercicio" size="40"></td>
                 </tr>
                 <tr>
                     <td>Descripcion Ejercicio:</td> 
-                    <td><input type="text" name="DescripcionEjercicio"></td>
+                    <td><input type="text" name="DescripcionEjercicio" value="Ejercicio" size="40"></td>
                 </tr>
                 <tr>
                     <td>Video Ejercicio:</td> 
-                    <td><input type="text" name="VideoEjercicio"></td>
+                    <td><input type="text" name="VideoEjercicio" value="Ejercicio" size="40"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit"  src="imgiconos/deshacer.png" value="Limpiar" name="accion">
-                    <td><input type="submit" src="imgiconos/guardar.png" value="Guardar" name="accion" ></td> 
-                    <td><input type="submit" src="imgiconos/buscar.png" value="Consultar" name="accion"></td>
+                    <td><input type="submit"  value="Limpiar" name="accion">
+                    <td><input type="submit"  value="Guardar" name="accion" ></td> 
+                    <td><input type="submit"  value="Consultar" name="accion"></td>
                 </tr>
             </table>
             </fieldset>
