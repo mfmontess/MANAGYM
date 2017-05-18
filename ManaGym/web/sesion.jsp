@@ -29,7 +29,7 @@
             <!--/login-top-->
 
             <div class="error-top">
-                <h2 class="inner-tittle page">GYM</h2>
+                <h2 class="inner-tittle page">ManaGYM</h2>
                 <div class="login">
                     <h3 class="inner-tittle t-inner">Login</h3>
 
