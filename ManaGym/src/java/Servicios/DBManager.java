@@ -1,19 +1,17 @@
 
 package Servicios;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.sql.*;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 
 
 public class DBManager {
     private final String db = "Managym";
-    private final String url = "jdbc:postgresql://localhost:5432/"+db;
-    private final String driver = "org.postgresql.Driver";
-    private final String usuario = "postgres";
-    private final String password = "andres06";
+    private final String url = "jdbc:sqlserver://managym.mssql.somee.com;" +
+            "user=managym; password=managym2017; databaseName="+db+";";
+    private final String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    private final String usuario = "managym";
+    private final String password = "managym2017";
     
     public DBManager(){
     }
@@ -25,7 +23,7 @@ public class DBManager {
         try {
             Class.forName(driver);
             System.out.println("\nConectando a la Base de Managym....\n");
-            Connection con= DriverManager.getConnection(url, usuario,password);
+            Connection con= DriverManager.getConnection(url);
             if(con==null){
             System.out.println("\nNo esta conectado  la base\n");
             return x;
