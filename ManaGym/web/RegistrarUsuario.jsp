@@ -34,31 +34,30 @@
             <!--/login-top-->
             <script>
             $(document).ready(function() {
-                $("input[name$='usuario']").click(function() {
-        var test = $(this).val();
-        $("div.desc").hide();
-        $("#usuario" + test).show();
-    });
-});
+                $("input[name$='perfil']").click(function() {
+                    var test = $(this).val();
+                    $("div.desc").hide();
+                    $("#usuario" + test).show();
+                });
+            });
     </script>
             <div class="error-top">
                 <h2 class="inner-tittle page">MANAGYM</h2>
                 <div class="login">
                     <h3 class="inner-tittle t-inner">Registrarse</h3>
                     <form action="RegistroUsuarioControlador">
-                        <div id="myRadioGroup">
+                        <!--<div id="myRadioGroup">-->
                             Instructor<input type="radio" name="perfil" checked="checked" value="2"/>
                             Cliente<input type="radio" name="perfil" value="3"/>
-                            <input type="text" name="documento" class="text" placeholder="Documento"  required>
+                            <!--<input type="text" name="documento" class="text" placeholder="Documento"  required>
                             <div id="usuario2" class="desc">
-                                <!--INSTRUCTOR-->
                                     <input type="text" name="nombre" class="text" placeholder="Nombre Instructor"  required>
                             </div>
                             <div id="usuario3" class="desc" style="display: none;">
-                                <!--CLIENTE-->
                                 <input type="text" name="nombre" class="text" placeholder="Nombre Cliente"  required>
                             </div>
-                        </div>
+                        </div>-->
+                        <input type="date" name="fechaNacimiento" class="text" placeholder="Fecha Nacimiento"  required>
                         <input type="text" name="direccion" class="text" placeholder="Dirección"  required>
                         <input type="text" name="celular" class="text" placeholder="Celular"  required>
                         <input type="text" name="usuario" class="text" placeholder="Codigo Usuario"  required>
@@ -72,7 +71,6 @@
                             <div class="clearfix"></div>                                
                         </div>
                         <label id="mensaje">{mensaje}</label>
-                        <label id="error">{error}</label>
                     </form>                  
                 </div>
             </div>

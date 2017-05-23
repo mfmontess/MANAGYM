@@ -40,7 +40,7 @@
                         <div class="clearfix"></div>
 
                         <div class="new">                            
-                            <p class="checkbox11">No esta registrado ? <a href="registrar.html">Registrese</a></p>
+                            <p class="checkbox11">No esta registrado ? <a href="RegistrarUsuario.jsp">Registrese</a></p>
                             <div class="clearfix"></div>
                         </div>
                     </form>

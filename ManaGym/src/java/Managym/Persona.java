@@ -5,12 +5,14 @@
  */
 package Managym;
 
+import java.util.Date;
+
 /**
  *
  * @author ASUS
  */
 public class Persona {
-    private int edad;
+    private Date fechaNacimiento;
     private String identificacion;
     private String nombre;
     private String celular;
@@ -25,12 +27,12 @@ public class Persona {
         this.usuario = usuario;
     }
 
-    public int getEdad() {
-        return edad;
+    public Date getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setFechaNacimiento(Date fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public String getIdentificacion() {

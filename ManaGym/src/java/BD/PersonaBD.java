@@ -7,6 +7,7 @@ package BD;
 
 import Managym.*;
 import Servicios.DBManager;
+import java.util.ArrayList;
 
 /**
  *
@@ -27,4 +28,10 @@ public class PersonaBD extends DBManager {
                 throw new Exception("Tipo de perfil no definido en el sistema");
         }
     }    
+
+    public Persona getPersona(String documento) {
+        ArrayList x = ejecutarQuery("select * from Instructores where CedulaInstructor = "+documento+" UNION"
+                + " select * from Instructores where CedulaInstructor = "+documento);
+        return (Persona) x.get(0);
+    }
 }
