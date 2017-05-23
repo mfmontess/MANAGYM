@@ -46,7 +46,7 @@
                 <div class="login">
                     <h3 class="inner-tittle t-inner">Registrarse</h3>
                     <form action="RegistroUsuarioControlador">
-                        <!--<div id="myRadioGroup">-->
+                        <div id="myRadioGroup">
                             Instructor<input type="radio" name="perfil" checked="checked" value="2"/>
                             Cliente<input type="radio" name="perfil" value="3"/>
                             <!--<input type="text" name="documento" class="text" placeholder="Documento"  required>
@@ -55,8 +55,8 @@
                             </div>
                             <div id="usuario3" class="desc" style="display: none;">
                                 <input type="text" name="nombre" class="text" placeholder="Nombre Cliente"  required>
-                            </div>
-                        </div>-->
+                            </div>-->
+                        </div>
                         <input type="date" name="fechaNacimiento" class="text" placeholder="Fecha Nacimiento"  required>
                         <input type="text" name="direccion" class="text" placeholder="Dirección"  required>
                         <input type="text" name="celular" class="text" placeholder="Celular"  required>

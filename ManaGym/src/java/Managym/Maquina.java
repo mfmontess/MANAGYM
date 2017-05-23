@@ -29,7 +29,6 @@ public class Maquina {
     }
 
     public Maquina() {
-        
     }
     
      public Maquina (ResultSet rs){

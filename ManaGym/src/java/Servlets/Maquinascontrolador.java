@@ -7,14 +7,10 @@ package Servlets;
 
 import BD.MaquinaBD;
 import Managym.Maquina;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
 
 /**
  *
@@ -61,53 +57,41 @@ public class Maquinascontrolador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
-        String id = request.getParameter("id");
-        String IdMaquina = request.getParameter("IdMaquina");
-        String NombreMaquina= request.getParameter("NombreMaquina");
-        String Caracteristicas= request.getParameter("Caracteristicas");
-        String EstadoMaquina= request.getParameter("EstadoMaquina");
-        String maquina1= request.getParameter("maquina");
+        
         String accion = request.getParameter("accion");
-        Maquina maquina = new Maquina();
-        System.out.println("este es el error"+accion);
-        if(accion.equals("Guardar")){
-            maquina = new Maquina (IdMaquina,NombreMaquina,Caracteristicas,EstadoMaquina);
-            MaquinaBD.mgr.guardar(maquina, true);
+        if(accion.equals("Consultar")){
+            String IdMaquina = request.getParameter("IdMaquina");
+            Maquina maquina= MaquinaBD.mgr.getMaquina(IdMaquina);
+            if(maquina == null) {
+                maquina = new Maquina();
+                maquina.setIdMaquina(IdMaquina);
+                sesion.setAttribute("estado", "Nuevo");
+            }else
+                sesion.setAttribute("estado", "Existente");
+            
             sesion.setAttribute("maquina", maquina);
+            request.getRequestDispatcher("/GestionarMaquinas.jsp").forward(request, response);
+        }else if(accion.equals("Guardar")){
+            String estado = sesion.getAttribute("estado").toString();
+            String IdMaquina = request.getParameter("IdMaquina");
+            String NombreMaquina= request.getParameter("NombreMaquina");
+            String Caracteristicas= request.getParameter("Caracteristicas");
+            String EstadoMaquina= request.getParameter("EstadoMaquina");
+            Maquina maquina = new Maquina (IdMaquina,NombreMaquina,Caracteristicas,EstadoMaquina);
+            if(estado.equals("Nuevo"))
+                MaquinaBD.mgr.guardar(maquina, true);
+            else if(estado.equals("Existente"))
+                MaquinaBD.mgr.guardar(maquina, false);
+            
+            sesion.setAttribute("maquina", null);
             sesion.setAttribute("mensaje", "Registro guardado con exito");
-           request.getRequestDispatcher("MostrarMaquinas.jsp").forward(request, response);
-        }else{
-            if(accion.equals("Consultar")){
-                IdMaquina = request.getParameter("IdMaquina");
-                maquina= MaquinaBD.mgr.getMaquina(IdMaquina);
-                ArrayList <Maquina> maquinas = MaquinaBD.mgr.getMaquinas();
-                sesion.setAttribute("maquinas", maquinas);
-                sesion.setAttribute("maquina", maquina);
-                sesion.setAttribute("mensaje", "El registro es:");
-                request.getRequestDispatcher("ConsultarMaquinas.jsp").forward(request, response);
-            }else{
-                if(accion.equals("Eliminar")){
-                    maquina = (Maquina) sesion.getAttribute("maquina");
-                    MaquinaBD.mgr.eliminar(maquina);
-                    sesion.setAttribute("maquina", maquina);
-                    sesion.setAttribute("mensaje", "Registro eliminado con exito");
-                   request.getRequestDispatcher("MostrarMaquinas.jsp").forward(request, response);
-                }else{
-                    if(accion.equals("Modificar")){
-                        maquina = (Maquina) sesion.getAttribute("maquina");
-                        NombreMaquina = request.getParameter("NombreMaquina");
-                        IdMaquina = request.getParameter("IdMaquina");
-                        MaquinaBD.mgr.guardar(maquina, false);
-                        sesion.setAttribute("maquina", maquina);
-                        sesion.setAttribute("mensaje", "Registro modificado con exito");
-                        request.getRequestDispatcher("MostrarMaquinas.jsp").forward(request, response);
-                    }else{
-                        request.getRequestDispatcher("GestionarMaquinas.jsp").forward(request, response);
-                        
-                    }
-                }
-                
-            }
+            request.getRequestDispatcher("GestionarMaquinas.jsp").forward(request, response);
+        }else if(accion.equals("Eliminar")){
+            Maquina maquina = (Maquina) sesion.getAttribute("maquina");
+            MaquinaBD.mgr.eliminar(maquina);
+            sesion.setAttribute("maquina", null);
+            sesion.setAttribute("mensaje", "Registro eliminado con exito");
+            request.getRequestDispatcher("GestionarMaquinas.jsp").forward(request, response);
         }
     }
 

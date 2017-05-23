@@ -1,6 +1,7 @@
 
 package Managym;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 
@@ -11,9 +12,18 @@ public class Cliente extends Persona{
     private ArrayList<Reporte> reportes;
  
     public Cliente (){
+        super();
         fichas = new ArrayList();
         rutinas = new ArrayList();
         reportes = new ArrayList();
+    }
+    
+    public Cliente(ResultSet rs){
+        super(rs);
+        try {
+            id = rs.getInt("IdCliente");
+        } catch (Exception e) {
+        }
     }
 
     public int getId() {

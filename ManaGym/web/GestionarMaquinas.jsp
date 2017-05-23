@@ -1,20 +1,26 @@
-<%-- 
-    Document   : GestionarMaquinas
-    Created on : 18/04/2017, 10:54:08 PM
-    Author     : lenovo
---%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
       <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-       <script type="text/jscript" > 
+        <title>MANAGYM</title>
+        <script src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("input[name=IdMaquina]").change(function(){
+                    $("input[value=Consultar]").click();
+                });
+                $("input[value=Eliminar]").click(function(){
+                        var str = "Desea eliminar la máquina ";
+                        confirm(str.concat($('input[name=IdMaquina]').val()));
+                });
+            });
         </script>
         <style type="text/css">
             body {
-                 background-image: url(imgfondos/images.jpg);     
+                 background-image: url(imgfondos/maquinas.jpg);     
                 }
                 h1 {
                     color: black;
@@ -65,21 +71,9 @@
                 display: block;
             }
         </style>
+        
     </head>
     <body>
-        
-            <ul class="nav">
-                <li><a href="GestionarEjercicios.jsp">GESTION DE EJERCICIOS</a></li> 
-                <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
-                <li><a href="GestionarRutinas.jsp">GESTION DE RUTINAS</a></li>
-                <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
-                    
-            </ul>
-         <br>
-          <br>
-           <br>
-            <br>
-             <br>
         <h1>MANAGYM</h1>
         <br>
          <br>
@@ -88,37 +82,36 @@
         <br>
         <form name="form2" action="Maquinascontrolador">
             <fieldset>
-                <legend>FORMULARIO REGISTRO MAQUINA</legend>
+                <legend>FORMULARIO GESTIÓN MAQUINA</legend>
             <table>
                  <br>
                 <tr>
-                    <td>Id Maquina:</td> 
-                    <td><input type="text" name="IdMaquina"></td>
+                    <td>Código Máquina:</td> 
+                    <td><input type="text" name="IdMaquina" value=${maquina.idMaquina}></td>
+                </tr>
+                <% if(request.getSession().getAttribute("maquina") != null){ %>
+                <tr>
+                    <td>Nombre:</td> 
+                    <td><input type="text" name="NombreMaquina" value=${maquina.nombreMaquina}></td>
                 </tr>
                 <tr>
-                    <td>Nombre Maquina:</td> 
-                    <td><input type="text" name="NombreMaquina"></td>
+                    <td>Estado:</td> 
+                    <td><input type="text" name="EstadoMaquina" value=${maquina.estadoMaquina}></td>
                 </tr>
                 <tr>
-                    <td>Estado Maquina:</td> 
-                    <td><input type="text" name="EstadoMaquina"></td>
+                    <td>Caracteristicas:</td> 
+                    <td><input type="text" name="Caracteristicas" value=${maquina.caracteristicas}></td>
                 </tr>
                 <tr>
-                    <td>Caracteristicas Maquina:</td> 
-                    <td><input type="text" name="Caracteristicas"></td>
+                    <td><input type="submit" value="Guardar" name="accion"></td> 
+                    <td><input type="submit" value="Eliminar" name="accion"></td>
                 </tr>
-                <tr>
-                    <td><input type="submit" src="imgiconos/guardar.png" value="Guardar" name="accion"></td> 
-                    <td><input type="submit" src="imgiconos/buscar.png" value="Consultar" name="accion"></td>
-                </tr>
+                <%}%>
+                ${mensaje}
             </table>
+            <input type="submit" value="Consultar" name="accion" style="display: none;">
             </fieldset>
         </form>
     </body>
 </html>
-<%-- 
-    Document   : Inicio
-    Created on : 9/11/2016, 04:17:56 PM
-    Author     : lenovo
---%>
 

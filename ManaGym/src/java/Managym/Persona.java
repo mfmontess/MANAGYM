@@ -5,6 +5,7 @@
  */
 package Managym;
 
+import java.sql.ResultSet;
 import java.util.Date;
 
 /**
@@ -18,6 +19,18 @@ public class Persona {
     private String celular;
     private String direccion;
     private Usuario usuario;
+    
+    public Persona(ResultSet rs){        
+        try {
+            identificacion = String.valueOf(rs.getInt("DocumentoPersona"));
+            nombre = rs.getString("NombrePersona");
+            celular = rs.getString("TelefonoPersona");
+            direccion = rs.getString("DireccionPersona");
+        } catch (Exception e) {
+        }
+    }
+    
+    public Persona(){}
 
     public Usuario getUsuario() {
         return usuario;

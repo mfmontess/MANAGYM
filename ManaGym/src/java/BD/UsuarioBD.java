@@ -41,6 +41,10 @@ public class UsuarioBD extends DBManager{
 
     public Usuario getUsuario(String usuario) {
         ArrayList x = ejecutarQuery("select * from usuarios where NombreUsuario = '"+usuario+"' ");
-        return (Usuario) x.get(0);
+        
+        if (x.size() > 0)
+            return (Usuario) x.get(0);
+        else
+            return null;
     }
 }
