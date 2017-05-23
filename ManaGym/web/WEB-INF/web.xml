@@ -28,6 +28,10 @@
         <servlet-name>VisualizarRutinas</servlet-name>
         <servlet-class>Servlets.VisualizarRutinas</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>TraerReporte</servlet-name>
+        <servlet-class>Servlets.TraerReporte</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Maquinascontrolador</servlet-name>
         <url-pattern>/Maquinascontrolador</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>VisualizarRutinas</servlet-name>
         <url-pattern>/VisualizarRutinas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TraerReporte</servlet-name>
+        <url-pattern>/TraerReporte</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
