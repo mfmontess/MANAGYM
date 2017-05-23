@@ -38,4 +38,13 @@ public class UsuarioBD extends DBManager{
                 + usuario.getNombreUsuario() + "','" + usuario.getContraseña() + "',"         
                 + usuario.getPerfil().getId() + "," + usuario.getEstado());
     }    
+
+    public Usuario getUsuario(String usuario) {
+        ArrayList x = ejecutarQuery("select * from usuarios where NombreUsuario = '"+usuario+"' ");
+        
+        if (x.size() > 0)
+            return (Usuario) x.get(0);
+        else
+            return null;
+    }
 }

@@ -5,6 +5,10 @@
         <servlet-class>Servlets.Maquinascontrolador</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>RegistroUsuarioControlador</servlet-name>
+        <servlet-class>Servlets.RegistroUsuarioControlador</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>GestionarUsuariosControlador</servlet-name>
         <servlet-class>Servlets.GestionarUsuariosControlador</servlet-class>
     </servlet>
@@ -24,9 +28,21 @@
         <servlet-name>Ingresar</servlet-name>
         <servlet-class>Servlets.Ingresar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VisualizarRutinas</servlet-name>
+        <servlet-class>Servlets.VisualizarRutinas</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>TraerReporte</servlet-name>
+        <servlet-class>Servlets.TraerReporte</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Maquinascontrolador</servlet-name>
         <url-pattern>/Maquinascontrolador</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroUsuarioControlador</servlet-name>
+        <url-pattern>/RegistroUsuarioControlador</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>GestionarUsuariosControlador</servlet-name>
@@ -47,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>Ingresar</servlet-name>
         <url-pattern>/Ingresar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VisualizarRutinas</servlet-name>
+        <url-pattern>/VisualizarRutinas</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>TraerReporte</servlet-name>
+        <url-pattern>/TraerReporte</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

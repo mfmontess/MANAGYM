@@ -1310,12 +1310,12 @@
                 <!--/down-->
                 <div class="down">	
                     <a href="index.html"><img src="images/admin.jpg"></a>
-                    <a href="index.html"><span class=" name-caret">${sessionScope.persona.usuario} </span></a>
-                    <p>Sistema de administración</p>
+                    <a href="index.html"><span class=" name-caret">Jasmin Leo</span></a>
+                    <p>System Administrator in Company</p>
                     <ul>
-                        <li><a class="tooltips" href="#"><span>Perfil</span><i class="lnr lnr-user"></i></a></li>
-                        <li><a class="tooltips" href="#"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
-                        <li><a class="tooltips" href="CerrarSesion"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
+                        <li><a class="tooltips" href="index.html"><span>Profile</span><i class="lnr lnr-user"></i></a></li>
+                        <li><a class="tooltips" href="index.html"><span>Settings</span><i class="lnr lnr-cog"></i></a></li>
+                        <li><a class="tooltips" href="index.html"><span>Log out</span><i class="lnr lnr-power-switch"></i></a></li>
                     </ul>
                 </div>
                 <!--//down-->

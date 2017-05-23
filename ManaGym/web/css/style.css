@@ -2051,7 +2051,7 @@ ol.breadcrumb.m-b-0 li a:hover {
     margin: 3px 0;
 }
 #os-Other-lbl {
-    border-left: #ea4c89 solid 1.4em;
+    border-left: #002561 solid 1.4em;
     padding-left: 0.5em;
     font-size: 1em;
     color: #777;
@@ -2429,7 +2429,7 @@ span.mar{
     background: #052963;
 }
 span.ur{
-    background: #ea4c89;
+    background: #002561;
 }
 span.work{
     background: #FFA800;
@@ -2848,8 +2848,8 @@ a.read.fourth:hover{
     outline: none;
     padding: 10px 15px;
     width: 100%;
-    border:2px solid #ea4c89;
-    background: #ea4c89;
+    border:2px solid #002561;
+    background: #002561;
     margin: 0;
     font-family: 'Roboto', sans-serif;
     transition: 0.5s all;
@@ -2860,8 +2860,8 @@ a.read.fourth:hover{
 }
 .login input[type="submit"]:hover{
     background:none;
-    border:2px solid #ea4c89;
-    color: #ea4c89;
+    border:2px solid #002561;
+    color: #002561;
 
 }
 
@@ -4619,12 +4619,12 @@ a.btn.green.two:hover {
     background: #00C6D7;
 }
 a.btn.red.three {
-    border: double #ea4c89;
-    color: #ea4c89;
+    border: double #002561;
+    color: #002561;
     padding: 10px 12px;
 }
 a.btn.blue.four {
-    background:#ea4c89;
+    background:#002561;
     color: #fff;
     border:none;
     padding: 10px 12px;
@@ -4634,10 +4634,10 @@ a.btn.blue.four {
     -webkit-border-radius: 5px;
 }
 a.btn.red.three:hover {
-    border: double #ea4c89;
+    border: double #002561;
     color: #fff;
     padding: 10px 12px;
-    background:#ea4c89;
+    background:#002561;
 }
 a.btn.blue.one:hover {
     border: 2px dotted #052963;
@@ -5082,7 +5082,7 @@ div.both_ribbon::after{
     position: absolute;
     display: block;
     border-style: solid;
-    border-color:#ea4c89 transparent transparent transparent;
+    border-color:#002561 transparent transparent transparent;
     bottom: -25px;
 }
 .ribbon1 .ribbon-fold:before {

@@ -29,7 +29,8 @@ public class ClienteBD extends DBManager {
         );
     }
 
-    void insert(Cliente cliente) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void insert(Cliente cliente) {
+        execute("INSERT INTO Instructores (IdUsuario,CedulaCliente,NombreCliente,TelefonoCliente,DireccionCliente) VALUES ("
+                + cliente.getUsuario().getId() +"," + Integer.parseInt(cliente.getIdentificacion()) + "'" + cliente.getNombre() + "','" + cliente.getCelular() +"','"+ cliente.getDireccion() +"')");
     }
 }

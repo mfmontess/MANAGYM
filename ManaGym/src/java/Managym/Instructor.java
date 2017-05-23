@@ -1,7 +1,7 @@
 
 package Managym;
 
-import java.util.ArrayList;
+import java.sql.ResultSet;
 
 
 public class Instructor extends Persona {
@@ -18,12 +18,18 @@ public class Instructor extends Persona {
         this.EspecialidadFisica = EspecialidadFisica;
     }
     
-    public Instructor(int IdInstructor, String NombreInstructor) {
-        this.IdInstructor = IdInstructor;
-        this.NombreInstructor = NombreInstructor;
+    public Instructor(ResultSet rs){
+        super(rs);
+        try {
+            IdInstructor = rs.getInt("IdInstructor");
+            NombreInstructor = rs.getString("NombreInstructor");
+            EspecialidadFisica = rs.getString("EspecialidadFisica");
+        } catch (Exception e) {
+        }
     }
     
     public Instructor (){
+        super();
     }   
     
     public int getIdInstructor() {

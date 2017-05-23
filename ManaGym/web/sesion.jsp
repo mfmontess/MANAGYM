@@ -29,7 +29,7 @@
             <!--/login-top-->
 
             <div class="error-top">
-                <h2 class="inner-tittle page">GYM</h2>
+                <h2 class="inner-tittle page">ManaGYM</h2>
                 <div class="login">
                     <h3 class="inner-tittle t-inner">Login</h3>
 
@@ -40,7 +40,7 @@
                         <div class="clearfix"></div>
 
                         <div class="new">                            
-                            <p class="checkbox11">No esta registrado ? <a href="registrar.html">Registrese</a></p>
+                            <p class="checkbox11">No esta registrado ? <a href="RegistrarUsuario.jsp">Registrese</a></p>
                             <div class="clearfix"></div>
                         </div>
                     </form>

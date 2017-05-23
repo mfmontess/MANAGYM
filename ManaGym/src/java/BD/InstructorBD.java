@@ -17,7 +17,7 @@ public class InstructorBD extends DBManager {
     }
     public static InstructorBD mgr = new InstructorBD();
 
-    void insert(Instructor instructor) {
+    public void insert(Instructor instructor) {
         execute("INSERT INTO Instructores (IdUsuario,CedulaInstructor,NombreInstructor,IdEspecialidad,TelefonoInstructor) VALUES ("
                 + instructor.getUsuario().getId() +"," + instructor.getIdentificacion() + "'" + instructor.getNombre() + "')");
     }    
