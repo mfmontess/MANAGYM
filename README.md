@@ -1,2 +1,2 @@
 # MANAGYM
-proyecto ingeniería de software
+proyecto ingeniería de software,
