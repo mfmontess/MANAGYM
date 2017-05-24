@@ -14,6 +14,11 @@
         <meta name="keywords" content="Augment Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
               Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+        <script>
+            webshims.setOptions('forms-ext', {types: 'date'});
+        webshims.polyfill('forms forms-ext');
+        </script>
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
         <!-- Custom CSS -->
@@ -39,6 +44,9 @@
                     $("div.desc").hide();
                     $("#usuario" + test).show();
                 });
+                //$("input[value=Enviar]").click(function(){
+                   //     alert($('input[name=fechaNacimiento]').val());
+                //});
             });
     </script>
             <div class="error-top">
@@ -49,13 +57,13 @@
                         <div id="myRadioGroup">
                             Instructor<input type="radio" name="perfil" checked="checked" value="2"/>
                             Cliente<input type="radio" name="perfil" value="3"/>
-                            <!--<input type="text" name="documento" class="text" placeholder="Documento"  required>
+                            <input type="text" name="documento" class="text" placeholder="Documento"  required>
                             <div id="usuario2" class="desc">
                                     <input type="text" name="nombre" class="text" placeholder="Nombre Instructor"  required>
                             </div>
                             <div id="usuario3" class="desc" style="display: none;">
                                 <input type="text" name="nombre" class="text" placeholder="Nombre Cliente"  required>
-                            </div>-->
+                            </div>
                         </div>
                         <input type="date" name="fechaNacimiento" class="text" placeholder="Fecha Nacimiento"  required>
                         <input type="text" name="direccion" class="text" placeholder="Dirección"  required>
@@ -68,10 +76,10 @@
                         <div class="clearfix"></div>
                         <div class="new">
                             <p class="sign">iniciar sesion ? <a href="sesion.jsp">Login</a></p>
-                            <div class="clearfix"></div>                                
+                            <div class="clearfix"></div>
                         </div>
-                        <label id="mensaje">{mensaje}</label>
-                    </form>                  
+                        ${mensaje}
+                    </form> 
                 </div>
             </div>
         </div>

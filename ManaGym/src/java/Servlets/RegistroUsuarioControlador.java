@@ -9,6 +9,9 @@ import BD.*;
 import Managym.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParsePosition;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -61,7 +64,7 @@ public class RegistroUsuarioControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
-        String msj = "";
+        String mensaje = "";
         try{
             String documento = request.getParameter("documento");
             String usuario = request.getParameter("usuario");
@@ -73,24 +76,31 @@ public class RegistroUsuarioControlador extends HttpServlet {
             int perfil = Integer.parseInt(request.getParameter("perfil"));
             
             if(!verificarExistencia(usuario, documento)){
-                Usuario user = new Usuario(usuario,password,new Perfil(perfil),2);
-                UsuarioBD.mgr.insert(user);
+                Usuario user = new Usuario(usuario,password,PerfilBD.mgr.getPerfil(perfil),2);
                 Persona person = FactoryPersona.CrearPersona(user);
                 person.setCelular(celular);
                 person.setDireccion(direccion);
                 person.setIdentificacion(documento);
                 person.setNombre(nombre);
-                person.setFechaNacimiento(new Date(fechaNacimiento));
+                if(user.getPerfil().getNombre().equals("Cliente")){
+                    if(verificarEdadClientes(fechaNacimiento))
+                        person.setFechaNacimiento(new Date(fechaNacimiento));
+                    else
+                        throw new Exception("Edad invalida para un cliente, esta debe estar entre los 18 y los 50 años");
+                } else
+                    person.setFechaNacimiento(new Date(fechaNacimiento));
+                
+                UsuarioBD.mgr.insert(user);
                 PersonaBD.mgr.insert(person);
-                msj = "Su registro se ha realizado satisfactoriamente, en breve espere su activación.";
+                mensaje = "Su registro se ha realizado satisfactoriamente, en breve espere su activación.";
                 sesion.setAttribute("persona", person);
             } else{
                 throw new Exception("Ya existe el código de usuario en el sistema");
             }
         } catch(Exception e){
-            msj = "No se pudo registrar el usuario debido al siguiente error: " + e.getMessage();
+            mensaje = "No se pudo registrar el usuario debido al siguiente error: " + e.getMessage();
         }
-        sesion.setAttribute("mensaje", msj);
+        sesion.setAttribute("mensaje", mensaje);
         request.getRequestDispatcher("RegistrarUsuario.jsp").forward(request, response);
     }
 
@@ -118,12 +128,28 @@ public class RegistroUsuarioControlador extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private boolean verificarExistencia(String usuario, String documento) {
-        
+    private boolean verificarExistencia(String usuario, String documento) {        
         Usuario user = UsuarioBD.mgr.getUsuario(usuario);
         Persona person = PersonaBD.mgr.getPersona(documento);
         
         return user != null || person != null;
     }
 
+    private boolean verificarEdadClientes(String fechaNacimiento) {
+        boolean valido = false;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        sdf.setLenient(false);
+        if (sdf.parse(fechaNacimiento, new ParsePosition(0)) != null){
+            Calendar c = Calendar.getInstance();
+            Date fecha = new Date(fechaNacimiento);
+            c.setTime(fecha);
+            Calendar cal50 = Calendar.getInstance();
+            cal50.add(Calendar.YEAR, -50);
+            Calendar cal18 = Calendar.getInstance();
+            cal18.add(Calendar.YEAR, -18);
+            if(c.compareTo(cal50) > 0 && c.compareTo(cal18) < 0)
+                valido = true;
+        }
+        return valido;
+    }
 }

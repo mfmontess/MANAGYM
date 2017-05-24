@@ -433,7 +433,7 @@ span#logo h1 {
     position:relative;
     background:#fff;
 }
-.main-search input[type="text"],.main-search input[type="submit"]{
+.main-search input[type="text"],.main-search input[type="submit"],.main-search input[type="date"]{
     display:inline-block;
     border:none;
     color:#5d5d5d;
@@ -445,7 +445,7 @@ span#logo h1 {
     -webkit-appearance: none;
     margin:0;
 }
-.main-search input[type="text"]{
+.main-search input[type="text"],.main-search input[type="date"]{
     background:none;
     padding:10px;
     width:89%;
@@ -2821,7 +2821,7 @@ a.read.fourth:hover{
 }
 /*--//404--*/
 /*--/sign-in--*/
-.login input[type="text"],.login input[type="password"]{
+.login input[type="text"],.login input[type="password"],.login input[type="date"]{
     width: 100%;
     padding: 0.9em 1em 0.9em 4em;
     color: #777;
@@ -6742,7 +6742,7 @@ footer  p a:hover ,.footer p a:hover{
         width: 30%;
         font-size: 16px;
     }
-    .login input[type="text"], .login input[type="password"] {
+    .login input[type="text"], .login input[type="password"], .login input[type="date"] {
         width: 100%;
         padding: 0.7em 1em 0.7em 4em;
         color: #777;

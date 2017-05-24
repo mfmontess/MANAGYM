@@ -5,6 +5,8 @@
  */
 package Managym;
 
+import java.sql.ResultSet;
+
 /**
  *
  * @author ASUS
@@ -18,16 +20,16 @@ public class Perfil {
         this.nombre = nombre;
     }
     
-    public Perfil(int id){
-        this.id = id;
+    public Perfil(ResultSet rs){
+        try {
+            id = rs.getInt("IdPerfil");
+            nombre = rs.getString("NombrePerfil");
+        } catch (Exception e) {
+        }
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
