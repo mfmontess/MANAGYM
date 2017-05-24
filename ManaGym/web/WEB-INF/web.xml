@@ -36,6 +36,10 @@
         <servlet-name>TraerReporte</servlet-name>
         <servlet-class>Servlets.TraerReporte</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AsignarRutinasControlador</servlet-name>
+        <servlet-class>Servlets.AsignarRutinasControlador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Maquinascontrolador</servlet-name>
         <url-pattern>/Maquinascontrolador</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>TraerReporte</servlet-name>
         <url-pattern>/TraerReporte</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AsignarRutinasControlador</servlet-name>
+        <url-pattern>/AsignarRutinasControlador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

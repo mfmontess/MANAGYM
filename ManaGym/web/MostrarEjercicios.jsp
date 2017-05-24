@@ -66,7 +66,7 @@
        <h1>MANAGYM</h1>
         <br>
         <br>
-        <form name="form2" action="Ejercicioscontrolador">
+        <form name="form2" action="EjerciciosControlador">
             <fieldset>
             <table>
                 <legend>EJERCICIOS</legend>
@@ -83,8 +83,7 @@
                     <td><input type="text" name="descripcionejercicio" value=${ejercicio.descripcionejercicio}></td>
                 </tr>
                 <tr>
-                    <td>Video Ejercicio:</td> 
-                    <td><input type="text" name="videoejercicio" value=${ejercicio.videoejercicio}></td>
+                   <td><a href="${ejercicio.videoejercicio}" target="_blank">URL Video Ejercicio</a></td>
                 </tr>
                 <tr>
                     <tr>
