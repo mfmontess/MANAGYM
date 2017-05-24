@@ -70,17 +70,19 @@ public class GestionarUsuariosControlador extends HttpServlet {
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
         String accion = request.getParameter("accion");
-        String perfil = request.getParameter("perfil");
         
         if(accion.equals("Buscar")){
-            ArrayList <Usuario> usuarios = UsuarioBD.mgr.getUsuarios(perfil);//
+            String perfil = request.getParameter("perfil");
+            int estado = Integer.parseInt(request.getParameter("lstEstado"));
+            
+            ArrayList <Usuario> usuarios = UsuarioBD.mgr.getUsuarios(perfil, estado);
             sesion.setAttribute("usuarios", usuarios);
             request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
         }
         else if(accion.equals("Gestionar")){
-            String estado = request.getParameter("lstAccion");
+            int estado = Integer.parseInt(request.getParameter("lstAccion"));
             String[] usuarios = obtenerUsuarios(request);
-            gestionarUsuarios(usuarios, Integer.parseInt(estado));
+            gestionarUsuarios(usuarios, estado);
             request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
         }   
     }

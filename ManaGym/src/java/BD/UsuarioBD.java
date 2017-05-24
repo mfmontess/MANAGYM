@@ -24,8 +24,8 @@ public class UsuarioBD extends DBManager{
         x.add(new Usuario(rs)); 
     }
     
-    public ArrayList getUsuarios (String perfil){
-        ArrayList x = ejecutarQuery("select * from usuarios where IdPerfil="+perfil+" ");
+    public ArrayList getUsuarios (String perfil, int estado){
+        ArrayList x = ejecutarQuery("select * from usuarios where IdPerfil="+perfil+" and IdEstado=" + estado);
         return x;
     }
 
