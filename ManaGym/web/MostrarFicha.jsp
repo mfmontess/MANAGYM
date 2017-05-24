@@ -1,17 +1,17 @@
 <%-- 
-    Document   : GestionarFicha
-    Created on : 16/05/2017, 09:18:15 PM
+    Document   : MostrarFicha.jsp
+    Created on : 17/05/2017, 06:37:16 PM
     Author     : lenovo
 --%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
-        <style type="text/css">
-         h1 {
+        <style>
+            h1 {
                     color: black;
                     font-family: fantasy;
                     text-align: center;
@@ -62,79 +62,61 @@
         </style>
     </head>
     <body>
-        <ul class="nav">
-                <li><a href="GestionarEjercicios.jsp">GESTION DE EJERCICIOS</a></li> 
-                <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
-                <li><a href="GestionarRutinas.jsp">GESTION DE RUTINAS</a></li>
-                <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
-                <li><a href="GestionarFicha.jsp">ADMINISTRAR FICHA MEDICA</a></li>                  
-            </ul>
-         <br>
-          <br>
-           <br>
-            <br>
-             <br>
-        <h1>MANAGYM</h1>
-        <br>
-         <br>
-          <br>
-        
-        <br>
         <form name="form4" action="FichaMedicaControlador">
-            <fieldset> 
-                <legend> FORMULARIO REGISTRO FICHA MEDICA</legend>
+            <fieldset>
                 <table>
-                    <br>
+                    <legend>FICHA MEDICA</legend>
                     <tr>
                         <td>Id Ficha:</td>
-                        <td><input type="text" name="IdFicha"></td>
+                        <td><input type="text" name="IdFicha" value="${fichamedica.idFicha}"></td>
                     </tr>
                     <tr>
                         <td>Altura:</td>
-                        <td><input type="text" name="Altura"></td>
+                        <td><input type="text" name="Altura" value="${fichamedica.altura}"></td>
                     </tr>
                     <tr>
                         <td>Peso:</td>
-                        <td><input type="text" name="Peso"></td>
+                        <td><input type="text" name="Peso" value="${fichamedica.peso}"></td>
                     </tr>
                     <tr>
                         <td>Ancho Espalda:</td>
-                        <td><input type="text" name="AnchoEspalda"></td>
+                        <td><input type="text" name="AnchoEspalda" value="${fichamedica.anchoEspalda}"></td>
                     </tr>
                     <tr>
                         <td>Contorno Brazo:</td>
-                        <td><input type="text" name="ContornoBrazo"></td>
-                    </tr>
-                    <tr>
-                        <td>Contorno Cintura:</td>
-                        <td><input type="text" name="ContornoCintura"></td>
-                    </tr>
-                    <tr>
-                        <td>Contorno Muslo:</td>
-                        <td><input type="text" name="ContornoMuslo"></td>
-                    </tr>
-                    <tr>
-                        <td>Contorno Pantorrilla:</td>
-                        <td><input type="text" name="ContornoPantorrilla"></td>
+                        <td><input type="text" name="Contorno Brazo" value="${fichamedica.contornoBrazo}"></td>
                     </tr>
                     <tr>
                         <td>Contorno Pecho:</td>
-                        <td><input type="text" name="ContornoPecho"></td>
+                        <td><input type="text" name="ContornoPecho" value="${fichamedica.contornoPecho}"></td>
+                    </tr>
+                    <tr>
+                        <td>Contorno Cintura:</td>
+                        <td><input type="text" name="ContornoCintura" value="${fichamedica.contornoCintura}"></td>
+                    </tr>
+                    <tr>
+                        <td>Contorno Pantorrilla:</td>
+                        <td><input type="text" name="ContornoPantorrilla" value="${fichamedica.contornoPantorrilla}"></td>
+                    </tr>
+                    <tr>
+                        <td>Contorno Muslo:</td>
+                        <td><input type="text" name="ContornoMuslo" value="${fichamedica.contornoMuslo}"></td>
                     </tr>
                     <tr>
                         <td>Fecha de Actualizacion:</td>
-                        <td><input type="text" name="FechaActualizacion"></td>
+                        <td><input type="text" name="FechaActualizacion" value="${fichamedica.fechaActualizacion}"></td>
                     </tr>
                     <tr>
                         <td>Id Cliente:</td>
-                        <td><input type="text" name="idcliente" disabled="false" value=${cliente.idcliente}></td>
+                        <td><input type="text" name="idcliente" disabled="false" value="${cliente.idcliente}"></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="Limpiar" name="accion"></td>
-                        <td><input type="submit" value="Guardar" name="accion"></td>
-                        <td><input type="submit" value="Consultar" name="accion"></td>
+                       ${mensaje4}
                     </tr>
-                </table>
+                    <tr>
+                        <td><input type="submit" value="Regresar" name="accion"></td>
+                    </tr>
+               </table>
             </fieldset>
         </form>
     </body>
