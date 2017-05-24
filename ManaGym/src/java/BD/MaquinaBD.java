@@ -40,11 +40,11 @@ public class MaquinaBD extends DBManager{
     
     public void guardar (Maquina maquina, Boolean valor){
         if(valor){
-            mgr.execute("insert into maquinas(IdMaquina,NombreMaquina,Caracteristicas,EstadoMaquina) values ("+maquina.getIdMaquina()+" , '" 
-                    +maquina.getNombreMaquina()+"' , '"+maquina.getCaracteristicas()+"' , '"+maquina.getEstadoMaquina()+"')");
+            mgr.execute("insert into maquinas(IdMaquina,NombreMaquina,CaracteristicasMaquina,IdEstado) values ("+maquina.getIdMaquina()+" , '" 
+                    +maquina.getNombreMaquina()+"' , '"+maquina.getCaracteristicas()+"' , "+maquina.getEstadoMaquina()+")");
         }else{
             mgr.execute("update maquinas set NombreMaquina= '"+maquina.getNombreMaquina()+
-                    "' , Caracteristicas= '"+maquina.getCaracteristicas()+"' , EstadoMaquina= '"+maquina.getEstadoMaquina()+"' where IdMaquina= '"+maquina.getIdMaquina()+"'");
+                    "' , CaracteristicasMaquina= '"+maquina.getCaracteristicas()+"' , IdEstado= '"+maquina.getEstadoMaquina()+"' where IdMaquina= '"+maquina.getIdMaquina()+"'");
         }
     }
     public void eliminar(Maquina maquina){

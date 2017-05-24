@@ -6,13 +6,13 @@ import java.sql.ResultSet;
 
 public class Maquina {
 
-    private String id;
+    private int id;
     private String IdMaquina;
     private String NombreMaquina;
     private String Caracteristicas;
     private String EstadoMaquina;
     
-    public Maquina(String id, String IdMaquina, String NombreMaquina,String Caracteristicas, String EstadoMaquina) {
+    public Maquina(int id, String IdMaquina, String NombreMaquina,String Caracteristicas, String EstadoMaquina) {
         this.id = id;
         this.IdMaquina = IdMaquina;
         this.NombreMaquina = NombreMaquina;
@@ -33,20 +33,22 @@ public class Maquina {
     
      public Maquina (ResultSet rs){
         try {
-            id =rs.getString("id");
+            id =rs.getInt("id");
             IdMaquina = rs.getString("IdMaquina");
             NombreMaquina = rs.getString("NombreMaquina");
-            Caracteristicas = rs.getString("Caracteristicas");
-            EstadoMaquina = rs.getString("EstadoMaquina");
+            Caracteristicas = rs.getString("CaracteristicasMaquina");
+            EstadoMaquina = rs.getString("IdEstado");
         } catch (Exception e) {
         }
     }
+     
+    public enum Estados{ACTIVO, INACTIVO};
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
     

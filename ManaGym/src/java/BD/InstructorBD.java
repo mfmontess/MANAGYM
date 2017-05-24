@@ -7,6 +7,7 @@ package BD;
 
 import Managym.Instructor;
 import Servicios.DBManager;
+import java.util.ArrayList;
 
 /**
  *
@@ -21,4 +22,9 @@ public class InstructorBD extends DBManager {
         execute("INSERT INTO Instructores (IdUsuario,CedulaInstructor,NombreInstructor,IdEspecialidad,TelefonoInstructor) VALUES ("
                 + instructor.getUsuario().getId() +"," + instructor.getIdentificacion() + "'" + instructor.getNombre() + "')");
     }    
+
+    public ArrayList<Instructor> getInstructores() {
+        ArrayList x = ejecutarQuery("select * from instructores");
+        return x;
+    }
 }
