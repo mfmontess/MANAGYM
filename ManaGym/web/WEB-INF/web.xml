@@ -37,6 +37,8 @@
         <servlet-class>Servlets.TraerReporte</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>AsignarRutinasControlador</servlet-name>
+        <servlet-class>Servlets.AsignarRutinasControlador</servlet-class>
         <servlet-name>AsignarClientes</servlet-name>
         <servlet-class>Servlets.AsignarClientes</servlet-class>
     </servlet>
@@ -77,6 +79,8 @@
         <url-pattern>/TraerReporte</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>AsignarRutinasControlador</servlet-name>
+        <url-pattern>/AsignarRutinasControlador</url-pattern>
         <servlet-name>AsignarClientes</servlet-name>
         <url-pattern>/AsignarClientes</url-pattern>
     </servlet-mapping>
