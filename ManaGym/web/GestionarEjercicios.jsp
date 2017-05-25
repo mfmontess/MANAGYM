@@ -83,7 +83,7 @@
           <br>
         
         <br>
-        <form name="form2" action="EjerciciosControlador" onsubmit ="return Validacion(this);">
+        <form name="form2" action="Ejercicioscontrolador" onsubmit ="return Validacion(this);">
             <fieldset>
                 <legend>FORMULARIO GESTION DE EJERCICIOS</legend>
             <table>
@@ -98,11 +98,11 @@
                 </tr>
                 <tr>
                     <td>Descripcion Ejercicio:</td> 
-                    <td><input type="text" name="DescripcionEjercicio" value="Descripcion" size="40"></td>
+                    <td><input type="text" name="descripcionejercicio" value="Descripcion" size="40"></td>
                 </tr>
                 <tr>
                     <td>URL Video Ejercicio:</td>
-                    <td><input type="text" name="VideoEjercicio" value="URL" size="40"></td>
+                    <td><input type="text" name="videoejercicio" value="URL" size="40"></td>
                 </tr>
                 <tr>
                     <td><input type="submit"  value="Limpiar" name="accion">
