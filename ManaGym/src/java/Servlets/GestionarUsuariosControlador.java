@@ -5,17 +5,11 @@
  */
 package Servlets;
 
-import BD.ClienteBD;
 import BD.UsuarioBD;
-import BD.UsuarioDAO;
-import Managym.Cliente;
 import Managym.Usuario;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -72,19 +66,31 @@ public class GestionarUsuariosControlador extends HttpServlet {
         String accion = request.getParameter("accion");
         
         if(accion.equals("Buscar")){
+            try{
             String perfil = request.getParameter("perfil");
-            int estado = Integer.parseInt(request.getParameter("lstEstado"));
-            
+            int estado = Integer.parseInt(request.getParameter("lstEstado"));            
             ArrayList <Usuario> usuarios = UsuarioBD.mgr.getUsuarios(perfil, estado);
             sesion.setAttribute("usuarios", usuarios);
             request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
+            } catch(Exception e){
+                sesion.setAttribute("usuarios", null);
+                sesion.setAttribute("accion", null);
+                sesion.setAttribute("mensaje", "Se presento un error al consultar los usuarios a gestionar.");
+            }
         }
         else if(accion.equals("Gestionar")){
+            try{
             int estado = Integer.parseInt(request.getParameter("lstAccion"));
             String[] usuarios = obtenerUsuarios(request);
             gestionarUsuarios(usuarios, estado);
+            sesion.setAttribute("mensaje", "Se gestionaron exitosamente los usuarios.");
             request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
-        }   
+            } catch(Exception e){
+                sesion.setAttribute("mensaje", "Se presento un error al gestionar los usuarios.");
+            }
+            sesion.setAttribute("usuarios", null);
+            sesion.setAttribute("accion", null);
+        }
     }
 
     /**

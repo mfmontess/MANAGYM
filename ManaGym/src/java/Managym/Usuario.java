@@ -76,8 +76,8 @@ public class Usuario {
         this.estado = estado;
     }
     
-    
-    
-    
-    
+    @Override
+    public String toString() {
+       return "\n"+nombreUsuario+"\n"+perfil.getNombre();
+    }
 }

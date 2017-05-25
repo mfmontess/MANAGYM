@@ -71,7 +71,7 @@
             <h3>Elija el perfil del usuario:</h3>
             <input type="checkbox" id="chkInstructor" name="perfil" value="2"/>
             <label>Instructor</label>
-            <input type="checkbox" id="chkCliente" name="perfil" value="3"/>
+            <input type="checkbox" id="chkCliente" name="perfil" value="1"/>
             <label>Cliente</label>
             <label>Estado</label>
             <select name="lstEstado">
@@ -87,11 +87,10 @@
                 <select name="lstUsuarios" multiple>
                     <c:forEach var="usuario" items="${usuarios}">
                         <option value=${usuario.getId()}>
-                            ${usuario.getUsuario()}
+                            ${usuario.toString()}
                         </option>
                      </c:forEach>
                 </select>
-                <!--<img src="imgiconos/users.png" title="${clientes.get(0).toString()}" />-->   
                 <br>
                 <label>Marque la acción a realizar:</label>
                 <select name="lstAccion">
@@ -102,6 +101,7 @@
                 <input type="submit" id="btnGestionarUsuario" name="accion" value="Gestionar"/>
                 </div>
             <%}%>
+            ${mensaje}
         </form>
     </body>
 </html>

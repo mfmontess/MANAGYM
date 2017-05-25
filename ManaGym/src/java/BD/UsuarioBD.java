@@ -25,7 +25,9 @@ public class UsuarioBD extends DBManager{
     }
     
     public ArrayList getUsuarios (String perfil, int estado){
-        ArrayList x = ejecutarQuery("select * from usuarios where IdPerfil="+perfil+" and IdEstado=" + estado);
+        ArrayList x = ejecutarQuery("select u.*, p.NombrePerfil from usuarios u "
+                + "INNER JOIN Perfiles p ON u.IdPerfil = p.IdPerfil "
+                + "where p.IdPerfil="+perfil+" and u.IdEstado=" + estado);
         return x;
     }
 
