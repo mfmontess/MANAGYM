@@ -62,7 +62,7 @@
                     <form action="RegistroUsuarioControlador">
                         <div id="myRadioGroup">
                             Instructor<input type="radio" name="perfil" checked="checked" value="2"/>
-                            Cliente<input type="radio" name="perfil" value="3"/>
+                            Cliente<input type="radio" name="perfil" value="1"/>
                             <input type="text" name="documento" class="text" placeholder="Documento"  required>
                             <input type="text" id="usuario2" name="nombre" class="text" placeholder="Nombre Instructor"  required>
                         </div>

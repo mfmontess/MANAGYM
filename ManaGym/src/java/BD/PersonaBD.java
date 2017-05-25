@@ -26,9 +26,9 @@ public class PersonaBD extends DBManager {
 
     public void insert(Persona obj) throws Exception {
         switch (obj.getUsuario().getPerfil().getId()) {
-            case 2:
+            case 1:
                 ClienteBD.mgr.insert((Cliente) obj);
-            case 3:
+            case 2:
                 InstructorBD.mgr.insert((Instructor) obj);
             default:
                 throw new Exception("Tipo de perfil no definido en el sistema");

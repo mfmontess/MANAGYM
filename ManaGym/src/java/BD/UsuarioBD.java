@@ -40,7 +40,9 @@ public class UsuarioBD extends DBManager{
     }
 
     public Usuario getUsuario(String usuario) {
-        ArrayList x = ejecutarQuery("select * from usuarios where NombreUsuario = '"+usuario+"' ");
+        ArrayList x = ejecutarQuery("select u.*, p.NombrePerfil from usuarios u "
+                + "INNER JOIN Perfiles p ON u.IdPerfil = p.IdPerfil "
+                + "WHERE u.NombreUsuario = '"+usuario+"' ");
         
         if (x.size() > 0)
             return (Usuario) x.get(0);

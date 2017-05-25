@@ -137,11 +137,9 @@ public class RegistroUsuarioControlador extends HttpServlet {
 
     private boolean verificarEdadClientes(String fechaNacimiento) {
         boolean valido = false;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        sdf.setLenient(false);
-        if (sdf.parse(fechaNacimiento, new ParsePosition(0)) != null){
+        try{
             Calendar c = Calendar.getInstance();
-            Date fecha = new Date(fechaNacimiento);
+            Date fecha = new SimpleDateFormat("yyyy-MM-dd").parse(fechaNacimiento);
             c.setTime(fecha);
             Calendar cal50 = Calendar.getInstance();
             cal50.add(Calendar.YEAR, -50);
@@ -149,7 +147,7 @@ public class RegistroUsuarioControlador extends HttpServlet {
             cal18.add(Calendar.YEAR, -18);
             if(c.compareTo(cal50) > 0 && c.compareTo(cal18) < 0)
                 valido = true;
-        }
+        }catch(Exception e){}
         return valido;
     }
 }

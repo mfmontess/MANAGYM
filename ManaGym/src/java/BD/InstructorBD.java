@@ -20,7 +20,7 @@ public class InstructorBD extends DBManager {
 
     public void insert(Instructor instructor) {
         execute("INSERT INTO Instructores (IdUsuario,CedulaInstructor,NombreInstructor,IdEspecialidad,TelefonoInstructor) VALUES ("
-                + instructor.getUsuario().getId() +"," + instructor.getIdentificacion() + "'" + instructor.getNombre() + "')");
+                + instructor.getUsuario().getId() +"," + instructor.getIdentificacion() + ",'" + instructor.getNombre() + "',1,'" + instructor.getCelular() + "')");
     }    
 
     public ArrayList<Instructor> getInstructores() {
