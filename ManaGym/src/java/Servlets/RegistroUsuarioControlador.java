@@ -13,6 +13,7 @@ import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -64,7 +65,6 @@ public class RegistroUsuarioControlador extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
-        String mensaje = "";
         try{
             String documento = request.getParameter("documento");
             String usuario = request.getParameter("usuario");
@@ -84,23 +84,23 @@ public class RegistroUsuarioControlador extends HttpServlet {
                 person.setNombre(nombre);
                 if(user.getPerfil().getNombre().equals("Cliente")){
                     if(verificarEdadClientes(fechaNacimiento))
-                        person.setFechaNacimiento(new Date(fechaNacimiento));
+                        person.setFechaNacimiento(new SimpleDateFormat("yyyy-MM-dd").parse(fechaNacimiento));
                     else
                         throw new Exception("Edad invalida para un cliente, esta debe estar entre los 18 y los 50 años");
                 } else
-                    person.setFechaNacimiento(new Date(fechaNacimiento));
+                    person.setFechaNacimiento(new SimpleDateFormat("yyyy-MM-dd").parse(fechaNacimiento));
                 
                 UsuarioBD.mgr.insert(user);
+                user = UsuarioBD.mgr.getUsuario(usuario);
+                person.setUsuario(user);
                 PersonaBD.mgr.insert(person);
-                mensaje = "Su registro se ha realizado satisfactoriamente, en breve espere su activación.";
-                sesion.setAttribute("persona", person);
+                sesion.setAttribute("mensaje", "Su registro se ha realizado satisfactoriamente, en breve espere su activación.");
             } else{
-                throw new Exception("Ya existe el código de usuario en el sistema");
+                sesion.setAttribute("mensaje", "Ya existe el código de usuario en el sistema");
             }
         } catch(Exception e){
-            mensaje = "No se pudo registrar el usuario debido al siguiente error: " + e.getMessage();
-        }
-        sesion.setAttribute("mensaje", mensaje);
+            sesion.setAttribute("mensaje", "No se pudo registrar el usuario, intento nuevamente");
+        }        
         request.getRequestDispatcher("RegistrarUsuario.jsp").forward(request, response);
     }
 

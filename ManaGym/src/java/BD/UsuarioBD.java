@@ -36,8 +36,8 @@ public class UsuarioBD extends DBManager{
     public void insert(Usuario usuario) {
         execute("insert into usuarios (NombreUsuario,ContrasenaUsuario,IdPerfil,IdEstado) values ('"
                 + usuario.getNombreUsuario() + "','" + usuario.getContraseña() + "',"         
-                + usuario.getPerfil().getId() + "," + usuario.getEstado());
-    }    
+                + usuario.getPerfil().getId() + "," + usuario.getEstado() +")" );
+    }
 
     public Usuario getUsuario(String usuario) {
         ArrayList x = ejecutarQuery("select * from usuarios where NombreUsuario = '"+usuario+"' ");

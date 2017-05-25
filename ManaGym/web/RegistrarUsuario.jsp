@@ -41,11 +41,17 @@
             $(document).ready(function() {
                 $("input[name$='perfil']").click(function() {
                     var test = $(this).val();
-                    $("div.desc").hide();
-                    $("#usuario" + test).show();
+                    var perfil = 'Nombre Instructor';
+                    
+                    if(test == "2")
+                        perfil = 'Nombre Instructor';
+                    else
+                        perfil = 'Nombre Cliente';
+                    
+                    $("input[name$='nombre']").prop('placeholder',perfil);
                 });
                 //$("input[value=Enviar]").click(function(){
-                   //     alert($('input[name=fechaNacimiento]').val());
+                //        alert($('input[name=fechaNacimiento]').val());
                 //});
             });
     </script>
@@ -58,21 +64,14 @@
                             Instructor<input type="radio" name="perfil" checked="checked" value="2"/>
                             Cliente<input type="radio" name="perfil" value="3"/>
                             <input type="text" name="documento" class="text" placeholder="Documento"  required>
-                            <div id="usuario2" class="desc">
-                                    <input type="text" name="nombre" class="text" placeholder="Nombre Instructor"  required>
-                            </div>
-                            <div id="usuario3" class="desc" style="display: none;">
-                                <input type="text" name="nombre" class="text" placeholder="Nombre Cliente"  required>
-                            </div>
+                            <input type="text" id="usuario2" name="nombre" class="text" placeholder="Nombre Instructor"  required>
                         </div>
                         <input type="date" name="fechaNacimiento" class="text" placeholder="Fecha Nacimiento"  required>
                         <input type="text" name="direccion" class="text" placeholder="Dirección"  required>
                         <input type="text" name="celular" class="text" placeholder="Celular"  required>
                         <input type="text" name="usuario" class="text" placeholder="Codigo Usuario"  required>
                         <input type="password" name="pass"  placeholder="Password"  required>
-                        <div class="sign-up">
-                            <input type="submit"  value="Enviar">
-                        </div>
+                        <div class="submit"><input type="submit"  value="Enviar" ></div>
                         <div class="clearfix"></div>
                         <div class="new">
                             <p class="sign">iniciar sesion ? <a href="sesion.jsp">Login</a></p>
