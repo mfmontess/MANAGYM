@@ -1,5 +1,6 @@
 
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -101,7 +102,11 @@
                 </tr>
                 <tr>
                     <td>Estado:</td>
-                    <td><input type="text" name="EstadoMaquina" value=${maquina.estadoMaquina}></td>
+                    <td>
+                        <select name="lstEstados">
+                        </select>
+                        <!--<input type="text" name="EstadoMaquina" value=${maquina.estadoMaquina}>-->
+                    </td>
                 </tr>
                 <tr>
                     <td>Caracteristicas:</td> 

@@ -22,7 +22,10 @@ public class MaquinaBD extends DBManager{
     }
     
     public Maquina getItem (String id){
-        ArrayList x = ejecutarQuery("select * from maquinas where id= '"+id+" ");
+        ArrayList x = ejecutarQuery("select m.*, e.DescripcionEstado from maquinas m "
+                + "INNER JOIN estadosmaquina e ON m.IdEstado = e.IdEstado "
+                + "where m.id= '"+id+" ");
+        
         if(x.size()>0){
             return (Maquina) x.get(0);
         }
@@ -30,7 +33,9 @@ public class MaquinaBD extends DBManager{
     }
     
     public Maquina getMaquina (String IdMaquina){
-        ArrayList x = ejecutarQuery("select * from maquinas where IdMaquina= "+IdMaquina);
+        ArrayList x = ejecutarQuery("select m.*, e.DescripcionEstado from maquinas m "
+                + "INNER JOIN estadosmaquina e ON m.IdEstado = e.IdEstado "
+                + "where m.IdMaquina= "+IdMaquina);
         if(x.size()>0)
             return (Maquina) x.get(0);
 
@@ -41,22 +46,25 @@ public class MaquinaBD extends DBManager{
     public void guardar (Maquina maquina, Boolean valor){
         if(valor){
             mgr.execute("insert into maquinas(IdMaquina,NombreMaquina,CaracteristicasMaquina,IdEstado) values ("+maquina.getIdMaquina()+" , '" 
-                    +maquina.getNombreMaquina()+"' , '"+maquina.getCaracteristicas()+"' , "+maquina.getEstadoMaquina()+")");
+                    +maquina.getNombreMaquina()+"' , '"+maquina.getCaracteristicas()+"' , "+maquina.getEstadoId()+")");
         }else{
             mgr.execute("update maquinas set NombreMaquina= '"+maquina.getNombreMaquina()+
-                    "' , CaracteristicasMaquina= '"+maquina.getCaracteristicas()+"' , IdEstado= '"+maquina.getEstadoMaquina()+"' where IdMaquina= '"+maquina.getIdMaquina()+"'");
+                    "' , CaracteristicasMaquina= '"+maquina.getCaracteristicas()+"' , IdEstado= '"+maquina.getEstadoId()+"' where IdMaquina= '"+maquina.getIdMaquina()+"'");
         }
     }
     public void eliminar(Maquina maquina){
         mgr.execute("delete from maquinas where IdMaquina ="+maquina.getIdMaquina()+"");
     }
     public ArrayList<Maquina> getMaquinas(){
-        ArrayList<Maquina> x = ejecutarQuery("select * from maquinas");
+        ArrayList<Maquina> x = ejecutarQuery("select m.*, e.DescripcionEstado from maquinas m "
+                + "INNER JOIN estadosmaquina e ON m.IdEstado = e.IdEstado ");
         return x;
     }
     
     public ArrayList consultarMaquinas (String valor){
-    ArrayList x = ejecutarQuery("select * from maquinas where idmaquina ="+valor+" ");
+    ArrayList x = ejecutarQuery("select m.*, e.DescripcionEstado from maquinas m "
+                + "INNER JOIN estadosmaquina e ON m.IdEstado = e.IdEstado "
+                + "where m.IdMaquina= "+valor);
     return x;
     }
 }

@@ -37,12 +37,10 @@ public class Maquina {
             IdMaquina = rs.getString("IdMaquina");
             NombreMaquina = rs.getString("NombreMaquina");
             Caracteristicas = rs.getString("CaracteristicasMaquina");
-            EstadoMaquina = rs.getString("IdEstado");
+            EstadoMaquina = rs.getString("DescripcionEstado");
         } catch (Exception e) {
         }
     }
-     
-    public enum Estados{ACTIVO, INACTIVO};
 
     public int getId() {
         return id;
@@ -78,6 +76,19 @@ public class Maquina {
 
     public String getEstadoMaquina() {
         return EstadoMaquina;
+    }
+    
+    public int getEstadoId(){
+        int estado = 2;
+        switch(EstadoMaquina){
+            case "Activo":
+                estado = 1;
+                break;
+            case "Inactivo":
+                estado = 2;
+                break;
+        }
+        return estado;
     }
 
     public void setEstadoMaquina(String EstadoMaquina) {
