@@ -2,7 +2,7 @@
 <%@page import="java.util.Iterator.*"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="Usuario" scope="session" class="Managym.Usuario"/>
+<jsp:useBean id="User" scope="session" class="Managym.Usuario"/>
 
 
 <!DOCTYPE HTML>
