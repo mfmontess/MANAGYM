@@ -23,8 +23,8 @@
                             <ul id="menu-academico-sub" >
                                 <li id="menu-academico-avaliacoes" ><a href="tabs.html">Gestionar Usuarios</a></li>
                                 <li id="menu-academico-avaliacoes" ><a href="tabs.html">Administrar ficha medica clientes</a></li> 
-                                <li id="menu-academico-boletim" ><a href="widget.html">Asignar Usuarios</a></li>
-                                <li id="menu-academico-boletim" ><a href="widget.html">Asignar Rutinas</a></li>
+                                <li id="menu-academico-boletim" ><a href="AsignarClientes.jsp">Asignar Usuarios</a></li>
+                                <li id="menu-academico-boletim" ><a href="AsignaRutinas.jsp">Asignar Rutinas</a></li>
                             </ul>
                         </li>
                         <li id="menu-academico" ><a href="#"><i class="lnr lnr-book"></i> <span>Gestionar Maquinas</span></a></li>
