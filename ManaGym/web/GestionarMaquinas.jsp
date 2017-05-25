@@ -104,6 +104,8 @@
                     <td>Estado:</td>
                     <td>
                         <select name="lstEstados">
+                            <option value="Activo" ${maquina.estadoMaquina == 'Activo' ? 'selected' : ''}>Activo</option>
+                            <option value="Inactivo" ${maquina.estadoMaquina == 'Inactivo' ? 'selected' : ''}>Inactivo</option>
                         </select>
                         <!--<input type="text" name="EstadoMaquina" value=${maquina.estadoMaquina}>-->
                     </td>
