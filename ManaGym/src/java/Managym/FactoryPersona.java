@@ -13,10 +13,12 @@ public class FactoryPersona {
 
     public static Persona CrearPersona(Usuario usuario) throws Exception {
         switch (usuario.getPerfil().getId()) {
-            case 2:
+            case 1:
                 return new Cliente();
-            case 3:
+            case 2:
                 return new Instructor();
+            case 3:
+                return new Administrador();
             default:
                 throw new Exception("Tipo de perfil no definido en el sistema");
         }

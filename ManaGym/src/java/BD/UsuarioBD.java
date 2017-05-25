@@ -24,8 +24,10 @@ public class UsuarioBD extends DBManager{
         x.add(new Usuario(rs)); 
     }
     
-    public ArrayList getUsuarios (String perfil){
-        ArrayList x = ejecutarQuery("select * from usuarios where IdPerfil="+perfil+" ");
+    public ArrayList getUsuarios (String perfil, int estado){
+        ArrayList x = ejecutarQuery("select u.*, p.NombrePerfil from usuarios u "
+                + "INNER JOIN Perfiles p ON u.IdPerfil = p.IdPerfil "
+                + "where p.IdPerfil="+perfil+" and u.IdEstado=" + estado);
         return x;
     }
 
@@ -36,11 +38,13 @@ public class UsuarioBD extends DBManager{
     public void insert(Usuario usuario) {
         execute("insert into usuarios (NombreUsuario,ContrasenaUsuario,IdPerfil,IdEstado) values ('"
                 + usuario.getNombreUsuario() + "','" + usuario.getContraseña() + "',"         
-                + usuario.getPerfil().getId() + "," + usuario.getEstado());
-    }    
+                + usuario.getPerfil().getId() + "," + usuario.getEstado() +")" );
+    }
 
     public Usuario getUsuario(String usuario) {
-        ArrayList x = ejecutarQuery("select * from usuarios where NombreUsuario = '"+usuario+"' ");
+        ArrayList x = ejecutarQuery("select u.*, p.NombrePerfil from usuarios u "
+                + "INNER JOIN Perfiles p ON u.IdPerfil = p.IdPerfil "
+                + "WHERE u.NombreUsuario = '"+usuario+"' ");
         
         if (x.size() > 0)
             return (Usuario) x.get(0);

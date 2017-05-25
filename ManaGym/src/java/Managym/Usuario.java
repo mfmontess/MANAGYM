@@ -43,10 +43,6 @@ public class Usuario {
     public int getId() {
         return id;
     }
-
-    public void setId(int id) {
-        this.id = id;
-    }
     
     public String getNombreUsuario() {
         return nombreUsuario;
@@ -80,8 +76,8 @@ public class Usuario {
         this.estado = estado;
     }
     
-    
-    
-    
-    
+    @Override
+    public String toString() {
+       return "\n"+nombreUsuario+"\n"+perfil.getNombre();
+    }
 }

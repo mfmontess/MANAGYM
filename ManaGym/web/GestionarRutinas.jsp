@@ -69,7 +69,7 @@
                 <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
                 <li><a href="GestionarRutinas.jsp">GESTION DE RUTINAS</a></li>
                 <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
-                <li><a href="AdministrarFiicha.jsp">ADMINISTRAR FICHA MEDICA</a></li>                  
+                <li><a href="GestionarFicha.jsp">ADMINISTRAR FICHA MEDICA</a></li>                  
             </ul>
         <br>
           <br>

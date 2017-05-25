@@ -25,8 +25,7 @@
             }
                 legend {
                     color: black;
-                    font-family: monospace;
-                    font-size: 30px;
+                    font-family: fantasy;
                   }
                     *{
                padding: 0px;
@@ -71,7 +70,7 @@
                 <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
                 <li><a href="GestionarRutinas.jsp">GESTION DE RUTINAS</a></li>
                 <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
-                <li><a href="AdministrarFiicha.jsp">ADMINISTRAR FICHA MEDICA</a></li>                  
+                <li><a href="GestionarFicha.jsp">ADMINISTRAR FICHA MEDICA</a></li>                  
             </ul>
          <br>
           <br>
@@ -95,15 +94,15 @@
                 </tr>
                 <tr>
                     <td>Nombre Ejercicio:</td> 
-                    <td><input type="text" name="nombreejercicio" value="Ejercicio" size="40"></td>
+                    <td><input type="text" name="nombreejercicio" value="Nombre Ejercicio" size="40"></td>
                 </tr>
                 <tr>
                     <td>Descripcion Ejercicio:</td> 
-                    <td><input type="text" name="DescripcionEjercicio" value="Ejercicio" size="40"></td>
+                    <td><input type="text" name="descripcionejercicio" value="Descripcion" size="40"></td>
                 </tr>
                 <tr>
-                    <td>Video Ejercicio:</td> 
-                    <td><input type="text" name="VideoEjercicio" value="Ejercicio" size="40"></td>
+                    <td>URL Video Ejercicio:</td>
+                    <td><input type="text" name="videoejercicio" value="URL" size="40"></td>
                 </tr>
                 <tr>
                     <td><input type="submit"  value="Limpiar" name="accion">

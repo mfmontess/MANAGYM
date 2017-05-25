@@ -74,6 +74,11 @@
         
     </head>
     <body>
+        <ul class="nav">
+                <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
+                <li><a href="AsignarClientes?accion=Ingresar">ASIGNAR CLIENTES</a></li> 
+                <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
+            </ul>
         <h1>MANAGYM</h1>
         <br>
          <br>
@@ -95,7 +100,7 @@
                     <td><input type="text" name="NombreMaquina" value=${maquina.nombreMaquina}></td>
                 </tr>
                 <tr>
-                    <td>Estado:</td> 
+                    <td>Estado:</td>
                     <td><input type="text" name="EstadoMaquina" value=${maquina.estadoMaquina}></td>
                 </tr>
                 <tr>

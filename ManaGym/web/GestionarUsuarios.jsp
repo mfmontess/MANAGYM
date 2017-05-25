@@ -10,19 +10,86 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Gestion de Usuarios</title>
+        <title>MANAGYM</title>
+        <style type="text/css">
+            body {
+                 background-image: url(imgfondos/maquinas.jpg);     
+                }
+                h1 {
+                    color: black;
+                    font-family: fantasy;
+                    text-align: center;
+                }
+                td{
+                color: black;
+                font-family: fantasy;
+            }
+                legend {
+                    color: black;
+                    font-family: monospace;
+                    font-size: 30px;
+                  }
+                    *{
+               padding: 0px;
+               margin: 0px;
+               
+            }
+            #header{
+                margin: auto;
+                width: 600px;
+                font-family: Arial,Helvetica,sans-serif;
+            }
+            ul,ol{
+                list-style: none;
+            }  
+            .nav li a{
+                background-color: black;
+                color: white;
+                text-decoration: none;
+                padding: 10px 15px;
+                display: block;
+            }
+            .nav li a:hover{
+                background-color:#434343; 
+            }
+            .nav > li{
+                float: left;
+            }
+            .nav li ul{
+                display:none; 
+                position: absolute;
+                min-width: 140px;
+            }
+            .nav li:hover > ul{
+                display: block;
+            }
+        </style>
     </head>
     <body>
+        <ul class="nav">
+                <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
+                <li><a href="AsignarClientes?accion=Ingresar">ASIGNAR CLIENTES</a></li> 
+                <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
+            </ul>
+        <br>
+         <br>
+          <br>
+        <h3>Gestionar Usuarios</h3>
+        
+        <br>
         <form name="form2" action="GestionarUsuariosControlador">
             <h3>Elija el perfil del usuario:</h3>
-            <input type="checkbox" id="chkCliente" name="perfil" value="1" checked="true"/>
-            <label>Cliente</label>
             <input type="checkbox" id="chkInstructor" name="perfil" value="2"/>
             <label>Instructor</label>
+            <input type="checkbox" id="chkCliente" name="perfil" value="1"/>
+            <label>Cliente</label>
+            <label>Estado</label>
+            <select name="lstEstado">
+                <option value="1" >Activo</option>
+                <option value="2" >Inactivo</option>
+            </select>
             <input type="submit" id="btnBuscar" name="accion" value="Buscar"/>
-            
             <br>
-            <label>Elija el usuario...</label>
             <% if( request.getParameter("accion") != null){
             %>            
             <br>
@@ -30,21 +97,21 @@
                 <select name="lstUsuarios" multiple>
                     <c:forEach var="usuario" items="${usuarios}">
                         <option value=${usuario.getId()}>
-                            ${usuario.getUsuario()}
+                            ${usuario.toString()}
                         </option>
                      </c:forEach>
                 </select>
-                <!--<img src="imgiconos/users.png" title="${clientes.get(0).toString()}" />-->
-            </div>
-            <%}%>   
-            <br>
-            <label>Marque la opción:</label>
-            <select name="lstAccion">
-                <option value="1" >Habilitar</option>
-                <option value="2" >Deshabilitar</option>
-            </select>
-            <br>
-            <input type="submit" id="btnGestionarUsuario" name="accion" value="Gestionar"/>
+                <br>
+                <label>Marque la acción a realizar:</label>
+                <select name="lstAccion">
+                    <option value="1" >Activar</option>
+                    <option value="2" >Inactivar</option>
+                </select>
+                <br>
+                <input type="submit" id="btnGestionarUsuario" name="accion" value="Gestionar"/>
+                </div>
+            <%}%>
+            ${mensaje}
         </form>
     </body>
 </html>

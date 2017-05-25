@@ -13,7 +13,17 @@
         <title>MANAGYM</title>
     </head>
     <body>
-        <form name="form2" action="GestionarUsuariosControlador">
+        <ul class="nav">
+                <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
+                <li><a href="AsignarClientes?accion=Ingresar">ASIGNAR CLIENTES</a></li> 
+                <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
+            </ul>
+        <br>
+         <br>
+          <br>
+        
+        <br>
+        <form name="form2" action="AsignarClientes">
             <h3>Asignación de Clientes a Instructor</h3>
             <label>Elija un instructor</label>
             <br>

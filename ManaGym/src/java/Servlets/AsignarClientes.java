@@ -5,13 +5,13 @@
  */
 package Servlets;
 
-import BD.UsuarioBD;
-import Managym.Usuario;
+import BD.*;
+import Managym.Cliente;
+import Managym.Instructor;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,8 +21,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author ASUS
  */
-@WebServlet(name = "GestionarUsuariosControlador", urlPatterns = {"/GestionarUsuariosControlador"})
-public class GestionarUsuariosControlador extends HttpServlet {
+public class AsignarClientes extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +40,10 @@ public class GestionarUsuariosControlador extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet GestionarUsuariosControlador</title>");            
+            out.println("<title>Servlet AsignarClientes</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet GestionarUsuariosControlador at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet AsignarClientes at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -65,31 +64,18 @@ public class GestionarUsuariosControlador extends HttpServlet {
         HttpSession sesion = request.getSession();
         String accion = request.getParameter("accion");
         
-        if(accion.equals("Buscar")){
-            try{
-            String perfil = request.getParameter("perfil");
-            int estado = Integer.parseInt(request.getParameter("lstEstado"));            
-            ArrayList <Usuario> usuarios = UsuarioBD.mgr.getUsuarios(perfil, estado);
-            sesion.setAttribute("usuarios", usuarios);
-            request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
-            } catch(Exception e){
-                sesion.setAttribute("usuarios", null);
-                sesion.setAttribute("accion", null);
-                sesion.setAttribute("mensaje", "Se presento un error al consultar los usuarios a gestionar.");
-            }
+        if(accion.equals("Ingresar")){
+            ArrayList<Instructor> instructores = InstructorBD.mgr.getInstructores();
+            ArrayList<Cliente> clientes = ClienteBD.mgr.getClientes();
+            sesion.setAttribute("clientes", clientes);
+            sesion.setAttribute("instructores", instructores);
+            request.getRequestDispatcher("/AsignarClientes.jsp").forward(request, response);
         }
         else if(accion.equals("Gestionar")){
-            try{
-            int estado = Integer.parseInt(request.getParameter("lstAccion"));
-            String[] usuarios = obtenerUsuarios(request);
-            gestionarUsuarios(usuarios, estado);
-            sesion.setAttribute("mensaje", "Se gestionaron exitosamente los usuarios.");
+            int idInstructor = Integer.parseInt(request.getParameter("lstInstructores"));
+            String[] clientes = obtenerClientes(request);
+            asociarClientes(clientes, idInstructor);
             request.getRequestDispatcher("GestionarUsuarios.jsp").forward(request, response);
-            } catch(Exception e){
-                sesion.setAttribute("mensaje", "Se presento un error al gestionar los usuarios.");
-            }
-            sesion.setAttribute("usuarios", null);
-            sesion.setAttribute("accion", null);
         }
     }
 
@@ -116,17 +102,17 @@ public class GestionarUsuariosControlador extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-    private void gestionarUsuarios(String[] usuarios, int estado) {
-        for(int i = 0; i<usuarios.length;i++){
-            UsuarioBD.mgr.updateEstado(usuarios[i],estado);
+    
+    private void asociarClientes(String[] clientes, int idInstructor) {
+        for(int i = 0; i<clientes.length;i++){
+            ClienteBD.mgr.updateInstructor(clientes[i],idInstructor);
         }
             
     }
 
-    private String[] obtenerUsuarios(HttpServletRequest request) {
-         String[] usuarios = request.getParameterValues("lstUsuarios");
-         return usuarios;
+    private String[] obtenerClientes(HttpServletRequest request) {
+         String[] clientes = request.getParameterValues("lstClientes");
+         return clientes;
     }
 
 }
