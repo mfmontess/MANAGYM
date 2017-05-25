@@ -3,21 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/Servicios/UsuarioServicio.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/Servicios/ReporteServicio.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/web/sesion.jsp</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/Servlets/Ingresar.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/BD/UsuarioDAO.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/Servicios/RutinasServicio.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/Servlets/VisualizarRutinas.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/BD/RutinasDAO.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/BD/ReporteDAO.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/Servicios/DBManager.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/web/GestionarReportes.jsp</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/web/Vista.jsp</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/BD/RutinaBD.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/conexion/Conexion.java</file>
-            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/src/java/Servlets/TraerReporte.java</file>
+            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/web/AsignaRutinas.jsp</file>
+            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/web/inicio.jsp</file>
+            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/web/AsignarClientes.jsp</file>
+            <file>file:/C:/Users/CAMILO/Documents/GitHub/MANAGYM/ManaGym/web/menu.jsp</file>
         </group>
     </open-files>
 </project-private>
