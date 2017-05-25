@@ -21,17 +21,17 @@
                         <li><a href="inicio.jsp"> <i class="lnr lnr-book"></i><span>Inicio</span></a></li>
                         <li id="menu-academico" ><a href="#"><i class="lnr lnr-book"></i> <span>Usuarios</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                             <ul id="menu-academico-sub" >
-                                <li id="menu-academico-avaliacoes" ><a href="tabs.html">Gestionar Usuarios</a></li>
-                                <li id="menu-academico-avaliacoes" ><a href="tabs.html">Administrar ficha medica clientes</a></li> 
-                                <li id="menu-academico-boletim" ><a href="AsignarClientes.jsp">Asignar Usuarios</a></li>
+                                <li id="menu-academico-avaliacoes" ><a href="GestionarUsuarios.jsp">Gestionar Usuarios</a></li>
+                                <li id="menu-academico-avaliacoes" ><a href="GestionarFicha.jsp">Administrar ficha medica clientes</a></li> 
+                                <li id="menu-academico-boletim" ><a href="AsignarClientes?accion=Ingresar">Asignar Usuarios</a></li>
                                 <li id="menu-academico-boletim" ><a href="AsignaRutinas.jsp">Asignar Rutinas</a></li>
                             </ul>
                         </li>
-                        <li id="menu-academico" ><a href="#"><i class="lnr lnr-book"></i> <span>Gestionar Maquinas</span></a></li>
+                        <li id="menu-academico" ><a href="GestionarMaquinas.jsp"><i class="lnr lnr-book"></i> <span>Gestionar Maquinas</span></a></li>
                         <li id="menu-academico" ><a href="#"><i class="lnr lnr-book"></i> <span>Gestion</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                             <ul id="menu-academico-sub" >
-                                <li id="menu-academico-avaliacoes" ><a href="login.html">Gestionar Ejercicios</a></li>
-                                <li id="menu-academico-boletim" ><a href="register.html">Gestionar Rutinas</a></li>
+                                <li id="menu-academico-avaliacoes" ><a href="GestionarEjercicios.jsp">Gestionar Ejercicios</a></li>
+                                <li id="menu-academico-boletim" ><a href="GestionarRutinas.jsp">Gestionar Rutinas</a></li>
                                 <li id="menu-academico-boletim" ><a href="register.html">Gestionar Asistencia Clientes</a></li>
                             </ul>
                         </li>
