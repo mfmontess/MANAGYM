@@ -75,6 +75,7 @@
     </head>
     <body>
         <ul class="nav">
+                <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
                 <li><a href="AsignarClientes?accion=Ingresar">ASIGNAR CLIENTES</a></li> 
                 <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
             </ul>

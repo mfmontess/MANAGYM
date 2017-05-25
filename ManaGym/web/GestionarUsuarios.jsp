@@ -66,7 +66,17 @@
         </style>
     </head>
     <body>
+        <ul class="nav">
+                <li><a href="GestionarUsuarios.jsp">GESTION DE USUARIOS</a></li>
+                <li><a href="AsignarClientes?accion=Ingresar">ASIGNAR CLIENTES</a></li> 
+                <li><a href="GestionarMaquinas.jsp">GESTION DE MAQUINAS</a></li>
+            </ul>
+        <br>
+         <br>
+          <br>
         <h3>Gestionar Usuarios</h3>
+        
+        <br>
         <form name="form2" action="GestionarUsuariosControlador">
             <h3>Elija el perfil del usuario:</h3>
             <input type="checkbox" id="chkInstructor" name="perfil" value="2"/>
