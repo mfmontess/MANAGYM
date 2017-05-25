@@ -36,6 +36,7 @@ public class UsuarioDAO extends Conexion {
     public Usuario Ingresar(String usuario, String contrasena) throws SQLException, Exception {
 
         Usuario u = null;
+        
         conectar();
         String sql = "SELECT * FROM `usuarios` as `usuarios` WHERE usuarios.NombreUsuario = ? and usuarios.ContrasenaUsuario = ?";
         PreparedStatement ps = conn.prepareStatement(sql);
@@ -45,7 +46,15 @@ public class UsuarioDAO extends Conexion {
         ResultSet rs = ps.executeQuery();
 
         while (rs.next()) {
-            u = new Usuario(rs);
+            u = new Usuario(
+                     rs.getString("NombreUsuario"),
+                     rs.getString("ContrasenaUsuario"),
+                    new Perfil(
+                              rs.getInt("IdPerfil"),
+                             rs.getString("NombrePerfil")
+                    ),
+                    rs.getInt("IdEstado")
+                    );
         }
         
         

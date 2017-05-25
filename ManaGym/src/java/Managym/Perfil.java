@@ -15,6 +15,10 @@ public class Perfil {
     private int id;
     private String nombre;
 
+    public Perfil() {
+    }
+    
+
     public Perfil(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
