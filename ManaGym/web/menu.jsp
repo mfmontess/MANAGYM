@@ -8,7 +8,7 @@
                 <!--/down-->
                 <div class="down">	
                     <a href="index.html"><img src="images/admin.jpg"></a>
-                    <a href="index.html"><span class=" name-caret">${sessionScope.persona.nombres}</span></a>
+                    <a href="index.html"><span class=" name-caret">${sessionScope.Usuario.nombreUsuario}</span></a>
                     <p>System Administrator in Company</p>
                     <ul>
                         <li><a class="tooltips" href="index.html"><span>Profile</span><i class="lnr lnr-user"></i></a></li>

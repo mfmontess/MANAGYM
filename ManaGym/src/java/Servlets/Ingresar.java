@@ -44,7 +44,7 @@ public class Ingresar extends HttpServlet {
                 if (UsuarioServicio.getInstance().IngresarSistema(usuario, pass) != null) {
                     U = UsuarioServicio.getInstance().IngresarSistema(usuario, pass);
                     HttpSession session = request.getSession(true);
-                    session.setAttribute("persona", U);
+                    session.setAttribute("Usuario", U);
                     RequestDispatcher rs = request.getRequestDispatcher("inicio.jsp");
                     rs.forward(request, response);
                 } else {
