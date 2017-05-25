@@ -47,6 +47,9 @@ public class UsuarioDAO extends Conexion {
         while (rs.next()) {
             u = new Usuario(rs);
         }
+        
+        
+        
         cerrarConexion();
         return u;
     }

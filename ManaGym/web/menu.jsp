@@ -1,6 +1,6 @@
 <div class="sidebar-menu">
                 <header class="logo">
-                    <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo"> <h1>Augment</h1></span> 
+                    <a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> <a href="index.html"> <span id="logo"> <h1>ManaGYM</h1></span> 
                         <!--<img id="logo" src="" alt="Logo"/>--> 
                     </a> 
                 </header>
