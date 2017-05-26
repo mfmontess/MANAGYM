@@ -66,7 +66,12 @@ public class Rutinacontrolador extends HttpServlet {
         String tiempodeduracion = request.getParameter("tiempodeduracion");
         String accion  = request.getParameter("accion");
         Rutina rutina = new Rutina();
-        if(accion.equals("Guardar")){
+        if(accion.equals("Ingresar")){
+            ArrayList <Ejercicio> ejercicios =EjercicioBD.mgr.getEjercicios1();
+            sesion.setAttribute("ejercicios",ejercicios);
+            request.getRequestDispatcher("GestionarRutinas.jsp").forward(request, response);
+        }
+        else if(accion.equals("Guardar")){
         rutina = new Rutina(idrutina, nombrerutina, descripcion, tiempodeduracion);
         RutinaBD.mgr.guardar(rutina, Boolean.TRUE);
         sesion.setAttribute("rutina", rutina);

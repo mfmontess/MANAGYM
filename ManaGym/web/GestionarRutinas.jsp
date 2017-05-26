@@ -143,9 +143,9 @@
                                         <td>ASOCIAR EJERCICIO</td>
                                         <td>
                                             <select name="ejercicio1" class="default">
-                                                <option value="" selected>Seleccionar</option>
+                                                <!--<option value="" selected>Seleccionar</option>-->
                                                 <c:forEach items="${ejercicios}" var="ejercicio"> 
-                                                    <option value="${ejercicio.getIdejercicio()}">${ejercicio.getNombreEjercicio()}</option>
+                                                    <option value="${ejercicio.getIdejercicio()}">${ejercicio.getNombreejercicio()}</option>
                                                 </c:forEach>
                                             </select>
                                         </td>

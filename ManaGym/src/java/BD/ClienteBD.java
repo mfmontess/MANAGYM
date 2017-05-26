@@ -31,7 +31,7 @@ public class ClienteBD extends DBManager {
 
     public void insert(Cliente cliente) {
         execute("INSERT INTO Instructores (IdUsuario,CedulaCliente,NombreCliente,TelefonoCliente,DireccionCliente) VALUES ("
-                + cliente.getUsuario().getId() +"," + Integer.parseInt(cliente.getIdentificacion()) + "'" + cliente.getNombre() + "','" + cliente.getCelular() +"','"+ cliente.getDireccion() +"')");
+                + cliente.getUsuario().getId() +"," + Integer.parseInt(cliente.getIdentificacion()) + ",'" + cliente.getNombre() + "','" + cliente.getCelular() +"','"+ cliente.getDireccion() +"')");
     }
 
     public void updateInstructor(String cliente, int idInstructor) {

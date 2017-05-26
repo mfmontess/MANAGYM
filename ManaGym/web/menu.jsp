@@ -31,7 +31,7 @@
                         <li id="menu-academico" ><a href="#"><i class="lnr lnr-book"></i> <span>Gestion</span> <span class="fa fa-angle-right" style="float: right"></span></a>
                             <ul id="menu-academico-sub" >
                                 <li id="menu-academico-avaliacoes" ><a href="GestionarEjercicios.jsp">Gestionar Ejercicios</a></li>
-                                <li id="menu-academico-boletim" ><a href="GestionarRutinas.jsp">Gestionar Rutinas</a></li>
+                                <li id="menu-academico-boletim" ><a href="Rutinacontrolador?accion=Ingresar">Gestionar Rutinas</a></li>
                                 <li id="menu-academico-boletim" ><a href="register.html">Gestionar Asistencia Clientes</a></li>
                             </ul>
                         </li>
